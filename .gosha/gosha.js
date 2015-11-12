@@ -1,21 +1,41 @@
 "use strict";
 
-var fs = require("fs-extra");
-var gulp = require("gulp");
+module.exports = {
+  copy: {
+    gosha: {
+      files: [{
+        expand: true,
+        src: [
+          "*.html",
+          "css/**",
+          "img/**",
+          "js/**"
+        ],
+        dest: "gosha",
+      }]
+    }
+  },
 
-function copy() {
-  return gulp.src(["*.html", "{css,img,js}/**"])
-    .pipe(gulp.dest("gosha"));
-}
+  clean: {
+    gosha: [
+      "gosha/img/README",
+      "gosha/js/README",
+      "gosha/css/README"
+    ]
+  },
 
-if (gulp.tasks.style && gulp.tasks.style.fn) {
-  gulp.task("gosha:copy", ["style"], copy);
-} else {
-  gulp.task("gosha:copy", copy);
-}
-
-gulp.task("gosha:clean", ["gosha:copy"], function(done) {
-  fs.remove("./gosha/{img,js,css}/README", done);
-});
-
-gulp.task("gosha", ["gosha:clean"]);
+  lintspaces: {
+    codestyle: {
+      src: [
+        "*.html",
+        "js/*.js",
+        "less/*.less",
+        "sass/*.sass",
+        "sass/*.scss"
+      ],
+      options: {
+        editorconfig: ".editorconfig"
+      }
+    }
+  }
+};
