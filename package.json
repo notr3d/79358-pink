@@ -2,7 +2,7 @@
   "name": "79358-pink",
   "version": "0.1.0",
   "private": true,
-  "description": "Обучающий проект «» от HTML Academy",
+  "description": "Обучающий проект «pink» от HTML Academy",
   "author": "Александр Некрасов",
   "repository": {
     "type": "git",
@@ -13,16 +13,21 @@
   },
   "homepage": "https://github.com/up-htmlacademy/79358-pink",
   "dependencies": {
+    "autoprefixer": "6.1.x",
     "grunt": "0.4.x",
     "grunt-contrib-clean": "0.6.x",
     "grunt-contrib-copy": "0.8.x",
+    "grunt-contrib-less": "1.1.x",
+    "grunt-contrib-watch": "0.6.x",
     "grunt-lintspaces": "0.7.x",
+    "grunt-postcss": "0.7.x",
     "load-grunt-tasks": "3.3.x"
   },
   "scripts": {
     "pregosha": "npm install > /dev/null",
     "gosha": "grunt gosha",
-    "test": "grunt lintspaces:codestyle"
+    "test": "grunt lintspaces:codestyle",
+    "start": "grunt watch"
   },
   "engines": {
     "node": "^5.0.0"
