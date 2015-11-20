@@ -6,10 +6,12 @@
     </head>
     <body>
         <header class="page-header">
-            <div class="page-header__wrapper">
-                <div class="page-header__nav-wrapper">
-                    <div class="page-logo"><a href="#" class="page-logo__link">Pink</a></div>
-                    <nav class="main-nav">
+            <div class="wrapper">
+                <div class="page-header__nav-wrapper">                    
+                    <nav class="main-nav">   
+                        <a href="#" class="page-logo">Pink</a>
+                        <a href="#" class="main-nav__show-list"></a>
+                        <a href="#" class="main-nav__hide-list"></a>                  
                         <ul class="main-nav__list">
                             <li class="main-nav__item"><a href="#" class="main-nav__link">Информация</a></li>
                             <li class="main-nav__item"><a href="#" class="main-nav__link">Блог</a></li>
@@ -21,16 +23,16 @@
                 <h1 class="page-title">Взгляните на жизнь иначе!</h1>
                 <div class="download">
                     <a href="#" class="download__link">Скачать приложение</a>
-                    <div class="download__download-type--ios"></div>
-                    <div class="download__download-type--android"></div>
-                    <div class="download__download-type--win-phone"></div>
+                    <div class="download__download-type download__download-type--ios"></div>
+                    <div class="download__download-type download__download-type--android"></div>
+                    <div class="download__download-type download__download-type--win-phone"></div>
                     <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
                 </div>
             </div>
         </header>
-        <main class="page-main">
-            <div class="page-main__wrapper">
-                <h2 class="page-main__header">Устали от серости мегаполиса? Нам есть, что вам предложить!</h2>
+        <article class="page-main">
+            <div class="wrapper">
+                <h2 class="page-main__header">Устали от серости мегаполиса?<br>Нам есть, что вам предложить!</h2>
                 <div class="features">
                     <div class="features_wrapper">
                         <div class="features__item">
@@ -49,93 +51,93 @@
                 </div>
                 <div class="reviews-slider">
                     <div class="reviews-slider__wrapper">
-                        <div class="reviews-slider__item reviews-slider__item--current">
+                        <div class="reviews-slider__item  reviews-slider__item--current">
                             <h3 class="reviews-slider__header">Николай Петров</h3>
                             <p class="reviews-slider__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
                         </div>
                         <div class="reviews-slider__item">
-                            <h3 class="reviews-slider__header">?</h3>
-                            <p class="reviews-slider__text">?</p>
+                            <h3 class="reviews-slider__header">Николай Петров</h3>
+                            <p class="reviews-slider__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
                         </div>
                         <div class="reviews-slider__item">
-                            <h3 class="reviews-slider__header">?</h3>
-                            <p class="reviews-slider__text">?</p>
+                            <h3 class="reviews-slider__header">Николай Петров</h3>
+                            <p class="reviews-slider__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
                         </div>
                         <div class="reviews-slider__controls">
-                            <ul class="reviews-slider__list">
-                                <li class="reviews-slider__item"><a href="#" class="reviews-slider__link  class="reviews-slider__link"--current"></a></li>
-                                <li class="reviews-slider__item"><a href="#" class="reviews-slider__link"></a></li>
-                                <li class="reviews-slider__item"><a href="#" class="reviews-slider__link"></a></li>
-                            </ul>
+                            <div class="reviews-slider__list">
+                                <i class="reviews-slider__item"><a href="#" class="reviews-slider__link  reviews-slider__link--current">1</a></i>
+                                <i class="reviews-slider__item"><a href="#" class="reviews-slider__link">2</a></i>
+                                <i class="reviews-slider__item"><a href="#" class="reviews-slider__link">3</a></i>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="prices-slider"><!--не уверен, но может сверстать таблицей?-->
+                <div class="prices-slider">
                     <div class="prices-slider__wrapper">
                         <div class="prices-slider__item">
                             <div class="prices-slider__suscr-type">
-                                <h3 class="prices-slider__header">?</h3>
-                                <p class="prices-slider__text">?</p>
+                                <h3 class="prices-slider__header">База</h3>
+                                <h4 class="prices-slider__text">1,99 USD</h4>
                             </div>
-                            <div class="prices-slider__content">
+                            <div class="prices-slider__content  prices-slider__content--included">
                                 <p>Розовый фильтр</p>
                             </div>
-                            <div class="prices-slider__content">
+                            <div class="prices-slider__content  prices-slider__content--not-included">
                                 <p>Смайлики</p>
                             </div>
-                            <div class="prices-slider__content">
+                            <div class="prices-slider__content  prices-slider__content--not-included">
                                 <p>Комментарии</p>
                             </div>
                         </div>
-                        <div class="prices-slider__item prices-slider__item--current">
+                        <div class="prices-slider__item  prices-slider__item--current">
                             <div class=" class="prices-slider__suscr-type"">
                                 <h3 class="prices-slider__header">Стандарт</h3>
-                                <p>3,99 USD</p>
+                                <h4>3,99 USD</h4>
                             </div>
-                            <div class="prices-slider__content prices-slider__content--included">
+                            <div class="prices-slider__content  prices-slider__content--included">
                                 <p>Розовый фильтр</p>
                             </div>
-                            <div class="prices-slider__content prices-slider__content--included">
+                            <div class="prices-slider__content  prices-slider__content--included">
                                 <p>Смайлики</p>
                             </div>
-                            <div class="prices-slider__content prices-slider__content--not-included">
+                            <div class="prices-slider__content  prices-slider__content--not-included">
                                 <p>Комментарии</p>
                             </div>
                         </div>
                         <div class="prices-slider__item">
                             <div class=" class="prices-slider__suscr-type"">
-                                <h3 class="prices-slider__header">?</h3>
-                                <p>?</p>
+                                <h3 class="prices-slider__header">Анлим</h3>
+                                <h4>9,99 USD</h4>
                             </div>
-                            <div class="prices-slider__content">
+                            <div class="prices-slider__content  prices-slider__content--included">
                                 <p>Розовый фильтр</p>
                             </div>
-                            <div class="prices-slider__content">
+                            <div class="prices-slider__content  prices-slider__content--included">
                                 <p>Смайлики</p>
                             </div>
-                            <div class="prices-slider__content">
+                            <div class="prices-slider__content  prices-slider__content--included">
                                 <p>Комментарии</p>
                             </div>
-                        </div>
+                        </div>                     
                         <div class="prices-slider__controls">
-                            <ul class="prices-slider__list">
-                                <li class="prices-slider__item"><a href="#" class="prices-slider__link"></a></li>
-                                <li class="prices-slider__item"><a href="#" class="prices-slider__link  class="prices-slider__link"--current"></a></li>
-                                <li class="prices-slider__item"><a href="#" class="prices-slider__link"></a></li>
-                            </ul>
+                            <div class="prices-slider__list">
+                                <i class="prices-slider__item"><a href="#" class="prices-slider__link">1</a></i>
+                                <i class="prices-slider__item"><a href="#" class="prices-slider__link  prices-slider__link--current">2</a></i>
+                                <i class="prices-slider__item"><a href="#" class="prices-slider__link">3</a></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </article>
         <footer class="page-footer">
-            <div class="page-footer__wrapper">
+            <div class="wrapper">
                 <div class="address">
                     <h2 class="address__header">Остались вопросы? Свяжитесь с нами!</h2>
                     <p class="address__text">Звоните:</p>
                     <a href="#" class="address__link">+7 (812) 555-66-66</a>
                     <p class="address__text">Пишите:</p>
-                    <a href="#" class="address__link">mail@htmlacademy.ru</a>
+                    <a href="mailto:mail@htmlacademy.ru" class="address__link">mail@htmlacademy.ru</a>
                     <p class="address__text">Приезжайте в гости:</p>
                     <a href="#" class="address__link">ул. Большая Конюшенная, 19/8</a>
                 </div>
