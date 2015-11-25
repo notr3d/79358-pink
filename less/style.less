@@ -1,0 +1,418 @@
+@black:#000;
+@white:#fff;
+@dark-blue:#1d2631;
+@dark-grey:#797f86;
+@grey:#bec2c7;
+@light-grey:#f2f2f2;
+@pink:#d22856;
+@green:#3dc644;
+@red:#f25b26;
+
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #282828;
+    color:@black;
+}
+
+h1 {
+    font-size:24px;
+    font-weight:lighter;
+    color:@white;
+}
+
+h2 {
+    font-size:24px;
+    font-weight: lighter;
+    color:@dark-grey;
+}
+
+h3 {
+    font-size: 18px;
+    color:@black;
+}
+
+a {
+    text-decoration: none;
+    color:@black;
+}
+
+ul {
+    list-style:none;
+}
+
+.wrapper {
+    width: 320px;
+    margin: 0 auto;
+    text-align:center;
+}
+
+.page-title {
+    margin:30px 45px 320px;
+}
+
+.page-header {
+    .wrapper {
+        background:url("../img/hand.png") no-repeat 50% 45% ,
+            url("../img/main-background.jpg") no-repeat 50% -30%;
+    }
+}
+
+.download {
+    background-color: @dark-blue;
+    padding:25px 20px 30px;
+    &__link {
+        font-size:18px;
+        font-weight: bolder;
+        display: block;
+        padding:20px 0;
+        border: 3px solid @white;
+        color:@white;
+        border-radius: 50px;
+        margin:0 5px 30px;
+    }
+        &__download-type {
+        width: 75px;
+        height: 75px;
+        display: inline-block;
+        background: url("../img/apple-logo.png") no-repeat center;
+            &--android {
+                background-image: url("../img/android-logo.png");
+            }
+            &--win-phone {
+                background-image: url("../img/win-logo.png");
+            }
+    }
+            &__text {
+                font-size:14px;
+                font-weight: lighter;
+                color:@white;
+            }
+}
+
+.main-nav {
+    &__list {
+        display:block;
+        position: relative;
+        height: 70px;
+        border-bottom:1px solid #000101;
+        border-bottom: 1px solid #000101;
+        background: #283645 url(../img/page-logo.png) no-repeat 23px 23px;
+            &--show {
+                background-color: rgba(0,0,0,.3);
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 50px;
+                    height: 5px;
+                    background-color: @white;
+                    right: 15px;
+                    top: 30px;
+                    box-shadow:
+                        0px 10px 0px 0px @white,
+                        0px -10px 0px 0px @white;
+                }
+            }
+            &--hide {
+                display: none;
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 50px;
+                    height: 5px;
+                    background-color: @white;
+                    right: 15px;
+                    top: 30px;
+                    transform:rotate(45deg);
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 50px;
+                    height: 5px;
+                    background-color: @white;
+                    right: 15px;
+                    top: 30px;
+                    transform:rotate(-45deg);
+                }
+            }
+    }
+    &__link {
+        font-weight: bold;
+        font-size: 18px;
+        color: @white;
+        text-transform: uppercase;
+        text-align: center;
+        display:block;
+        padding:25px 0;
+        border-bottom:1px solid #000101;
+        border-top: 1px solid #485461;
+        background-color: @dark-blue;
+        display: none;
+    }
+}
+
+.page-main {
+    color:@black;
+    .wrapper {
+        background-color: @white;
+        overflow: hidden;
+        padding: 60px 0 70px;
+    }
+}
+
+.features {
+    margin-top: 70px;
+    padding:60px 20px 320px;
+    background: #f2f2f2 url("../img/iphone.png") no-repeat 50% 108%;
+    position: relative;
+    &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom:100%;
+          left:0;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 0px 40px 340px;
+          border-color: transparent transparent @light-grey transparent;
+    }
+    &__header {
+        margin-bottom: 25px;
+    }
+    &__text {
+        font-size:14px;
+        color: @dark-grey;
+        margin-bottom: 45px;
+        line-height:24px;
+    }
+}
+
+.reviews-slider {
+    position: relative;
+    padding: 50px 0 40px;
+    &__wrapper {
+        width: 960px;
+        overflow: hidden;
+    }
+    &__text {
+        font-size: 14px;
+        line-height:30px;
+        color: @dark-grey;
+        padding: 0 20px;
+    }
+    &__item {
+        display: inline-block;
+        width: 320px;
+        float:left;
+    }
+    &__controls {
+        position: relative;
+        width: 100px;
+        text-align: center;
+        margin:5px;
+        bottom:-15px;
+        left:160px;
+        margin-left:-50px;
+    }
+    &__link {
+        display:inline-block;
+        width: 6px;
+        height: 6px;
+        background-color: @grey;
+        text-align: center;
+        z-index: 10;
+        margin:10px;
+        border-radius: 50%;
+    }
+    &__link--current {
+        box-shadow:0 0 0 3px #283645;
+    }
+}
+.prices-slider {
+    padding: 60px 0 40px;
+    background-color: @light-grey;
+    margin-top: 20px;
+    position: relative;
+    &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom:100%;
+          left:0;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 0px 40px 340px;
+          border-color: transparent transparent @light-grey transparent;
+    }
+    &__wrapper {
+        border:1px solid @light-grey;
+        width: 840px;
+        position: relative;
+        left:-260px;
+    }
+    &__subscr-type {
+        background-color: @dark-blue;
+        padding:25px 0;
+        &--hit {
+            position: relative;
+            overflow: hidden;
+            &::before {
+                content: 'ХИТ';
+                display: block;
+                position: absolute;
+                color:@white;
+                background-color: @pink;
+                transform:rotate(-45deg);
+                font-size: 14px;
+                padding: 7px 40px;
+                top:10px;
+                left: -30px;
+                }
+            }
+    }
+    &__header {
+        font-weight:bolder;
+        color:@white;
+        text-transform: uppercase;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    &__price {
+        color:@white;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: lighter;
+        margin: 0;
+    }
+    &__content {
+        background-color: @white;
+        color:@black;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 25px;
+        margin: 0;
+        text-align:left;
+    }
+    &__content--included {
+        position: relative;
+            ::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 30px;
+                    height: 3px;
+                    background-color: @green;
+                    right: 20px;
+                    top: 30px;
+                    transform:rotate(-45deg);
+                }
+            ::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 15px;
+                    height: 3px;
+                    background-color: @green;
+                    right: 42px;
+                    top: 35px;
+                    transform:rotate(45deg);
+                    }
+    }
+    &__content--not-included {
+        position: relative;
+        ::before {
+                  content: '';
+                  display: block;
+                  position: absolute;
+                  width: 40px;
+                  height: 3px;
+                  background-color: @red;
+                  right: 20px;
+                  top: 30px;
+                  transform:rotate(-45deg);
+                  }
+            ::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 40px;
+                    height: 3px;
+                    background-color: @red;
+                    right: 20px;
+                    top: 30px;
+                    transform:rotate(45deg);
+                    }
+    }
+    &__controls {
+        width: 100px;
+        margin:40px auto;
+    }
+    &__link {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin: 0 10px;
+        background-color: @grey;
+        border-radius: 50%;
+        &--current {
+            box-shadow: 0 0 0 3px @dark-blue;
+        }
+    }
+}
+.address {
+    background-color: @white;
+    padding: 0 25px 50px;
+    color:@black;
+    position: relative;
+    &__header {
+        margin-bottom: 40px;
+    }
+    &__link {
+        display: block;
+        color:@pink;
+        font-size: 24px;
+        font-weight: lighter;
+        margin:0 5px 35px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+    &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top:100%;
+          left:0;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 40px 0px 0 170px;
+          border-color: @white transparent transparent transparent;
+    }
+    &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top:100%;
+          right:0;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 40px 170px 0 0px;
+          border-color: @white transparent transparent transparent;
+    }
+}
+.map {
+    background: url("../img/map.jpg") no-repeat 47% 55%;
+    height: 200px;
+}
