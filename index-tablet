@@ -1,16 +1,24 @@
-.body-index {
-    .wrapper {
-        text-align:center;
-    }
-    .page-title {
-        margin:30px 45px 320px;
+@media screen and (min-width: 700px) {
+    
+.page-logo {
+    .hide-link-text;
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 120px;
+    height: 70px;
+    background: url(../img/page-logo.png) no-repeat center;
 }
 
-    .page-header {
-        .wrapper {
-            background:url("../img/hand.png") no-repeat 50% 45%,
-                url("../img/main-background.jpg") no-repeat 50% -30%;
-        }
+.page-title {
+    margin:30px 45px;
+}
+
+.page-header {
+    &__nav-wrapper {
+        position: relative;
+        width: 320px;
+        background-color: rgba(0,0,0,.3);
     }
 }
 
@@ -34,12 +42,12 @@
         width: 75px;
         height: 75px;
         display: inline-block;
-        background: url("../img/app-logo/apple-logo.svg") no-repeat center;
+        background: url("../img/apple-logo.png") no-repeat center;
             &--android {
-                background-image: url("../img/app-logo/android-logo.svg");
+                background-image: url("../img/android-logo.png");
             }
             &--win-phone {
-                background-image: url("../img/app-logo/microsoft-logo.svg");
+                background-image: url("../img/win-logo.png");
             }
     }
             &__text {
@@ -48,6 +56,78 @@
                 color:@white;
             }
 }
+
+.main-nav {
+    position: relative;
+    left:100;
+    width: 320px;
+    &__list {
+        .hide-link-text;
+        display:block;
+        height: 70px;
+        border-bottom:1px solid #000101;
+        border-bottom: 1px solid #000101;
+            &--toggle {
+                width: 100px;
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 50px;
+                    height: 5px;
+                    background-color: @white;
+                    right: 15px;
+                    top: 30px;
+                    box-shadow:
+                        0px 10px 0px 0px @white,
+                        0px -10px 0px 0px @white;
+                }
+            }
+            &--hide {
+                display: none;
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 50px;
+                    height: 5px;
+                    background-color: @white;
+                    right: 15px;
+                    top: 30px;
+                    transform:rotate(45deg);
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 50px;
+                    height: 5px;
+                    background-color: @white;
+                    right: 15px;
+                    top: 30px;
+                    transform:rotate(-45deg);
+                }
+            }
+        &-container {
+            position: absolute;
+        }
+    }
+    &__link {
+        font-weight: bold;
+        font-size: 18px;
+        color: @white;
+        text-transform: uppercase;
+        text-align: center;
+        display:block;
+        padding:25px 0;
+        border-bottom:1px solid #000101;
+        border-top: 1px solid #485461;
+        background-color: @dark-blue;
+        width: 320px;
+        display: none;
+    }
+}
+
 .page-main {
     color:@black;
     .wrapper {
@@ -56,6 +136,7 @@
         padding: 60px 0 70px;
     }
 }
+
 .features {
     margin-top: 70px;
     padding:60px 20px 320px;
@@ -86,7 +167,7 @@
 
 .reviews-slider {
     position: relative;
-    padding: 50px 0 85px;
+    padding: 50px 0 40px;
     &__wrapper {
         width: 960px;
         overflow: hidden;
@@ -97,20 +178,17 @@
         color: @dark-grey;
         padding: 0 20px;
     }
-    &__descr {
-        display: none;
-    }
     &__item {
         display: inline-block;
         width: 320px;
         float:left;
     }
     &__controls {
-        position: absolute;
+        position: relative;
         width: 100px;
         text-align: center;
         margin:5px;
-        bottom:35px;
+        bottom:-15px;
         left:160px;
         margin-left:-50px;
     }
@@ -134,9 +212,6 @@
     background-color: @light-grey;
     margin-top: 20px;
     position: relative;
-    &__descr {
-        display: none;
-    }
     &::before {
           content: "";
           display: block;
@@ -313,14 +388,21 @@
     height: 200px;
 }
 
-.about {
-    display: none;
+.index {
+    .wrapper {
+        text-align:center;
+    }
+    .page-title {
+        margin:30px 45px 320px;
 }
 
-@media screen and (max-width: 700px) {
-    .body-index .main-footer {
-        .links {
-            display: none;
+    .page-header {
+        .wrapper {
+            background:url("../img/hand.png") no-repeat 50% 45%,
+                url("../img/main-background.jpg") no-repeat 50% -30%;
         }
-    }
+}
+    
+}
+
 }

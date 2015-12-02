@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     </head>
-    <body class="index">
+    <body class="body-index">
         <header class="page-header">
             <div class="wrapper">
                 <div class="page-header__nav-wrapper">
@@ -36,7 +36,7 @@
                 <h2 class="page-main__header">Устали от серости мегаполиса?</h2>
                 <h2 class="page-main__header">Нам есть, что вам предложить!</h2>
                 <div class="features">
-                    <div class="features_wrapper">
+                    <div class="features__wrapper">
                         <div class="features__item">
                             <h3 class="features__header">Поднимает настроение</h3>
                             <p class="features__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
@@ -51,18 +51,33 @@
                         </div>
                     </div>
                 </div>
+                <div class="about">
+                    <div class="wrapper">
+                        <div class="about__logo">    
+                        </div>
+                        <div class="about__content">
+                            <h2 class="about__header">Эффект 
+на 24 часа!</h2>
+                            <p class="about__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится  целые сутки!</p>
+                            <a href="#" class="about__link">Узнать больше об исследовании</a>
+                        </div>    
+                    </div>
+                </div>
                 <div class="reviews-slider">
                     <div class="reviews-slider__wrapper">
                         <div class="reviews-slider__item  reviews-slider__item--current">
                             <h3 class="reviews-slider__header">Николай Петров</h3>
+                            <span class="reviews-slider__descr">25 лет, водитель трамвая</span>
                             <p class="reviews-slider__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
                         </div>
                         <div class="reviews-slider__item">
                             <h3 class="reviews-slider__header">Николай Петров</h3>
+                            <span class="reviews-slider__descr">25 лет, водитель трамвая</span>
                             <p class="reviews-slider__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
                         </div>
                         <div class="reviews-slider__item">
                             <h3 class="reviews-slider__header">Николай Петров</h3>
+                            <span class="reviews-slider__descr">25 лет, водитель трамвая</span>
                             <p class="reviews-slider__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
                         </div>
                         <div class="reviews-slider__controls">
@@ -76,6 +91,7 @@
                     <table class="prices-slider__wrapper">
                         <thead>
                             <tr class="prices-slider__header-group">
+                                <th class="prices-slider__descr"></th>
                                 <th class="prices-slider__subscr-type">
                                     <p class="prices-slider__header">База</p>
                                     <p class="prices-slider__price">1,99 USD</p>
@@ -92,6 +108,9 @@
                         </thead>
                         <tbody>
                             <tr class="prices-slider__tbody-group">
+                                <td class="prices-slider__descr">
+                                    <p>Розовый фильтр</p>
+                                </td>
                                 <td class="prices-slider__content  prices-slider__content--included">
                                     <p>Розовый фильтр</p>
                                 </td>
@@ -103,6 +122,9 @@
                                 </td>
                             </tr>
                             <tr class="prices-slider__content-group">
+                                <td class="prices-slider__descr">
+                                    <p>Смайлики</p>
+                                </td>
                                 <td class="prices-slider__content  prices-slider__content--not-included">
                                     <p>Смайлики</p>
                                 </td>
@@ -114,6 +136,9 @@
                                 </td>
                             </tr>
                             <tr class="prices-slider__content-group">
+                                <td class="prices-slider__descr">
+                                    <p>Комментарии</p>
+                                </td>
                                 <td class="prices-slider__content  prices-slider__content--not-included">
                                     <p>Комментарии</p>
                                 </td>
@@ -134,18 +159,37 @@
                 </div>
             </div>
         </article>
-        <footer class="page-footer">
+        <footer class="main-footer">
             <div class="wrapper">
                 <div class="address">
                     <h2 class="address__header">Остались вопросы? Свяжитесь с нами!</h2>
-                    <h3 class="address__item">Звоните:</h3>
-                    <a href="#" class="address__link">+7 (812) 555-66-66</a>
-                    <h3 class="address__item">Пишите:</h3>
-                    <a href="mailto:mail@htmlacademy.ru" class="address__link">mail@htmlacademy.ru</a>
-                    <h3 class="address__item">Приезжайте в гости:</h3>
-                    <a href="#" class="address__link">ул. Большая Конюшенная, 19/8</a>
+                    <div class="address__container">
+                        <h3 class="address__item">Звоните:</h3>
+                        <a href="#" class="address__link">+7 (812) 555-66-66</a> 
+                    </div>
+                    <div class="address__container">
+                        <h3 class="address__item">Пишите:</h3>
+                        <a href="mailto:mail@htmlacademy.ru" class="address__link">mail@htmlacademy.ru</a>
+                    </div>
+                    <div class="address__container">
+                        <h3 class="address__item">Приезжайте в гости:</h3>
+                        <a href="#" class="address__link">ул. Большая Конюшенная, 19/8</a>
+                    </div>    
                 </div>
                 <div class="map"></div>
+                <div class="links">
+                <div class="wrapper">
+                    <div class="main-logo"></div>
+                    <div class="social">
+                        <ul class="social__list">
+                            <li class="social__item"><a href="#" class="social__link social__link--twitter">twitter.com</a></li>
+                            <li class="social__item"><a href="#" class="social__link social__link--facebook">facebook.com</a></li>
+                            <li class="social__item"><a href="#" class="social__link social__link--youtube">youtube.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="main-footer__developer">Разработано <a href="#">http://glukhanko.ru/</a></div>
+                </div>
+            </div>
             </div>
         </footer>
     </body>
