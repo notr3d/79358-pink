@@ -11,7 +11,6 @@
     }
 }
 .page-title {
-    //margin:30px 45px;
     text-align: center;
 }
 .upload-button {
@@ -105,13 +104,13 @@ input {
     }
     &[type=date] {
         font-family: "Open Sans", "Verdana", "Tahoma", "Arial", sans-serif;
-        padding: 15px 10px 15px 25px;
+        padding: 15px 25px;
         font-size: 18px;
         color:@dark-blue;
         outline:none;
         border:2px solid @grey;
         border-radius: 3px;
-        width: 241px;
+        width: 226px;
     }
     &[type=button] {
         .hide-link-text;
@@ -162,6 +161,9 @@ label {
         font-weight: normal;
         color:@dark-grey;
         text-align: center;
+        p {
+            display: none;
+        }
     }
     &__app {
         background-color: @light-grey;
@@ -194,7 +196,7 @@ label {
         background-color: @light-grey;
         input {
             &[name=companion-count] {
-                width: 96px;  
+                width: 106px;  
                 margin: 0 -5px;
             }
         }
