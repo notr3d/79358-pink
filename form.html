@@ -48,15 +48,21 @@
                     </section>
                     <section class="form__vacation">
                         <div class="fieldset">
-                        <h3 class="form__vacation-header">Когда вы путешествовали? *</h3>
-                        <input type="date" name="vacation-date" id="vacation-date" value="2015-04-01" required>
-                        <label class="form__vacation-date" for="vacation-date">Дата выезда</label>
-                        <input type="button" name="vacation-duration-minus" id="vacation-duration-minus" value="-">
-                        <input type="text" name="vacation-duration" id="vacation-duration" value="10 дней" required>
-                        <input type="button" name="vacation-duration-plus" id="vacation-duration-plus" value="+">
-                        <label class="form__vacation-duration"  for="vacation-duration">Продолжительность</label>
-                        <output>10</output>
-                        <label class="form__vacation-return">Дата возвращения</label>
+                            <h3 class="form__vacation-header">Когда вы путешествовали? *</h3>
+                            <div class="container">
+                                <input type="date" name="vacation-date" id="vacation-date" value="2015-04-01" required>
+                                <label class="form__vacation-date" for="vacation-date">Дата выезда</label>
+                            </div>
+                            <div class="container">
+                                <input type="button" name="vacation-duration-minus" id="vacation-duration-minus" value="-">
+                                <input type="text" name="vacation-duration" id="vacation-duration" value="10 дней" required>
+                                <input type="button" name="vacation-duration-plus" id="vacation-duration-plus" value="+">
+                                <label class="form__vacation-duration"  for="vacation-duration">Продолжительность</label>
+                            </div>
+                            <div class="container">
+                                <output>10</output>
+                            <label class="form__vacation-return">Дата возвращения</label>
+                            </div>
                         </div>
                     </section>
                     <section class="form__companions">
@@ -76,6 +82,8 @@
                                     <input type="text" name="companion-name" id="companion-name-1" placeholder="Введите ваше имя" required>
                                     <label class="companion__info-alias" for="companion-alias-1">Прозвище:</label>
                                     <input type="text" name="companion-alias" id="companion-alias-1" placeholder="Ну как же без этого!">
+                                    <a href=# class="delete-button">Удалить</a>
+                                </div>
                             </div>
                             <div class="companion">
                                 <div class="companion__info">
@@ -87,9 +95,9 @@
                                     <input type="text" name="companion-name" id="companion-name  companion-name-2" placeholder="Введите ваше имя" required>
                                     <label class="companion__info-alias" for="companion-alias-2">Прозвище:</label>
                                     <input type="text" name="companion-alias" id="companion-alias-2" placeholder="Ну как же без этого!">
+                                    <a href=# class="delete-button">Удалить</a>
                                 </div>
                             </div>
-                        </div>    
                     </section>
                     <section class="form__achievments">
                         <div class="fieldset">
@@ -159,10 +167,12 @@
                             </div>
                         </div>
                     </section>
-                    <input type="submit" name="submit" id="submit" value="Отправить форму">
-                    <p class="form__descr">
-                        <span>*</span> — обязательные поля
-                    </p>
+                    <div class="container">
+                        <input type="submit" name="submit" id="submit" value="Отправить форму">
+                        <p class="form__descr">
+                            <span>*</span> — обязательные поля
+                        </p>
+                    </div>
                 </form>
             </div>
         </article>
@@ -185,15 +195,18 @@
            <div class="wrapper">
                 <h2 class="popup__header">Ваша заявка отправлена</h2>
                 <p class="popup__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
-                <a href="#" class="popup__link">Закрыть окно</a>
+                
             </div>
+            <div class="container">    
+                    <a href="#" class="popup__link">Закрыть окно</a>
+                </div>
         </div>
-        <div class="popup popup--failure">
+        <!--<div class="popup popup--failure">
            <div class="wrapper">
                 <h2 class="popup__header">Что-то пошло не так!</h2>
                 <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
                 <a href="#" class="popup__link">ОК</a>
             </div>
-        </div>
+        </div>-->
     </body>
 </html>
