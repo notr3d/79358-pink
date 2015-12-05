@@ -1,16 +1,13 @@
 .body-index {
-    .wrapper {
-        text-align:center;
-    }
+    text-align:center;  
+    overflow: hidden;
     .page-title {
         margin:30px 45px 320px;
 }
 
     .page-header {
-        .wrapper {
-            background:url("../img/hand.png") no-repeat 50% 45%,
-                url("../img/main-background.jpg") no-repeat 50% -30%;
-        }
+        background:url("../img/hand.png") no-repeat 50% 40%,
+            url("../img/main-background.jpg") no-repeat 50% -30%;
     }
 }
 
@@ -50,11 +47,8 @@
 }
 .page-main {
     color:@black;
-    .wrapper {
-        background-color: @white;
-        overflow: hidden;
-        padding: 60px 0 70px;
-    }
+    background-color: @white;
+    padding: 60px 0 70px;
 }
 .features {
     margin-top: 70px;
@@ -70,7 +64,7 @@
           width: 0;
           height: 0;
           border-style: solid;
-          border-width: 0 0px 40px 340px;
+          border-width: 0 0px 40px 700px;
           border-color: transparent transparent @light-grey transparent;
     }
     &__header {
@@ -88,7 +82,7 @@
     position: relative;
     padding: 50px 0 85px;
     &__wrapper {
-        width: 960px;
+        width: 300vw;
         overflow: hidden;
     }
     &__text {
@@ -102,7 +96,7 @@
     }
     &__item {
         display: inline-block;
-        width: 320px;
+        width: 100vw;
         float:left;
     }
     &__controls {
@@ -111,7 +105,7 @@
         text-align: center;
         margin:5px;
         bottom:35px;
-        left:160px;
+        left:50%;
         margin-left:-50px;
     }
     &__link {
@@ -146,14 +140,14 @@
           width: 0;
           height: 0;
           border-style: solid;
-          border-width: 0 0px 40px 340px;
+          border-width: 0 0px 40px 700px;
           border-color: transparent transparent @light-grey transparent;
     }
     &__wrapper {
         border:1px solid @light-grey;
-        width: 840px;
+        width: 270%;
         position: relative;
-        left:-260px;
+        left:-85%;
     }
     &__subscr-type {
         background-color: @dark-blue;
@@ -288,23 +282,12 @@
           display: block;
           position: absolute;
           top:100%;
-          left:0;
+          left:50%;
+          margin-left: -350px;
           width: 0;
           height: 0;
           border-style: solid;
-          border-width: 40px 0px 0 160px;
-          border-color: @white transparent transparent transparent;
-    }
-    &::after {
-          content: "";
-          display: block;
-          position: absolute;
-          top:100%;
-          right:0;
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-width: 40px 160px 0 0px;
+          border-width: 40px 350px 0 350px;
           border-color: @white transparent transparent transparent;
     }
 }
