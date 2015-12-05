@@ -1,14 +1,13 @@
 .body-index {
-    
     .page-title {
-        margin:110px 410px 30px 100px;
+        margin:100px 0px 30px 100px;
+        width: 250px;
+        font-size: 40px;
 }
 
     .page-header {
-        .wrapper {
             background:url("../img/iphone-hand/iphone-hand-tablet@1x.png") no-repeat 50% 100%,
                 url("../img/background/background-tablet@1x.jpg") no-repeat 50% 0%;
-        }
 }
     .page-main {
     .wrapper {
@@ -20,28 +19,31 @@
 }
 }
 .download {
+    width: 350px;
     background-color: transparent;
     padding:25px 40px 0px;
-    margin:0px 320px 30px 0px;
+    margin:0px 320px 0px 0px;
         &__download-type {
         margin: 0 5px 20px;
     }
             &__text {
                 font-size:18px;
+                padding-bottom: 50px;
             }
 }
 .features {
-    background: #f2f2f2 url("../img/iphone-screen-tablet-3@1x.png") no-repeat 5% 100%;
+    background: #f2f2f2 url("../img/iphone-screen-tablet-3@1x.png") no-repeat 10% 100%;
     position: relative;
     padding-top: 20px;
     height: 160px;
     &__wrapper {
-        width: 350px;
-        float: right;
-        text-align: left;
+        width: 50%;
+        left: 45%;
+        position: relative;
+        text-align:left;
     }
     &::before {
-          border-width: 0 0px 60px 700px;
+          border-width: 0 0px 60px 1200px;
     }
     &__header {
         margin-bottom: 30px;
@@ -50,7 +52,7 @@
 
 .reviews-slider {
     &__wrapper {
-        width: 2100px;
+        width: 300vw;
     }
     &__header {
         margin-top: 50px;
@@ -68,12 +70,12 @@
         display: block;
     }
     &__item {
-        width: 700px;
+        width: 100vw;
         display: flex;
         flex-direction: column;
     }
     &__controls {
-        left:350px;
+        left:50%;
         margin-left:-50px;
     }
     &__link--current {
@@ -85,16 +87,16 @@
         display: table-cell;
         background-color: @white;
         text-align: left;
-        padding-left: 5px;
+        padding-left: 13px;
     }
     &__header-group th:first-child {
         visibility: hidden;
     }
     &::before {
-          border-width: 0 0px 60px 700px;
+          border-width: 0 0px 60px 1200px;
     }
     &__wrapper {
-        width: 620px;
+        width: 90%;
         position: static;
         margin: 0 auto;
     }
@@ -122,19 +124,23 @@
     }
     &__content--included {
             ::before {
-                    right:50px;
+                    left:50%;
+                    margin-left: -5px;
                 }
             ::after {
-                    right: 72px;
+                    left:50%;
+                    margin-left: -11px;
                 }
     }
     &__content--not-included {
         position: relative;
         ::before {
-                  right: 50px;
+                  left:50%;
+                  margin-left: -15px;
                   }
             ::after {
-                    right: 50px;
+                    left:50%;
+                    margin-left: -15px;
                     }
     }
     &__controls {
@@ -167,12 +173,18 @@
         width: 240px;
         margin: 0 auto;
     }
-    
     &::before {
-          border-width: 60px 0px 0 350px;
-    }
-    &::after {
-          border-width: 60px 350px 0 0px;
+          content: "";
+          display: block;
+          position: absolute;
+          top:100%;
+          left:50%;
+          margin-left: -600px;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 60px 600px 0 600px;
+          border-color: @white transparent transparent transparent;
     }
 }
 .map {
@@ -182,12 +194,10 @@
 
 .about {
     display: block;
-    .wrapper {
-        display: flex;
-        padding: 0;
-        margin: 0;
-        height: 400px;
-    }
+    display: flex;
+    padding: 0;
+    margin: 0;
+    height: 400px;
     &__logo {
         width: 47%;
         background:url(../img/watch.png) no-repeat 50% 50%;
@@ -218,6 +228,7 @@
     }
 }
 .main-footer {
+    background-color: @white;
     .links {
         display: block;
     }
