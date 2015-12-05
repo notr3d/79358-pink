@@ -64,7 +64,6 @@ input {
         margin: 50px 20px;
     }
     &[type=text] {
-        font-family: "Open Sans", "Verdana", "Tahoma", "Arial", sans-serif;
         width: 226px;
         padding: 15px 25px;
         font-size: 18px;
@@ -103,7 +102,6 @@ input {
         }
     }
     &[type=date] {
-        font-family: "Open Sans", "Verdana", "Tahoma", "Arial", sans-serif;
         padding: 15px 25px;
         font-size: 18px;
         color:@dark-blue;
@@ -130,7 +128,6 @@ input {
 
 }
 output {
-    font-family: "Open Sans", "Verdana", "Tahoma", "Arial", sans-serif;
     display: block;
     width: 226px;
     padding: 15px 25px;
@@ -200,43 +197,6 @@ label {
                 margin: 0 -5px;
             }
         }
-        .companion {
-            margin-bottom: 15px;
-            position: relative;
-                .delete-button {
-                    display: none;
-                }
-            input {
-                padding-right: 0;
-                width: 186px;
-                margin-left: 60px;
-            }
-            label {
-                padding: 25px 85px 15px;
-                font-size: 14px;
-            }
-            &__number {
-                position: absolute;
-                width: 60px;
-                height: 120px;
-                top: 5px;
-                left: 4px;
-                span {
-                    display: inline-block;
-                    text-align: center;
-                    height: 54px;
-                    width: 54px;
-                    line-height:60px;
-                    &:first-child {
-                        color: @pink;
-                    }
-                    &:last-child {
-                        border: 2px solid @grey;
-                        border-radius: 3px;
-                    }
-                }
-            }
-        }
     }
     &__achievments {
         label {
@@ -289,6 +249,43 @@ label {
         }
     }
 }
+.companion {
+    margin-bottom: 15px;
+    position: relative;
+        .delete-button {
+            display: none;
+        }
+    input {
+        padding-right: 0;
+        width: 186px;
+        margin-left: 60px;
+    }
+    label {
+        padding: 25px 85px 15px;
+        font-size: 14px;
+    }
+    &__number {
+        position: absolute;
+        width: 60px;
+        height: 120px;
+        top: 5px;
+        left: 4px;
+        span {
+            display: inline-block;
+            text-align: center;
+            height: 54px;
+            width: 54px;
+            line-height:60px;
+            &:first-child {
+                color: @pink;
+            }
+            &:last-child {
+                border: 2px solid @grey;
+                border-radius: 3px;
+            }
+        }
+    }
+}
 .image-preview {
     &__item {
         display: inline-block;
@@ -313,28 +310,9 @@ label {
         top: -15px;
         right: -15px;
         outline: none;
-        &:before {
-            content: "";
-            display: block;
-            width: 15px;
-            height: 2px;
-            background-color: @grey;
-            transform: rotate(-45deg);
-            position: relative;
-            top: 1px;
-            right: -4px;
-        }
-        &:after {
-            content: "";
-            display: block;
-            width: 15px;
-            height: 2px;
-            background-color: @grey;
-            transform: rotate(45deg);
-            position: relative;
-            top: -1px;
-            right: -4px;
-        }
+        font-size: 20px;
+        color:@grey;
+        cursor:pointer;
     }
     &__caption {
             font-size: 12px;

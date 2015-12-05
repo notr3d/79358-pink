@@ -1,0 +1,116 @@
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size:50px;
+    }
+
+    h2 {
+        font-size:50px;
+    }
+
+    .wrapper {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .page-logo {
+    }
+
+    .page-header {
+        &__nav-wrapper {
+            width: 1200px;
+        }
+    }
+
+    .main-nav {
+    position: relative;
+    width: 1200px;
+    &__list {
+        height: 110px;
+        border-bottom:1px solid #000101;
+        border-bottom: 1px solid #000101;
+        position: relative;
+        right: 0;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 50px;
+                height: 5px;
+                background-color: @white;
+                right: 15px;
+                top: 30px;
+                box-shadow:
+                    0px 10px 0px 0px @white,
+                    0px -10px 0px 0px @white;
+            }
+            &--hide {
+                display: none;
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 50px;
+                    height: 5px;
+                    background-color: @white;
+                    right: 15px;
+                    top: 30px;
+                    transform:rotate(45deg);
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 50px;
+                    height: 5px;
+                    background-color: @white;
+                    right: 15px;
+                    top: 30px;
+                    transform:rotate(-45deg);
+                }
+            }
+        &-container {
+            position: absolute;
+        }
+    }
+    &__link {
+        font-weight: bold;
+        font-size: 18px;
+        color: @white;
+        text-transform: uppercase;
+        text-align: center;
+        display:block;
+        padding:25px 0;
+        border-bottom:1px solid #000101;
+        border-top: 1px solid #485461;
+        background-color: @dark-blue;
+        width: 320px;
+        display: none;
+        }
+    }
+    .links {
+        .wrapper {
+            overflow: hidden;
+            display: flex;
+            .main-logo {
+                position: relative;
+                left: -40px;
+                top: 15px;
+            }
+            .social {
+                position: relative;
+                left: -90px;
+                top: 30px;
+            }
+            .main-footer__developer {
+                position: relative;
+                left: -40px;
+                top: 20px;
+            }
+        }
+    }
+    
+    @import "index-desktop.less";
+    @import "form-desktop.less";
+}
+
+

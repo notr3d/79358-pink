@@ -155,29 +155,6 @@ ul {
         text-align: center;
         margin: 0 auto;
     }
-    .social {
-        &__item {
-            display: inline-block;
-        }
-        &__link {
-            .hide-link-text;
-            display: block; 
-            width: 48px;
-            height: 48px;
-            border: 2px solid @grey;
-            border-radius: 50%;
-            margin: 0 12px 40px;
-            &--twitter {
-                background: url("../img/twitter.png") no-repeat center;
-            }
-            &--facebook {
-                background: url("../img/facebook.png") no-repeat center;
-            }
-            &--youtube {
-                background: url("../img/youtube.png") no-repeat center;
-            }
-        }
-    }
     &__developer {
         padding: 20px 0;
             a {
@@ -192,10 +169,32 @@ ul {
 
         }
 }
+.social {
+    &__item {
+        display: inline-block;
+    }
+    &__link {
+        .hide-link-text;
+        display: block; 
+        width: 48px;
+        height: 48px;
+        border: 2px solid @grey;
+        border-radius: 50%;
+        margin: 0 12px 40px;
+        &--twitter {
+            background: url("../img/twitter.png") no-repeat center;
+        }
+        &--facebook {
+            background: url("../img/facebook.png") no-repeat center;
+        }
+        &--youtube {
+            background: url("../img/youtube.png") no-repeat center;
+        }
+    }
+}
 
 @import "index.less";
 @import "form.less";
 
 @import "style-tablet.less";
-//@import "index-desktop.less";
-//@import "form-desktop.less";
+@import "style-desktop.less";
