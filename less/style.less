@@ -53,7 +53,6 @@ ul {
 }
 
 .wrapper {
-    //text-align:center;
     width: 320px;
     margin: 0 auto;
 }
@@ -66,6 +65,7 @@ ul {
     width: 120px;
     height: 70px;
     background: url(../img/page-logo.png) no-repeat center;
+    z-index: 1;
 }
 
 .page-title {
@@ -75,22 +75,21 @@ ul {
 .page-header {
     &__nav-wrapper {
         position: relative;
-        width: 320px;
-        background-color: rgba(0,0,0,.3);
+        background-color: rgba(0, 0, 0, 0.3);
+        border-bottom:1px solid @black;
+        height:70px;
     }
 }
 
 .main-nav {
     position: relative;
-    width: 320px;
-    &__list {
+    &__button {
         .hide-link-text;
-        display:block;
+        display:inline-block;
         height: 70px;
-        border-bottom:1px solid #000101;
-        border-bottom: 1px solid #000101;
-        position: relative;
-        right: 0;
+        width:80px;
+        position: absolute;
+        right: 0px;
             &::before {
                 content: '';
                 display: block;
@@ -104,9 +103,7 @@ ul {
                     0px 10px 0px 0px @white,
                     0px -10px 0px 0px @white;
             }
-            &--hide {
-                display: none;
-                &::before {
+                /*&::before {
                     content: '';
                     display: block;
                     position: absolute;
@@ -127,24 +124,24 @@ ul {
                     right: 15px;
                     top: 30px;
                     transform:rotate(-45deg);
-                }
-            }
-        &-container {
-            position: absolute;
+                }    */
         }
-    }
+    &__list {
+            position: absolute;
+            top:70px;
+        }
     &__link {
         font-weight: bold;
         font-size: 18px;
         color: @white;
         text-transform: uppercase;
         text-align: center;
-        display:block;
-        padding:25px 0;
+        padding:20px 0;
         border-bottom:1px solid #000101;
         border-top: 1px solid #485461;
         background-color: @dark-blue;
         width: 320px;
+        display: block;
         display: none;
     }
 }

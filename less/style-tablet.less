@@ -22,31 +22,27 @@
 
     .page-header {
         &__nav-wrapper {
-            width: 700px;
+            height: 110px;
         }
     }
 
     .main-nav {
-        width: 700px;
-        &__list {
+        &__button {
             height: 110px;
-                &::before {
-                    right: 40px;
-                    top: 55px;
-                }
-                &--hide {
-                    &::before {
-                        right:40px;
-                        top:45px;
-                    }
-                    &::after {
-                        right: 40px;
-                        top: 45px;
-                    }
-                }
+            width: 130px;
+            &::before {
+                right: 40px;
+                top: 50px;
+            }
+        }
+        &__list {
+            top: 110px;
         }
         &__link {
             width: 700px;
+            padding: 25px 0;
+            display: block;
+            display: none;
         }
     }
     .links {
