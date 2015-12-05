@@ -1,0 +1,224 @@
+.body-index {
+    
+    .page-title {
+        margin:110px 410px 30px 100px;
+}
+
+    .page-header {
+        .wrapper {
+            background:url("../img/iphone-hand/iphone-hand-tablet@1x.png") no-repeat 50% 100%,
+                url("../img/background/background-tablet@1x.jpg") no-repeat 50% 0%;
+        }
+}
+    .page-main {
+    .wrapper {
+        h2:last-of-type {
+            width: 340px; 
+            margin: 0 auto;
+        }
+    }
+}
+}
+.download {
+    background-color: transparent;
+    padding:25px 40px 0px;
+    margin:0px 320px 30px 0px;
+        &__download-type {
+        margin: 0 5px 20px;
+    }
+            &__text {
+                font-size:18px;
+            }
+}
+.features {
+    background: #f2f2f2 url("../img/iphone-screen-tablet-3@1x.png") no-repeat 5% 100%;
+    position: relative;
+    padding-top: 20px;
+    height: 160px;
+    &__wrapper {
+        width: 350px;
+        float: right;
+        text-align: left;
+    }
+    &::before {
+          border-width: 0 0px 60px 700px;
+    }
+    &__header {
+        margin-bottom: 30px;
+    }
+}
+
+.reviews-slider {
+    &__wrapper {
+        width: 2100px;
+    }
+    &__header {
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    &__text {
+        font-size: 18px;
+        padding: 0 40px;
+        order:-1;
+    }
+    &__descr {
+        color:@dark-grey;
+        font-size: 14px;
+        margin-top: 10px;
+        display: block;
+    }
+    &__item {
+        width: 700px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__controls {
+        left:350px;
+        margin-left:-50px;
+    }
+    &__link--current {
+        box-shadow:0 0 0 3px #283645;
+    }
+}
+.prices-slider {
+    &__descr {
+        display: table-cell;
+        background-color: @white;
+        text-align: left;
+        padding-left: 5px;
+    }
+    &__header-group th:first-child {
+        visibility: hidden;
+    }
+    &::before {
+          border-width: 0 0px 60px 700px;
+    }
+    &__wrapper {
+        width: 620px;
+        position: static;
+        margin: 0 auto;
+    }
+    &__subscr-type {
+        padding:20px 0;
+        &--hit {
+            &::before {
+                font-size: 12px;
+                padding: 5px 40px;
+                top:10px;
+                }
+            }
+    }
+    &__header {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    &__price {
+        font-size: 18px;
+    }
+    &__content {
+        font-size: 0px;
+        width: 25%;
+        padding: 32px 25px;
+    }
+    &__content--included {
+            ::before {
+                    right:50px;
+                }
+            ::after {
+                    right: 72px;
+                }
+    }
+    &__content--not-included {
+        position: relative;
+        ::before {
+                  right: 50px;
+                  }
+            ::after {
+                    right: 50px;
+                    }
+    }
+    &__controls {
+        width: 100px;
+        margin:40px auto 20px;
+    }
+    &__link {
+        .hide-link-text;
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin: 0 10px;
+        background-color: @grey;
+        border-radius: 50%;
+        &--current {
+            box-shadow: 0 0 0 3px @dark-blue;
+        }
+    }
+}
+.address {
+    &__header {
+        margin: 0 140px 40px;
+    }
+    &__container:not(:last-child){
+        display: inline-block;
+        margin: 40px;
+        margin-top: 0; 
+    }
+    &__container:last-child{
+        width: 240px;
+        margin: 0 auto;
+    }
+    
+    &::before {
+          border-width: 60px 0px 0 350px;
+    }
+    &::after {
+          border-width: 60px 350px 0 0px;
+    }
+}
+.map {
+    background: @light-grey url("../img/map.jpg") no-repeat 47% 55%;
+    height: 200px;
+}
+
+.about {
+    display: block;
+    .wrapper {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        height: 400px;
+    }
+    &__logo {
+        width: 47%;
+        background:url(../img/watch.png) no-repeat 50% 50%;
+    }
+    &__content {
+        width: 50%;
+        text-align: left;
+        padding-top: 100px;
+    }
+    &__header {
+        font-size: 30px;
+        font-weight: bolder;
+        line-height: 36px;
+        color:@black;
+        text-align: left;
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 25px;
+        color: @dark-grey;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    &__link {
+        font-size: 14px;
+        color:@pink;
+        text-decoration: underline;
+    }
+}
+.main-footer {
+    .links {
+        display: block;
+    }
+}

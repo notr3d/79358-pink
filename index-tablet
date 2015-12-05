@@ -1,66 +1,5 @@
-@import "index.less";
-@import "form.less";
-
-@black:#000;
-@white:#fff;
-@dark-blue:#1d2631;
-@dark-grey:#797f86;
-@grey:#bec2c7;
-@light-grey:#f2f2f2;
-@pink:#d22856;
-@green:#3dc644;
-@red:#f25b26;
-@dark-green:#2aab6d;
-
-* {
-    margin:0;
-    padding:0;
-}
-
-body {
-    font-family: "Open Sans", "Verdana", "Tahoma", "Arial", sans-serif;
-    background-color: #282828;
-    color:@black;
-}
-
-h1 {
-    font-size:24px;
-    font-weight:lighter;
-    color:@white;
-}
-
-h2 {
-    font-size:24px;
-    font-weight: lighter;
-    color:@dark-grey;
-}
-
-h3 {
-    font-size: 18px;
-    color:@black;
-}
-
-a {
-    text-decoration: none;
-    color:@black;
-}
-
-ul {
-    list-style:none;
-}
-
-.hide-link-text {
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.wrapper {
-    //text-align:center;
-    width: 320px;
-    margin: 0 auto;
-}
-
+@media screen and (min-width: 700px) {
+    
 .page-logo {
     .hide-link-text;
     display: block;
@@ -81,6 +20,41 @@ ul {
         width: 320px;
         background-color: rgba(0,0,0,.3);
     }
+}
+
+.download {
+    background-color: @dark-blue;
+    padding:25px 20px 30px;
+    &__link {
+        font-size:18px;
+        font-weight: bolder;
+        display: block;
+        padding:20px 0;
+        border: 3px solid @white;
+        color:@white;
+        border-radius: 50px;
+        margin:0 5px 30px;
+    }
+        &__download-type {
+        .hide-link-text;
+        vertical-align:middle;
+        margin-bottom: 25px;
+        width: 75px;
+        height: 75px;
+        display: inline-block;
+        background: url("../img/apple-logo.png") no-repeat center;
+            &--android {
+                background-image: url("../img/android-logo.png");
+            }
+            &--win-phone {
+                background-image: url("../img/win-logo.png");
+            }
+    }
+            &__text {
+                font-size:14px;
+                font-weight: lighter;
+                color:@white;
+            }
 }
 
 .main-nav {
@@ -108,20 +82,6 @@ ul {
                         0px 10px 0px 0px @white,
                         0px -10px 0px 0px @white;
                 }
-        position: relative;
-        right: 0;
-            &::before {
-                content: '';
-                display: block;
-                position: absolute;
-                width: 50px;
-                height: 5px;
-                background-color: @white;
-                right: 15px;
-                top: 30px;
-                box-shadow:
-                    0px 10px 0px 0px @white,
-                    0px -10px 0px 0px @white;
             }
             &--hide {
                 display: none;
@@ -168,7 +128,8 @@ ul {
     }
 }
 
-.main-footer {
+.page-main {
+    color:@black;
     .wrapper {
         background-color: @white;
         overflow: hidden;
@@ -238,28 +199,55 @@ ul {
         height: 6px;
         background-color: @grey;
         text-align: center;
-        margin: 0 auto;
+        z-index: 10;
+        margin:10px;
+        border-radius: 50%;
     }
-    .social {
-        &__item {
-            display: inline-block;
-        }
-        &__link {
-            .hide-link-text;
-            display: block;
-            width: 48px;
-            height: 48px;
-            border: 2px solid @grey;
-            border-radius: 50%;
-            margin: 0 12px 40px;
-            &--twitter {
-                background: url("../img/twitter.png") no-repeat center;
-            }
-            &--facebook {
-                background: url("../img/facebook.png") no-repeat center;
-            }
-            &--youtube {
-                background: url("../img/youtube.png") no-repeat center;
+    &__link--current {
+        box-shadow:0 0 0 3px #283645;
+    }
+}
+.prices-slider {
+    padding: 60px 0 40px;
+    background-color: @light-grey;
+    margin-top: 20px;
+    position: relative;
+    &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom:100%;
+          left:0;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 0px 40px 340px;
+          border-color: transparent transparent @light-grey transparent;
+    }
+    &__wrapper {
+        border:1px solid @light-grey;
+        width: 840px;
+        position: relative;
+        left:-260px;
+    }
+    &__subscr-type {
+        background-color: @dark-blue;
+        padding:25px 0;
+        &--hit {
+            position: relative;
+            overflow: hidden;
+            &::before {
+                content: 'ХИТ';
+                display: block;
+                position: absolute;
+                color:@white;
+                background-color: @pink;
+                transform:rotate(-45deg);
+                font-size: 14px;
+                padding: 7px 40px;
+                top:10px;
+                left: -30px;
+                }
             }
     }
     &__header {
@@ -351,18 +339,23 @@ ul {
             box-shadow: 0 0 0 3px @dark-blue;
         }
     }
-    &__developer {
-        padding: 20px 0;
-            a {
-                .hide-link-text;
-                display: inline-block;
-                vertical-align: middle;
-                width: 30px;
-                height: 40px;
-                background: url("../img/glukhanko.png") no-repeat center;
-
-            }
-
+}
+.address {
+    background-color: @white;
+    padding: 0 25px 50px;
+    color:@black;
+    position: relative;
+    &__header {
+        margin-bottom: 40px;
+    }
+    &__link {
+        display: block;
+        color:@pink;
+        font-size: 24px;
+        font-weight: lighter;
+        margin:0 5px 35px;
+        &:last-child {
+            margin: 0;
         }
     }
     &::before {
@@ -395,9 +388,21 @@ ul {
     height: 200px;
 }
 
-@import "index.less";
-@import "form.less";
+.index {
+    .wrapper {
+        text-align:center;
+    }
+    .page-title {
+        margin:30px 45px 320px;
+}
 
-@import "style-tablet.less";
-//@import "index-desktop.less";
-//@import "form-desktop.less";
+    .page-header {
+        .wrapper {
+            background:url("../img/hand.png") no-repeat 50% 45%,
+                url("../img/main-background.jpg") no-repeat 50% -30%;
+        }
+}
+    
+}
+
+}
