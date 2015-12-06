@@ -8,45 +8,54 @@
     </head>
     <body class="body-form">
         <header class="page-header">
-            <div class="wrapper">
-                <div class="page-header__nav-wrapper">
-                    <a href="#" class="page-logo">Pink</a>
-                    <nav class="main-nav">
-                        <a href="#" class="main-nav__button">Меню</a>
-                        <ul class="main-nav__list">
-                            <li class="main-nav__item"><a href="#" class="main-nav__link">Информация</a></li>
-                            <li class="main-nav__item"><a href="#" class="main-nav__link">Блог</a></li>
-                            <li class="main-nav__item"><a href="#" class="main-nav__link">Отзывы</a></li>
-                            <li class="main-nav__item"><a href="#" class="main-nav__link">Конкурс</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            <h1 class="page-title">Конкурс на самое безбашеное путешествие с Пинк</h1>
+            <div class="page-header__nav-wrapper">
+                <a href="#" class="page-logo">Pink</a>
+                <nav class="main-nav">
+                    <a href="#" class="main-nav__button">Меню</a>
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item"><a href="#" class="main-nav__link">Информация</a></li>
+                        <li class="main-nav__item"><a href="#" class="main-nav__link">Блог</a></li>
+                        <li class="main-nav__item"><a href="#" class="main-nav__link">Отзывы</a></li>
+                        <li class="main-nav__item"><a href="#" class="main-nav__link">Конкурс</a></li>
+                    </ul>
+                </nav>
             </div>
+        <h1 class="page-title">Конкурс на самое безбашеное путешествие с Пинк</h1>
         </header>
         <article class="page-main">
-            <div class="wrapper">
-                <form action="#" class="form">
-                    <h2 class="form__header">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<p> Пожалуйста, заполните форму ниже:</p></h2>
-                    <section class="form__name">
+            <form action="#" class="form">
+                <h2 class="form__header">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<p> Пожалуйста, заполните форму ниже:</p></h2>
+                <section class="form__name">
+                    <div class="wrapper">
                         <label class="form__name-first-name" for="first-name">Имя: *</label>
                         <input type="text" name="first-name" id="first-name" placeholder="Введите ваше имя" required>
                         <label class="form__name-last-name" for="last-name">Фамилия: *</label>
                         <input type="text" name="last-name" id="last-name" placeholder="Укажите фамилию" required>
                         <label class="form__name-middle-name" for="middle-name">Отчество: *</label>
-                        <input type="text" name="middle-name" id="middle-name" placeholder="Ну и отчество тоже">                       </section>
-                    <section class="form__app">
+                        <input type="text" name="middle-name" id="middle-name" placeholder="Ну и отчество тоже">
+                    </div>
+                </section>
+                <section class="form__app">
+                    <div class="wrapper">
                         <div class="fieldset">
                             <h3 class="form__app-header">С каким приложением путешествовали? *</h3>
-                            <input type="radio" name="system" id="system-ios" value="ios" checked required>
-                            <label class="form__app-ios" for="system-ios">Pink для iOS</label>
-                            <input type="radio" name="system" id="system-android" value="android" required>
-                            <label class="form__app-android" for="system-android">Pink для Android</label>
-                            <input type="radio" name="system" id="system-win-phone" value="win-phone" required>
-                            <label class="form__app-win-phone" for="system-win-phone">Windows Phone</label>
-                        </div>    
-                    </section>
-                    <section class="form__vacation">
+                            <div class="container">
+                                <input type="radio" name="system" id="system-ios" value="ios" checked required>
+                                <label class="form__app-ios" for="system-ios">Pink для iOS</label>    
+                            </div>
+                            <div class="container">
+                                <input type="radio" name="system" id="system-android" value="android" required>
+                                <label class="form__app-android" for="system-android">Pink для Android</label>    
+                            </div>
+                            <div class="container">
+                                <input type="radio" name="system" id="system-win-phone" value="win-phone" required>
+                                <label class="form__app-win-phone" for="system-win-phone">Windows Phone</label>    
+                            </div>
+                        </div> 
+                    </div>   
+                </section>
+                <section class="form__vacation">
+                    <div class="wrapper">
                         <div class="fieldset">
                             <h3 class="form__vacation-header">Когда вы путешествовали? *</h3>
                             <div class="container">
@@ -64,42 +73,49 @@
                             <label class="form__vacation-return">Дата возвращения</label>
                             </div>
                         </div>
-                    </section>
-                    <section class="form__companions">
-                        <div class="fieldset">
-                            <h3>Количество попутчиков *</h3>
-                            <input name="companion-count-minus" id="companion-count-minus" type="button" value="-">
-                            <input type="text" name="companion-count" id="companion-count" placeholder="2 чел" required>
-                            <input type="button" name="companion-count-plus" id="companion-count-plus" value="+">
-                            <div class="hr"></div>
-                            <div class="companion">
-                                <div class="companion__info">
-                                   <div class="companion__number">
-                                       <span>№</span>
-                                       <span>1</span>
-                                   </div>
-                                    <label class="companion__info-name" for="companion-name-1">Имя: *</label>
-                                    <input type="text" name="companion-name" id="companion-name-1" placeholder="Введите ваше имя" required>
-                                    <label class="companion__info-alias" for="companion-alias-1">Прозвище:</label>
-                                    <input type="text" name="companion-alias" id="companion-alias-1" placeholder="Ну как же без этого!">
-                                    <a href=# class="delete-button">Удалить</a>
-                                </div>
+                    </div>    
+                </section>
+                <section class="form__companions">
+                    <div class="wrapper">
+                    <div class="fieldset">
+                        <h3>Количество попутчиков *</h3>
+                            <div class="container">
+                                <input name="companion-count-minus" id="companion-count-minus" type="button" value="-">
+                                <input type="text" name="companion-count" id="companion-count" placeholder="2 чел" required>
+                                <input type="button" name="companion-count-plus" id="companion-count-plus" value="+">
                             </div>
-                            <div class="companion">
-                                <div class="companion__info">
-                                   <div class="companion__number">
-                                       <span>№</span>
-                                       <span>2</span>
-                                   </div>
-                                    <label class="companion__info-name" for="companion-name-2">Имя: *</label>
-                                    <input type="text" name="companion-name" id="companion-name  companion-name-2" placeholder="Введите ваше имя" required>
-                                    <label class="companion__info-alias" for="companion-alias-2">Прозвище:</label>
-                                    <input type="text" name="companion-alias" id="companion-alias-2" placeholder="Ну как же без этого!">
-                                    <a href=# class="delete-button">Удалить</a>
-                                </div>
+                        
+                        <div class="hr"></div>
+                        <div class="companion">
+                            <div class="companion__info">
+                               <div class="companion__number">
+                                   <span>№</span>
+                                   <span>1</span>
+                               </div>
+                                <label class="companion__info-name" for="companion-name-1">Имя: *</label>
+                                <input type="text" name="companion-name" id="companion-name-1" placeholder="Введите ваше имя" required>
+                                <label class="companion__info-alias" for="companion-alias-1">Прозвище:</label>
+                                <input type="text" name="companion-alias" id="companion-alias-1" placeholder="Ну как же без этого!">
+                                <a href=# class="delete-button">Удалить</a>
                             </div>
-                    </section>
-                    <section class="form__achievments">
+                        </div>
+                        <div class="companion">
+                            <div class="companion__info">
+                               <div class="companion__number">
+                                   <span>№</span>
+                                   <span>2</span>
+                               </div>
+                                <label class="companion__info-name" for="companion-name-2">Имя: *</label>
+                                <input type="text" name="companion-name" id="companion-name  companion-name-2" placeholder="Введите ваше имя" required>
+                                <label class="companion__info-alias" for="companion-alias-2">Прозвище:</label>
+                                <input type="text" name="companion-alias" id="companion-alias-2" placeholder="Ну как же без этого!">
+                                <a href=# class="delete-button">Удалить</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="form__achievments">
+                    <div class="wrapper">
                         <div class="fieldset">
                             <h3>Ваши безбашенные достижения в путешествии</h3>
                             <input type="checkbox" name="achievment" id="achievment-1" checked>
@@ -115,8 +131,10 @@
                             <input type="checkbox" name="achievment" id="achievment-6">
                             <label class="form__achievments-achievmet" for="achievment-6">Разгромил отель</label>
                         </div>
-                    </section>
-                    <section class="form__fotos">
+                    </div>
+                </section>
+                <section class="form__fotos">
+                    <div class="wrapper">
                         <div class="fieldset">
                             <h3>Ваши фотографии из поездки *</h3>
                             <div class="upload-button">
@@ -166,15 +184,15 @@
                                 </figure>
                             </div>
                         </div>
-                    </section>
-                    <div class="container">
-                        <input type="submit" name="submit" id="submit" value="Отправить форму">
-                        <p class="form__descr">
-                            <span>*</span> — обязательные поля
-                        </p>
                     </div>
-                </form>
-            </div>
+                </section>
+                <div class="container">
+                    <input type="submit" name="submit" id="submit" value="Отправить форму">
+                    <p class="form__descr">
+                        <span>*</span> — обязательные поля
+                    </p>
+                </div>
+            </form>
         </article>
         <footer class="main-footer">
             <div class="links">

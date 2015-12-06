@@ -17,6 +17,7 @@
     border-radius: 3px;
     overflow: hidden;
     position: relative;
+    width: 280px;
     input {
         display: block;
         width: 280px;
@@ -35,17 +36,6 @@
         left: 56px;
     }
 }
-section {
-    padding:50px 20px;
-    h3 {
-        color: @pink;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 14px;
-        margin-bottom: 40px;
-        font-weight: normal;
-    }
-}
 input {
     font-family: "Open Sans", "Verdana", "Tahoma", "Arial", sans-serif;
     &[type=submit] {
@@ -58,7 +48,8 @@ input {
         outline: none;
         border:none;
         border-radius: 3px;
-        margin: 50px 20px;
+        margin: 50px auto;
+        display: block;
     }
     &[type=text] {
         width: 226px;
@@ -149,11 +140,23 @@ label {
     margin: 45px 0 30px;
 }
 .form {
+    section {
+        padding:50px 20px;
+        h3 {
+            color: @pink;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 40px;
+            font-weight: normal;
+        }
+    }
     &__header {
         margin:0px 20px;
         font-size: 14px;
+        line-height: 30px;
         font-weight: normal;
-        color:@dark-grey;
+        color:@black;
         text-align: center;
         p {
             display: none;
@@ -167,7 +170,7 @@ label {
             margin: 0;
             vertical-align: top;
             padding: 10px;
-            min-width: 150px;
+            width: 200px;
             color: @dark-blue;
             text-transform: none;
         }
@@ -198,7 +201,7 @@ label {
     &__achievments {
         label {
             display: inline-block;
-            width: 190px;
+            width: 220px;
             text-transform: none;
             color: @dark-grey;
            margin-left: 20px;
@@ -321,12 +324,9 @@ label {
     top: 150px;
     left: 50%;
     margin-left: -160px;
-    display: none;
-    .wrapper {    
+    display: none;   
     background-color: @white;
     padding: 50px 0px;
-
-    }
     &__header {
         font-size: 18px;
         color: @black;
