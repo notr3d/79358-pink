@@ -1,30 +1,39 @@
 .social {
-    &__item {
-        display: inline-block;
+    @media @mobile {
+        &__list {
+            margin: 0;
+            padding: 0;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+
+        }
+        &__link {
+            .hide-link-text;
+            display: inline-block;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: @white;
+            border: 3px solid @light-grey;
+            margin: 5px;
+            &--twitter {
+                background: url(../img/twitter.png) no-repeat center;
+            }
+            &--facebook {
+                background: url(../img/facebook.png) no-repeat center;
+            }
+            &--youtube {
+                background: url(../img/youtube.png) no-repeat center;
+            }
+        }
     }
-    &__link {
-        .hide-link-text;
-        display: block; 
-        width: 48px;
-        height: 48px;
-        border: 2px solid @grey;
-        border-radius: 50%;
-        margin: 0 12px 40px;
-        &--twitter {
-            background: url("../img/twitter.png") no-repeat center;
-        }
-        &--facebook {
-            background: url("../img/facebook.png") no-repeat center;
-        }
-        &--youtube {
-            background: url("../img/youtube.png") no-repeat center;
-        }
+    @media @tablet {
+        
     }
-}
-@media screen and (min-width: 700px) {
-   .social {
-                position: relative;
-                left: -90px;
-                top: 30px;
-            } 
+    @media @desktop {
+        
+    }    
 }

@@ -1,0 +1,49 @@
+.submit {
+    @media @mobile {
+        &__button {
+            display: block;
+            height: 60px;
+            width: 280px;
+            margin: 0 auto;
+            background-color: @dark-green;
+            border-radius: 3px;
+            border:none;
+            color:@white;
+            font-weight: bold;
+        }
+        &__descr {
+            font-size: 14px;
+            margin: 0 auto;
+            width: 200px;
+            height: 60px;
+            line-height: 60px;
+            span {
+                &:first-child {
+                    color:@pink;
+                }
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+    @media @tablet {
+        &__button {
+            display: inline-block;    
+        }
+        &__descr {
+            display: inline-block;
+            float: right;
+            width: auto;
+        }
+    }
+    @media @desktop {
+        &__descr {
+            span {
+                &:last-child {
+                    display: inline;
+                }
+            }
+        }
+    }    
+}

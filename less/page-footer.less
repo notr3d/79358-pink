@@ -1,0 +1,23 @@
+.page-footer {
+    @media @mobile {
+        &__wrapper {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+        }
+    }
+    @media @tablet {
+        &__wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    @media @desktop {
+        width:1200px;
+        margin: 0 auto;
+    }    
+}

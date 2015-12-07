@@ -3,228 +3,167 @@
     <head>
         <meta charset="utf-8">
         <title>Регистрация</title>
-        <link rel="stylesheet" href="css/style.css">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/style.css">        
     </head>
-    <body class="body-form">
-        <header class="page-header">
-            <div class="page-header__nav-wrapper">
-                <a href="#" class="page-logo">Pink</a>
-                <nav class="main-nav">
-                    <a href="#" class="main-nav__button">Меню</a>
-                    <ul class="main-nav__list">
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">Информация</a></li>
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">Блог</a></li>
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">Отзывы</a></li>
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">Конкурс</a></li>
+    <body class="page-form">
+         <header class="page-header">
+             <div class="page-nav">
+                 <div class="page-nav__wrapper">
+                     <a href="#" class="page-logo">Pink</a>
+                     <button class="page-nav__button">&times;</button>
+                     <ul class="page-nav__list">
+                             <li class="page-nav__item"><a href="#" class="page-nav__link">Информация</a></li>
+                             <li class="page-nav__item"><a href="#" class="page-nav__link">Блог</a></li>
+                             <li class="page-nav__item"><a href="#" class="page-nav__link">Отзывы</a></li>
+                             <li class="page-nav__item"><a href="#" class="page-nav__link">Конкурс</a></li>
                     </ul>
-                </nav>
-            </div>
-        <h1 class="page-title">Конкурс на самое безбашеное путешествие с Пинк</h1>
-        </header>
-        <article class="page-main">
-            <form action="#" class="form">
-                <h2 class="form__header">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<p> Пожалуйста, заполните форму ниже:</p></h2>
-                <section class="form__name">
-                    <div class="wrapper">
-                        <label class="form__name-first-name" for="first-name">Имя: *</label>
-                        <input type="text" name="first-name" id="first-name" placeholder="Введите ваше имя" required>
-                        <label class="form__name-last-name" for="last-name">Фамилия: *</label>
-                        <input type="text" name="last-name" id="last-name" placeholder="Укажите фамилию" required>
-                        <label class="form__name-middle-name" for="middle-name">Отчество: *</label>
-                        <input type="text" name="middle-name" id="middle-name" placeholder="Ну и отчество тоже">
-                    </div>
-                </section>
-                <section class="form__app">
-                    <div class="wrapper">
-                        <div class="fieldset">
-                            <h3 class="form__app-header">С каким приложением путешествовали? *</h3>
-                            <div class="container">
-                                <input type="radio" name="system" id="system-ios" value="ios" checked required>
-                                <label class="form__app-ios" for="system-ios">Pink для iOS</label>    
-                            </div>
-                            <div class="container">
-                                <input type="radio" name="system" id="system-android" value="android" required>
-                                <label class="form__app-android" for="system-android">Pink для Android</label>    
-                            </div>
-                            <div class="container">
-                                <input type="radio" name="system" id="system-win-phone" value="win-phone" required>
-                                <label class="form__app-win-phone" for="system-win-phone">Windows Phone</label>    
-                            </div>
-                        </div> 
-                    </div>   
-                </section>
-                <section class="form__vacation">
-                    <div class="wrapper">
-                        <div class="fieldset">
-                            <h3 class="form__vacation-header">Когда вы путешествовали? *</h3>
-                            <div class="container">
-                                <input type="date" name="vacation-date" id="vacation-date" value="2015-04-01" required>
-                                <label class="form__vacation-date" for="vacation-date">Дата выезда</label>
-                            </div>
-                            <div class="container">
-                                <input type="button" name="vacation-duration-minus" id="vacation-duration-minus" value="-">
-                                <input type="text" name="vacation-duration" id="vacation-duration" value="10 дней" required>
-                                <input type="button" name="vacation-duration-plus" id="vacation-duration-plus" value="+">
-                                <label class="form__vacation-duration"  for="vacation-duration">Продолжительность</label>
-                            </div>
-                            <div class="container">
-                                <output>11 апреля 2015</output>
-                            <label class="form__vacation-return">Дата возвращения</label>
-                            </div>
-                        </div>
-                    </div>    
-                </section>
-                <section class="form__companions">
-                    <div class="wrapper">
-                    <div class="fieldset">
-                        <h3>Количество попутчиков *</h3>
-                            <div class="container">
-                                <input name="companion-count-minus" id="companion-count-minus" type="button" value="-">
-                                <input type="text" name="companion-count" id="companion-count" placeholder="2 чел" required>
-                                <input type="button" name="companion-count-plus" id="companion-count-plus" value="+">
-                            </div>
-                        
-                        <div class="hr"></div>
-                        <div class="companion">
-                            <div class="companion__info">
-                               <div class="companion__number">
-                                   <span>№</span>
-                                   <span>1</span>
-                               </div>
-                                <label class="companion__info-name" for="companion-name-1">Имя: *</label>
-                                <input type="text" name="companion-name" id="companion-name-1" placeholder="Введите ваше имя" required>
-                                <label class="companion__info-alias" for="companion-alias-1">Прозвище:</label>
-                                <input type="text" name="companion-alias" id="companion-alias-1" placeholder="Ну как же без этого!">
-                                <a href=# class="delete-button">Удалить</a>
-                            </div>
-                        </div>
-                        <div class="companion">
-                            <div class="companion__info">
-                               <div class="companion__number">
-                                   <span>№</span>
-                                   <span>2</span>
-                               </div>
-                                <label class="companion__info-name" for="companion-name-2">Имя: *</label>
-                                <input type="text" name="companion-name" id="companion-name  companion-name-2" placeholder="Введите ваше имя" required>
-                                <label class="companion__info-alias" for="companion-alias-2">Прозвище:</label>
-                                <input type="text" name="companion-alias" id="companion-alias-2" placeholder="Ну как же без этого!">
-                                <a href=# class="delete-button">Удалить</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="form__achievments">
-                    <div class="wrapper">
-                        <div class="fieldset">
-                            <h3>Ваши безбашенные достижения в путешествии</h3>
-                            <input type="checkbox" name="achievment" id="achievment-1" checked>
-                            <label class="form__achievments-achievmet" for="achievment-1">Сделал селфи с акулой</label>
-                            <input type="checkbox" name="achievment" id="achievment-2" checked>
-                            <label class="form__achievments-achievmet" for="achievment-2">Обгорел на пляже</label>
-                            <input type="checkbox" name="achievment" id="achievment-3">
-                            <label class="form__achievments-achievmet" for="achievment-3">Видел Чака Норриса</label>
-                            <input type="checkbox" name="achievment" id="achievment-4">
-                            <label class="form__achievments-achievmet" for="achievment-4">Накупил сувениров</label>
-                            <input type="checkbox" name="achievment" id="achievment-5" checked>
-                            <label class="form__achievments-achievmet" for="achievment-5">Удержал башню</label>
-                            <input type="checkbox" name="achievment" id="achievment-6">
-                            <label class="form__achievments-achievmet" for="achievment-6">Разгромил отель</label>
-                        </div>
-                    </div>
-                </section>
-                <section class="form__fotos">
-                    <div class="wrapper">
-                        <div class="fieldset">
-                            <h3>Ваши фотографии из поездки *</h3>
-                            <div class="upload-button">
-                                <input type="file" name="photo" id="photo" value="Загрузить фото" required>
-                            </div>
-                            <div class="hr"></div>
-                            <div class="image-preview">
-                                <figure class="image-preview__item">
-                                    <img src="" alt="img-1.jpg" class="image-preview__img">
-                                    <figcaption class="image-preview__caption">IMG-1.JPG</figcaption>
-                                    <button class="image-preview__delete-image">&times;</button>
-                                </figure>
-                                <figure class="image-preview__item">
-                                    <img src="" alt="img-2.jpg" class="image-preview__img">
-                                    <figcaption class="image-preview__caption">IMG-2.JPG</figcaption>
-                                    <button class="image-preview__delete-image">&times;</button>
-                                </figure>
-                                <figure class="image-preview__item">
-                                    <img src="" alt="img-3.jpg" class="image-preview__img">
-                                    <figcaption class="image-preview__caption">IMG-3.JPG</figcaption>
-                                    <button class="image-preview__delete-image">&times;</button>
-                                </figure>
-                                <figure class="image-preview__item">
-                                    <img src="" alt="img-4.jpg" class="image-preview__img">
-                                    <figcaption class="image-preview__caption">IMG-4.JPG</figcaption>
-                                    <button class="image-preview__delete-image">&times;</button>
-                                </figure>
-                                <figure class="image-preview__item">
-                                    <img src="" alt="img-5.jpg" class="image-preview__img">
-                                    <figcaption class="image-preview__caption">IMG-5.JPG</figcaption>
-                                    <button class="image-preview__delete-image">&times;</button>
-                                </figure>
-                                <figure class="image-preview__item">
-                                    <img src="" alt="img-6.jpg" class="image-preview__img">
-                                    <figcaption class="image-preview__caption">IMG-6.JPG</figcaption>
-                                    <button class="image-preview__delete-image">&times;</button>
-                                </figure>
-                                <figure class="image-preview__item">
-                                    <img src="" alt="img-7.jpg" class="image-preview__img">
-                                    <figcaption class="image-preview__caption">IMG-7.JPG</figcaption>
-                                    <button class="image-preview__delete-image">&times;</button>
-                                </figure>
-                                <figure class="image-preview__item">
-                                    <img src="" alt="img-8.jpg" class="image-preview__img">
-                                    <figcaption class="image-preview__caption">IMG-8.JPG</figcaption>
-                                    <button class="image-preview__delete-image">&times;</button>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div class="container">
-                    <input type="submit" name="submit" id="submit" value="Отправить форму">
-                    <p class="form__descr">
-                        <span>*</span> — обязательные поля
-                    </p>
                 </div>
-            </form>
-        </article>
-        <footer class="main-footer">
-            <div class="links">
-                <div class="wrapper">
-                    <div class="main-logo"></div>
-                    <div class="social">
-                        <ul class="social__list">
-                            <li class="social__item"><a href="#" class="social__link social__link--twitter">twitter.com</a></li>
-                            <li class="social__item"><a href="#" class="social__link social__link--facebook">facebook.com</a></li>
-                            <li class="social__item"><a href="#" class="social__link social__link--youtube">youtube.com</a></li>
-                        </ul>
-                    </div>
-                    <div class="main-footer__developer">Разработано <a href="#">http://glukhanko.ru/</a></div>
-                </div>
-            </div>
-        </footer>
-        <div class="popup popup--success">
-           <div class="wrapper">
-                <h2 class="popup__header">Ваша заявка отправлена</h2>
-                <p class="popup__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
-                
-            </div>
-            <div class="container">    
-                    <a href="#" class="popup__link">Закрыть окно</a>
-                </div>
-        </div>
-        <!--<div class="popup popup--failure">
-           <div class="wrapper">
-                <h2 class="popup__header">Что-то пошло не так!</h2>
-                <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-                <a href="#" class="popup__link">ОК</a>
-            </div>
-        </div>-->
+             </div>
+             <div class="page-title">
+                 <h1 class="page-title__header">Конкурс на самое безбашенное путешествие с Пинк</h1>    
+             </div>
+         </header>
+         <article class="form">
+             <h2 class="form__header">
+                 Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span> Пожалуйста, заполните форму ниже:</span>
+             </h2>
+             <section class="name">
+                 <div class="name__item">
+                     <label for="firstname" class="name__label">ИМЯ *</label>
+                     <input type="text" name="firstname" class="name__input" id="firstname" placeholder="Введите ваше имя" required>
+                 </div> 
+                 <div class="name__item">
+                     <label for="lastname" class="name__label">ФАМИЛИЯ *</label>
+                     <input type="text" name="lastname" class="name__input" id="lastname" placeholder="Укажите фамилию" required>
+                 </div> 
+                 <div class="name__item">
+                     <label for="middlename" class="name__label">ОТЧЕСТВО</label>
+                     <input type="text" name="middlename"  class="name__input" id="middlename" placeholder="Ну и отчество тоже">
+                 </div>
+             </section>
+             <section class="app">
+                 <div class="app__wrapper">
+                     <h3 class="app__header">С каким приложением путешествовали? *</h3>
+                     <div class="app__item">
+                         <input type="radio" name="app" class="app__radio" id="ios" required>
+                         <label for="ios" class="app__label">Pink для iOS</label>
+                     </div>
+                     <div class="app__item">
+                         <input type="radio" name="app" class="app__radio" id="android" required>
+                         <label for="android" class="app__label">Pink для Android</label>
+                     </div>
+                     <div class="app__item">
+                         <input type="radio" name="app" class="app__radio" id="windows" required>
+                         <label for="windows" class="app__label">Pink для Windows Phone</label>
+                     </div>
+                 </div>
+             </section>
+             <section class="vacation">
+                 <div class="vacation__wrapper">
+                      <h3 class="app__header">Когда вы путешествовали? *</h3>
+                     <div class="vacation__item">
+                         <input type="date" name="vacation-start" class="vacation__start" id="vacation__start" value="2015-04-01" required>
+                         <label for="vacation__start" class="vacation__label">ДАТА ВЫЕЗДА</label>    
+                     </div>
+                     <div class="vacation__item">
+                         <input type="button" name="vacation__duration-minus" class="vacation__duration-minus" id="vacation__duration-minus" value="-">
+                         <input type="text" name="vacation__duration-count" class="vacation__duration-count" id="vacation__duration-count" value="10 дней" required>        
+                         <input type="button" name="vacation__duration-plus" class="vacation__duration-plus" id="vacation__duration-plus" value="+">
+                         <label for="vacation__duration-count">ПРОДОЛЖИТЕЛЬНОСТЬ</label>        
+                     </div>
+                     <div class="vacation__item">
+                         <input type="date" name="vacation__end" class="vacation__end" id="vacation__end" value="2015-04-11" disabled>
+                         <label for="vacation__end" class="vacation__label">Дата Возвращения</label>
+                     </div>
+                 </div>
+             </section>
+             <section class="companions">
+                 <div class="companions__wrapper">
+                     <h3>КОЛИЧЕСТВО ПОПУТЧИКОВ *</h3>
+                     <div class="companions__item">
+                         <input type="button" name="companions__minus" class="companions__minus" id="companions__minus" value="-">
+                         <input type="text" name="companions-count" class="companions-count" id="companions-count" value="2 чел" required>        
+                         <input type="button" name="companions__plus" class="companions__plus" id="companions__plus" value="+">
+                     </div>
+                     <div class="companion">
+                         <div class="companion__number">
+                         <label>№</label>
+                         <div>1</div>    
+                         </div>
+                         <div class="companion__name">
+                         <label for="companion__name">ИМЯ: *</label>
+                         <input type="text" name="companion__name" class="companion__name" id="companion__name" placeholder="Введите ваше имя" required>    
+                         </div>
+                         <div class="companion__alias">
+                         <label for="companion__alias">Прозвище:</label>
+                         <input type="text" name="companion__alias" class="companion__alias" id="companion__alias" placeholder="Ну как же без этого!" required>    
+                         </div>
+                         <button class="companion__delete">УДАЛИТЬ</button>     
+                     </div>
+                 </div>
+             </section>
+             <section class="achievments">
+                 <div class="achievments__wrapper">
+                     <h3>Ваши безбашенные достижения в путешествии</h3>
+                     <div class="achievments__item">
+                         <input type="checkbox" name="achievment" class="achievments__achievment" id="achievment-1" value="achievment-1" checked>
+                         <label for="achievment-1">Сделал селфи с акулой</label>
+                     </div>
+                     <div class="achievments__item">
+                         <input type="checkbox" name="achievment" class="achievments__achievment" id="achievment-2" value="achievment-3">
+                         <label for="achievment-2">Обгорел на пляже</label>
+                     </div>
+                     <div class="achievments__item">
+                         <input type="checkbox" name="achievment" class="achievments__achievment" id="achievment-3" value="achievment-3">
+                         <label for="achievment-3">Видел Чака Норриса</label>
+                     </div>
+                     <div class="achievments__item">
+                         <input type="checkbox" name="achievment" class="achievments__achievment" id="achievment-4" value="achievment-4">
+                         <label for="achievment-4">Накупил сувениров</label>
+                     </div>
+                     <div class="achievments__item">
+                         <input type="checkbox" name="achievment" class="achievments__achievment" id="achievment-5" value="achievment-5">
+                         <label for="achievment-5">Удержал башню</label>
+                     </div>
+                     <div class="achievments__item">
+                         <input type="checkbox" name="achievment" class="achievments__achievment" id="achievment-6" value="achievment-6">
+                         <label for="achievment-6">Разгромил отель</label>
+                     </div>                     
+                 </div>                 
+             </section>
+             <section class="photo">
+                 <div class="photo__wrapper">
+                     <h3 class="photo__header">ВАШИ ФОТОГРАФИИ ИЗ ПОЕЗДКИ *</h3>
+                     <div class="photo__upload">
+                         <input type="file" name="file" id="file" value="file" multiple>
+                     </div>
+                     <div class="photo__preview">
+                         <figure class="photo__item">
+                             <img src="" alt="">
+                             <figcaption></figcaption>
+                             <button>&times;</button>
+                         </figure>
+                     </div>
+                 </div>
+             </section>
+             <section class="submit">
+                 <input type="submit" name="submit" class="submit__button" id="submit__button" value="ОТПРАВИТЬ ФОРМУ">
+                 <div class="submit__descr"><span>* </span>— ОБЯЗАТЕЛЬНЫЕ <span>ДЛЯ ЗАПОЛНЕНИЯ</span> ПОЛЯ</div>    
+             </section>    
+         </article>
+         <footer class="page-footer">
+             <div class="page-footer__wrapper">
+                 <a href="#" class="page-logo">Pink</a>
+                 <div class="social">
+                     <ul class="social__list">
+                         <li class="social__item"><a href="#" class="social__link  social__link--twitter">Twitter</a></li>
+                         <li class="social__item"><a href="#" class="social__link  social__link--facebook">Facebook</a></li>
+                         <li class="social__item"><a href="#" class="social__link  social__link--youtube">Youtube</a></li>
+                     </ul>
+                 </div>
+                 <a href="#" class="copyright">Разработано</a>
+             </div>
+         </footer>     
     </body>
 </html>

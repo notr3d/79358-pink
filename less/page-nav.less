@@ -1,0 +1,105 @@
+.page-nav {
+    @media @mobile {
+        background-color: rgba(0,0,0,0.3);
+        height: 70px;
+        position: relative;
+        &__list {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top:70px;
+            width: 100%;
+        }
+        &__item {
+
+        }
+        &__link {
+            display: block;
+            color: @white;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 20px 0;
+            background-color: @blue;
+            font-weight: bold;
+            border-bottom: 1px solid @black;
+            border-top: 1px solid @light-blue;
+            display: none;
+        }
+        &__button {
+            color:transparent;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 90px;
+            height: 70px;
+            background-color: transparent;
+            border:none;
+            outline:none;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 50px;
+                height: 4px;
+                background-color: @white;
+                right: 20px;
+                top: 33px;
+                box-shadow:
+                    0px 10px 0px 0px @white,
+                    0px -10px 0px 0px @white;
+            }
+        }
+    }
+    @media @tablet {
+        height:110px;
+        &__button {
+            height: 110px;
+            width: 130px;
+            &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 4px;
+            background-color: @white;
+            right: 40px;
+            top: 50px;
+            box-shadow:
+                0px 10px 0px 0px @white,
+                0px -10px 0px 0px @white;
+        }
+        }
+    }
+    @media @desktop {
+        &__wrapper {
+            margin: 0 auto;
+            width: 1200px;
+        }
+        &__list {
+            top: -120px;
+            right: 0px;    
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            position: relative;
+            flex-direction:row-reverse;
+        }
+        &__link {
+            display: inline-block;
+            background-color: transparent;
+            vertical-align: middle;
+            line-height: 72px;
+            border:none;
+            margin-left: 70px;
+            font-weight: normal;
+            font-size: 18px;
+            height: 72px;
+        }
+        &__button {
+            display: none;
+        }
+    }    
+}
