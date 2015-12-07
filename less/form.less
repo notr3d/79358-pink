@@ -1,3 +1,144 @@
+.main-logo {
+    background: url(../img/main-logo.png) no-repeat center;
+    width: 160px;
+    height: 80px;
+    margin: 0 auto 40px;
+}
+/*.page-header {
+    background: url("../img/main-background.jpg") no-repeat 50% 20%;
+}*/
+.page-title {
+    text-align: center;
+}
+.upload-button {
+    outline:none;
+    background-color: @white;
+    border:2px solid @grey;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    width: 280px;
+    input {
+        display: block;
+        width: 280px;
+        height: 60px;
+        opacity: 0;
+        overflow: hidden;
+    }
+    &::before {
+        content: 'Загрузить фото';
+        font-size: 18px;
+        color:@dark-blue;
+        text-transform: uppercase;
+        font-weight: bolder;
+        position: absolute;
+        top: 18px;
+        left: 56px;
+    }
+}
+input {
+    font-family: "Open Sans", "Verdana", "Tahoma", "Arial", sans-serif;
+    &[type=submit] {
+        padding: 25px 50px;
+        background-color: @dark-green;
+        color: @white;
+        font-size: 18px;
+        text-transform: uppercase;
+        box-shadow: none;
+        outline: none;
+        border:none;
+        border-radius: 3px;
+        margin: 50px auto;
+        display: block;
+    }
+    &[type=text] {
+        width: 226px;
+        padding: 15px 25px;
+        font-size: 18px;
+        color:@dark-blue;
+        outline:none;
+        border:2px solid @grey;
+        border-radius: 3px;
+    }
+    &[type=radio] {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+        visibility: hidden;
+        margin-bottom: 40px;
+        &::before {
+            content:"";
+            display: block;
+            visibility: visible;
+            background-color: @white;
+            border: 2px solid @grey;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+        }
+        &:checked::after {
+            content:"";
+            display: block;
+            visibility: visible;
+            background-color: @pink;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            top:-27px;
+            left: 12px;
+            position: relative;
+        }
+    }
+    &[type=date] {
+        padding: 15px 25px;
+        font-size: 18px;
+        color:@dark-blue;
+        outline:none;
+        border:2px solid @grey;
+        border-radius: 3px;
+        width: 226px;
+    }
+    &[type=button] {
+        .hide-link-text;
+        cursor:pointer;
+        outline:none;
+        border:2px solid @grey;
+        width: 58px;
+        height: 58px;
+        text-align: center;
+        position: relative;
+        top: -2px;
+        background: @white url("../img/minus.png") no-repeat center;
+        }
+    &[value="+"] {
+        background: @white url("../img/plus.png") no-repeat center;
+    }
+
+}
+output {
+    display: block;
+    width: 226px;
+    padding: 15px 25px;
+    font-size: 18px;
+    color:@dark-blue;
+    outline:none;
+    border:2px solid @grey;
+    border-radius: 3px;
+    background-color: @light-grey;
+}
+label {
+    display: block;
+    color: @pink;
+    text-align: left;
+    padding: 25px 25px 15px;
+    text-transform: uppercase;
+}
+.hr {
+    width: 280px;
+    height: 2px;
+    background-color: @grey;
+    margin: 45px 0 30px;
+}
 .form {
     section {
         padding:50px 20px;
@@ -108,98 +249,102 @@
         }
     }
 }
-@media screen and (min-width: 700px) {
-    .form {
+.companion {
+    margin-bottom: 15px;
+    position: relative;
+        .delete-button {
+            display: none;
+        }
+    input {
+        padding-right: 0;
+        width: 186px;
+        margin-left: 60px;
+    }
+    label {
+        padding: 25px 85px 15px;
+        font-size: 14px;
+    }
+    &__number {
+        position: absolute;
+        width: 60px;
+        height: 120px;
+        top: 5px;
+        left: 4px;
+        span {
+            display: inline-block;
+            text-align: center;
+            height: 54px;
+            width: 54px;
+            line-height:60px;
+            &:first-child {
+                color: @pink;
+            }
+            &:last-child {
+                border: 2px solid @grey;
+                border-radius: 3px;
+            }
+        }
+    }
+}
+.image-preview {
+    &__item {
+        display: inline-block;
+        margin-right:30px;
+        margin-bottom: 25px;
+        position: relative;
+        &:nth-of-type(3n) {
+            margin-right: 0;
+        }
+        img {
+            width:70px;
+            height: 70px;
+        }
+    }
+    &__delete-image {
+        width: 28px;
+        height: 28px;
+        border:2px solid @grey;
+        background: @white;
+        border-radius: 50%;
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        outline: none;
+        font-size: 20px;
+        color:@grey;
+        cursor:pointer;
+    }
+    &__caption {
+            font-size: 12px;
+        }
+}
+.popup {
+    text-align: center;
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    margin-left: -160px;
+    display: none;   
+    background-color: @white;
+    padding: 50px 0px;
     &__header {
         font-size: 18px;
-        line-height: 30px;
-        width: 500px;
-        margin: 0 auto;
-        p {
-            display: block;
-        }
+        color: @black;
+        margin-bottom: 40px;
+        font-weight: bolder;
     }
-    &__app {
-        background-color: @white;
-        label {
-            width: 400px;
-        }
+    &__text {
+        margin: 0 30px 35px;
     }
-    &__vacation {
-        .container {
-            width: 266px;
-            display: inline-block;
-            &:nth-of-type(2){
-                position: absolute;
-            }
-        }
-        input {
-            &[type=text] {
-                width: 86px;
-            }
-        }
-        label {
-            
-        }
-    }
-    &__companions {
-        background-color: @white;
-        input {
-            &[name=companion-count] {
-                width: 60px; 
-                border-color:transparent;
-                padding-left: 35px;
-            }
-        }
-        .companion {
-            input {
-                width: 276px;
-                margin-left: 75px;
-            }
-            label {
-            }
-            &__number {
-                left: -1px;
-                span {
-                    &:last-child {
-                        background-color: @light-grey;
-                    }
-                }
-            }
-            .delete-button {
-                display: inline;
-                padding: 10px;
-                position: relative;
-                top: -120px;
-                left: 30px;
-                text-transform: uppercase;
-                font-size: 14px;
-            }
-        }
-    }
-    &__achievments {
-        label {
-            width: 420px;
-        }
-        input[type=checkbox] {
-            &::before {
-            }
-            &:checked::after {
-            }
-        }
-    }
-    &__fotos {
-        background-color: @white;
-    }
-    .container {
-        position: relative;
-    }
-    &__descr {
-        position: absolute;
-        right: 0;
-        top: 30px;
-        span {
-        }
+    &__link {
+        display: block;
+        background-color: @dark-green;
+        color: @white;
+        padding: 25px 6px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0 20px;
+        border-radius: 3px;
     }
 }
-}
+

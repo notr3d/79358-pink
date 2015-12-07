@@ -1,0 +1,74 @@
+@media screen and (min-width: 700px) {
+    
+    h1 {
+        font-size:40px;
+    }
+
+    h2 {
+        font-size:40px;
+    }
+
+    .wrapper {
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    .page-logo {
+        width: 220px;
+        height: 110px;
+        background: url(../img/glasses.png) no-repeat 40px 30px,
+            url(../img/page-logo.png) no-repeat 110px 45px;
+    }
+
+    .page-header {
+        &__nav-wrapper {
+            height: 110px;
+        }
+    }
+
+    .main-nav {
+        &__button {
+            height: 110px;
+            width: 130px;
+            &::before {
+                right: 40px;
+                top: 50px;
+            }
+        }
+        &__list {
+            top: 110px;
+        }
+        &__link {
+            width: 700px;
+            padding: 25px 0;
+            display: block;
+            display: none;
+        }
+    }
+    .links {
+        .wrapper {
+            overflow: hidden;
+            display: flex;
+            .main-logo {
+                position: relative;
+                left: -40px;
+                top: 15px;
+            }
+            .social {
+                position: relative;
+                left: -90px;
+                top: 30px;
+            }
+            .main-footer__developer {
+                position: relative;
+                left: -40px;
+                top: 20px;
+            }
+        }
+    }
+    
+    @import "index-tablet.less";
+    @import "form-tablet.less";
+}
+
+
