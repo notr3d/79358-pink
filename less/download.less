@@ -1,0 +1,50 @@
+.download {
+    background-color: @dark-blue;
+    padding:25px 20px 30px;
+    &__link {
+        font-size:18px;
+        font-weight: bolder;
+        display: block;
+        padding:20px 0;
+        border: 3px solid @white;
+        color:@white;
+        border-radius: 50px;
+        margin:0 auto 30px;
+        max-width: 400px;
+    }
+        &__download-type {
+        .hide-link-text;
+        vertical-align:middle;
+        margin-bottom: 25px;
+        width: 75px;
+        height: 75px;
+        display: inline-block;
+        background: url("../img/app-logo/apple-logo.svg") no-repeat center;
+            &--android {
+                background-image: url("../img/app-logo/android-logo.svg");
+            }
+            &--win-phone {
+                background-image: url("../img/app-logo/microsoft-logo.svg");
+            }
+    }
+            &__text {
+                font-size:14px;
+                font-weight: lighter;
+                color:@white;
+            }
+}
+@media screen and (min-width: 700px) {
+    .download {
+    width: 350px;
+    background-color: transparent;
+    padding:25px 40px 0px;
+    margin:0px 320px 0px 0px;
+        &__download-type {
+        margin: 0 5px 20px;
+    }
+            &__text {
+                font-size:18px;
+                padding-bottom: 50px;
+            }
+}
+}
