@@ -29,17 +29,19 @@
                  Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span> Пожалуйста, заполните форму ниже:</span>
              </h2>
              <section class="name">
-                 <div class="name__item">
-                     <label for="firstname" class="name__label">ИМЯ *</label>
-                     <input type="text" name="firstname" class="name__input" id="firstname" placeholder="Введите ваше имя" required>
-                 </div> 
-                 <div class="name__item">
-                     <label for="lastname" class="name__label">ФАМИЛИЯ *</label>
-                     <input type="text" name="lastname" class="name__input" id="lastname" placeholder="Укажите фамилию" required>
-                 </div> 
-                 <div class="name__item">
-                     <label for="middlename" class="name__label">ОТЧЕСТВО</label>
-                     <input type="text" name="middlename"  class="name__input" id="middlename" placeholder="Ну и отчество тоже">
+                 <div class="name__wrapper">
+                     <div class="name__item">
+                         <label for="firstname" class="name__label">ИМЯ: *</label>
+                         <input type="text" name="firstname" class="name__input" id="firstname" placeholder="Введите ваше имя" required>
+                     </div> 
+                     <div class="name__item">
+                         <label for="lastname" class="name__label">ФАМИЛИЯ: *</label>
+                         <input type="text" name="lastname" class="name__input" id="lastname" placeholder="Укажите фамилию" required>
+                     </div> 
+                     <div class="name__item">
+                         <label for="middlename" class="name__label">ОТЧЕСТВО:</label>
+                         <input type="text" name="middlename"  class="name__input" id="middlename" placeholder="Ну и отчество тоже">
+                     </div>   
                  </div>
              </section>
              <section class="app">
@@ -55,13 +57,13 @@
                      </div>
                      <div class="app__item">
                          <input type="radio" name="app" class="app__radio" id="windows" required>
-                         <label for="windows" class="app__label">Pink для Windows Phone</label>
+                         <label for="windows" class="app__label">Windows Phone</label>
                      </div>
                  </div>
              </section>
              <section class="vacation">
                  <div class="vacation__wrapper">
-                      <h3 class="app__header">Когда вы путешествовали? *</h3>
+                      <h3 class="vacation__header">Когда вы путешествовали? *</h3>
                      <div class="vacation__item">
                          <input type="date" name="vacation-start" class="vacation__start" id="vacation__start" value="2015-04-01" required>
                          <label for="vacation__start" class="vacation__label">ДАТА ВЫЕЗДА</label>    
@@ -70,7 +72,7 @@
                          <input type="button" name="vacation__duration-minus" class="vacation__duration-minus" id="vacation__duration-minus" value="-">
                          <input type="text" name="vacation__duration-count" class="vacation__duration-count" id="vacation__duration-count" value="10 дней" required>        
                          <input type="button" name="vacation__duration-plus" class="vacation__duration-plus" id="vacation__duration-plus" value="+">
-                         <label for="vacation__duration-count">ПРОДОЛЖИТЕЛЬНОСТЬ</label>        
+                         <label for="vacation__duration-count" class="vacation__label">ПРОДОЛЖИТЕЛЬНОСТЬ</label>        
                      </div>
                      <div class="vacation__item">
                          <input type="date" name="vacation__end" class="vacation__end" id="vacation__end" value="2015-04-11" disabled>
@@ -80,10 +82,10 @@
              </section>
              <section class="companions">
                  <div class="companions__wrapper">
-                     <h3>КОЛИЧЕСТВО ПОПУТЧИКОВ *</h3>
+                     <h3 class="companions__header">КОЛИЧЕСТВО ПОПУТЧИКОВ *</h3>
                      <div class="companions__item">
                          <input type="button" name="companions__minus" class="companions__minus" id="companions__minus" value="-">
-                         <input type="text" name="companions-count" class="companions-count" id="companions-count" value="2 чел" required>        
+                         <input type="text" name="companions-count" class="companions__count" id="companions-count" placeholder="2 чел" required>        
                          <input type="button" name="companions__plus" class="companions__plus" id="companions__plus" value="+">
                      </div>
                      <div class="companion">
@@ -101,34 +103,35 @@
                          </div>
                          <button class="companion__delete">УДАЛИТЬ</button>     
                      </div>
+                     
                  </div>
              </section>
              <section class="achievments">
                  <div class="achievments__wrapper">
-                     <h3>Ваши безбашенные достижения в путешествии</h3>
+                     <h3 class="achievments__header">Ваши безбашенные достижения в путешествии</h3>
                      <div class="achievments__item">
-                         <input type="checkbox" name="achievment" class="achievments__achievment" id="achievment-1" value="achievment-1" checked>
-                         <label for="achievment-1">Сделал селфи с акулой</label>
+                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-1" value="achievment-1" checked>
+                         <label for="achievment-1" class="achievments__label">Сделал селфи с акулой</label>
                      </div>
                      <div class="achievments__item">
-                         <input type="checkbox" name="achievment" class="achievments__achievment" id="achievment-2" value="achievment-3">
-                         <label for="achievment-2">Обгорел на пляже</label>
+                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-2" value="achievment-3">
+                         <label for="achievment-2" class="achievments__label">Обгорел на пляже</label>
                      </div>
                      <div class="achievments__item">
-                         <input type="checkbox" name="achievment" class="achievments__achievment" id="achievment-3" value="achievment-3">
-                         <label for="achievment-3">Видел Чака Норриса</label>
+                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-3" value="achievment-3">
+                         <label for="achievment-3" class="achievments__label">Видел Чака Норриса</label>
                      </div>
                      <div class="achievments__item">
-                         <input type="checkbox" name="achievment" class="achievments__achievment" id="achievment-4" value="achievment-4">
-                         <label for="achievment-4">Накупил сувениров</label>
+                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-4" value="achievment-4">
+                         <label for="achievment-4" class="achievments__label">Накупил сувениров</label>
                      </div>
                      <div class="achievments__item">
-                         <input type="checkbox" name="achievment" class="achievments__achievment" id="achievment-5" value="achievment-5">
-                         <label for="achievment-5">Удержал башню</label>
+                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-5" value="achievment-5">
+                         <label for="achievment-5" class="achievments__label">Удержал башню</label>
                      </div>
                      <div class="achievments__item">
-                         <input type="checkbox" name="achievment" class="achievments__achievment" id="achievment-6" value="achievment-6">
-                         <label for="achievment-6">Разгромил отель</label>
+                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-6" value="achievment-6">
+                         <label for="achievment-6" class="achievments__label">Разгромил отель</label>
                      </div>                     
                  </div>                 
              </section>

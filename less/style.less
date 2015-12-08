@@ -10,7 +10,7 @@
 @dark-blue:#1d2631;
 
 @dark-grey:#797f86;
-@grey:#bec2c7;
+@grey:#e5e5e5;
 @light-grey:#f2f2f2;
 
 @green:#3dc644;
@@ -30,6 +30,12 @@
 @import "page-title.less";
 @import "form.less";
 @import "submit.less";
+@import "name.less";
+@import "app.less";
+@import "vacation.less";
+@import "companions.less";
+@import "companion.less";
+@import "achievments.less";
 
 * {
     
@@ -48,6 +54,10 @@ body {
     font-family: "Open Sans", "Verdana", "Tahoma", "Arial", sans-serif;
 }
 
+input {
+    font-family: "Open Sans", "Verdana", "Tahoma", "Arial", sans-serif;
+}
+
 .hide-link-text {
     text-indent: 100%;
     white-space: nowrap;
@@ -56,12 +66,9 @@ body {
 
 .block {
     @media @mobile {
-        
     }
     @media @tablet {
-        
     }
     @media @desktop {
-        
     }    
 }

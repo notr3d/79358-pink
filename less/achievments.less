@@ -1,0 +1,97 @@
+.achievments {
+    @media @mobile {
+        &__wrapper {
+            width: 280px;
+            margin: 0 auto;
+        }
+        &__header {
+            color:@pink;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: normal;
+            text-transform: uppercase;
+            margin: 40px auto;
+            display: block;
+            text-align: center;
+            width: 250px;
+        }
+        &__item {
+            padding: 20px 0;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+        }
+        &__label {
+            font-size: 18px;
+            display: inline-block;
+            width: 100%;
+            line-height: 30px;
+            padding: 0 25px;
+        }
+        &__checkbox {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            position: relative;
+            &::before {
+                content:'';
+                display: block;
+                position: absolute;
+                width: 38px;
+                height: 38px;
+                background-color: @white;
+                border:2px solid @grey;
+                top:-2px
+            }
+            &:checked::after {
+                content:'';
+                display: block;
+                position: absolute;
+                width: 20px;
+                height: 7px;
+                top: 12px;
+                left: 10px;
+                border-left:2px solid @pink;
+                border-bottom:2px solid @pink;
+                transform:rotate(-45deg);
+            }
+        }
+    }
+    @media @tablet {
+        &__wrapper {
+            border:2px solid @light-grey;
+            padding: 40px 60px;
+            width: 496px;
+            margin: 0 auto;
+            position: relative;
+        }
+        &__header {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            width: 440px;
+            margin: 0;
+            margin-left: -220px;
+            background-color: @white;
+        }
+    }
+    @media @desktop {
+        &__wrapper {
+            width: 816px;
+            margin: 0 auto;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            flex-wrap: wrap; 
+            flex-direction: column;
+            height: 160px;
+        }
+        &__item {
+            
+        }
+    }    
+}
