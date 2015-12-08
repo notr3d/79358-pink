@@ -103,6 +103,21 @@
                          </div>
                          <button class="companion__delete">УДАЛИТЬ</button>     
                      </div>
+                     <div class="companion">
+                         <div class="companion__number">
+                         <label>№</label>
+                         <div>1</div>    
+                         </div>
+                         <div class="companion__name">
+                         <label for="companion__name">ИМЯ: *</label>
+                         <input type="text" name="companion__name" class="companion__name" id="companion__name" placeholder="Введите ваше имя" required>    
+                         </div>
+                         <div class="companion__alias">
+                         <label for="companion__alias">Прозвище:</label>
+                         <input type="text" name="companion__alias" class="companion__alias" id="companion__alias" placeholder="Ну как же без этого!" required>    
+                         </div>
+                         <button class="companion__delete">УДАЛИТЬ</button>     
+                     </div>
                      
                  </div>
              </section>
@@ -139,14 +154,51 @@
                  <div class="photo__wrapper">
                      <h3 class="photo__header">ВАШИ ФОТОГРАФИИ ИЗ ПОЕЗДКИ *</h3>
                      <div class="photo__upload">
-                         <input type="file" name="file" id="file" value="file" multiple>
+                         <input type="file" name="upload-photo" class="photo__upload-file" id="photo__upload-file" multiple>
+                         <label for="photo__upload-file" class="photo__label">ЗАГРУЗИТЬ ФОТО</label>
                      </div>
                      <div class="photo__preview">
                          <figure class="photo__item">
-                             <img src="" alt="">
-                             <figcaption></figcaption>
+                             <img src="" alt="img-1.jpg">
+                             <figcaption>img-1.jpg</figcaption>
                              <button>&times;</button>
                          </figure>
+                         <figure class="photo__item">
+                             <img src="" alt="img-1.jpg">
+                             <figcaption>img-1.jpg</figcaption>
+                             <button>&times;</button>
+                         </figure>
+                         <figure class="photo__item">
+                             <img src="" alt="img-1.jpg">
+                             <figcaption>img-1.jpg</figcaption>
+                             <button>&times;</button>
+                         </figure>
+                         <figure class="photo__item">
+                             <img src="" alt="img-1.jpg">
+                             <figcaption>img-1.jpg</figcaption>
+                             <button>&times;</button>
+                         </figure>
+                         <figure class="photo__item">
+                             <img src="" alt="img-1.jpg">
+                             <figcaption>img-1.jpg</figcaption>
+                             <button>&times;</button>
+                         </figure>
+                         <figure class="photo__item">
+                             <img src="" alt="img-1.jpg">
+                             <figcaption>img-1.jpg</figcaption>
+                             <button>&times;</button>
+                         </figure>
+                         <figure class="photo__item">
+                             <img src="" alt="img-1.jpg">
+                             <figcaption>img-1.jpg</figcaption>
+                             <button>&times;</button>
+                         </figure>
+                         <figure class="photo__item">
+                             <img src="" alt="img-1.jpg">
+                             <figcaption>img-1.jpg</figcaption>
+                             <button>&times;</button>
+                         </figure>
+                         
                      </div>
                  </div>
              </section>
@@ -157,7 +209,7 @@
          </article>
          <footer class="page-footer">
              <div class="page-footer__wrapper">
-                 <a href="#" class="page-logo">Pink</a>
+                 <a href="#" class="page-logo  page-logo--black">Pink</a>
                  <div class="social">
                      <ul class="social__list">
                          <li class="social__item"><a href="#" class="social__link  social__link--twitter">Twitter</a></li>
@@ -167,6 +219,7 @@
                  </div>
                  <a href="#" class="copyright">Разработано</a>
              </div>
-         </footer>     
+         </footer> 
+         <script src="js/script.js"></script>     
     </body>
 </html>
