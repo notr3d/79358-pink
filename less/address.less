@@ -1,0 +1,58 @@
+.address {
+    @media @mobile {
+        &__wrapper {
+            padding: 20px 0;
+            width: 280px;
+            margin: 0 auto;
+        }
+        &__header {
+            font-size: 24px;
+            color: @dark-grey;
+            text-align: center;
+            font-weight: lighter;
+        }
+        &__text {
+            font-weight: bold;
+            text-align: center;
+            font-style: 18px;
+        }
+        &__link {
+            text-align: center;
+            display: block;
+            color:@pink;
+            font-size: 24px;
+        }
+    }
+    @media @tablet {
+        &__wrapper {
+            width: 620px;
+        }
+        &__header {
+            font-size: 40px;
+            width: 400px;
+            margin: auto;
+        }
+        &__container {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: space-around;
+        }
+        &__item {
+            width: 260px;
+        }
+    }
+    @media @desktop {
+        &__wrapper {
+            width: 940px;    
+        }
+        &__item {
+            &:nth-child(2) {
+                order:1;
+            }
+        }
+    }    
+}

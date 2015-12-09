@@ -1,6 +1,6 @@
-@mobile:      ~"only screen and (min-width: 320px)";
-@tablet:      ~"only screen and (min-width: 700px)";
-@desktop:     ~"only screen and (min-width: 1200px)";
+@mobile: ~"only screen and (min-width: 320px)";
+@tablet: ~"only screen and (min-width: 700px)";
+@desktop: ~"only screen and (min-width: 1200px)";
 
 @black:#000;
 @white:#fff;
@@ -37,6 +37,14 @@
 @import "companion.less";
 @import "achievments.less";
 @import "photo.less";
+@import "download.less";
+@import "index-header.less";
+@import "features.less";
+@import "about.less";
+@import "address.less";
+@import "map.less";
+@import "prices.less";
+
 
 * {
     
@@ -67,9 +75,19 @@ input {
 
 .block {
     @media @mobile {
+        &__wrapper {
+            width: 280px;
+            margin: 0 auto;
+        }
     }
     @media @tablet {
+        &__wrapper {
+            width: 620px;    
+        }
     }
     @media @desktop {
+        &__wrapper {
+            width: 940px;    
+        }
     }    
 }
