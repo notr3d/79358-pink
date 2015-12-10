@@ -1,14 +1,21 @@
 .prices {
     @media @mobile {
+        background-color: @light-grey;
+        padding: 150px 0 20px;
+        overflow: hidden;
         &__wrapper {
             width: 840px;
             margin: 0 auto;
+            position: relative;
+            left: 50%;
+            margin-left: -420px;
         }
         &__table-head-cell {
             background-color: @dark-blue;
             color:@white;
             border:2px solid @grey;
             width: 280px;
+            padding: 25px 0;
             &:first-child {
                 display: none;
             } 
@@ -32,31 +39,119 @@
             }
         }
         &__type {
-            font-size: 16px;
+            font-size: 18px;
+            margin: 0;
+            margin-bottom: 10;
         }
         &__price {
-            font-size: 18px;
+            font-size: 24px;
             font-weight: lighter;
+            margin: 0;
         }
         &__table-cell {
             font-size: 14px;
             text-transform: uppercase;
             padding: 25px;
             border: 2px solid @grey;
-            background: light-grey;
+            background: @white;
+            &--yes {
+                background: @white url(../img/misc/yes.svg) no-repeat 90% 50%;    
+            }
+            &--no {
+                background: @white url(../img/misc/no.svg) no-repeat 90% 50%;    
+            }
             &:first-child {
                 display: none;
+            }
+        }
+        &__controls {
+            width: 72px;
+            height: 50px;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 20px auto;
+        }
+        &__control {
+            position: relative;
+            visibility: hidden;
+            &::before {
+                visibility: visible;
+                content: '';
+                display: block;
+                height: 6px;
+                width: 6px;
+                position: absolute;
+                left: 3px;
+                top: 3px;
+                border-radius: 50%;
+                background-color: @dark-grey;
+                cursor:pointer;
+            }
+            &:checked {
+                &::after {
+                    visibility: visible;
+                    content: '';
+                    display: block;
+                    height: 6px;
+                    width: 6px;
+                    position: absolute;
+                    left: 3px;
+                    top: 3px;
+                    border-radius: 50%;
+                    background-color: @dark-grey;
+                    cursor:pointer;
+                    background-color: @white;
+                    box-shadow: 0 0 0 3px @dark-blue;
+                }
+            }
+            #prices__control-1:checked ~ .prices__wrapper .prices__table  {
+                transform: translateX(280px);
+            }
+            #prices__control-3:checked ~ .prices__wrapper .prices__table {
+                transform: translateX(-280px);
             }
         }
     }
     @media @tablet {
         &__wrapper {
-            width: 620px;    
+            width: 620px;
+            margin: 0 auto;
+            position: static;
+        }
+        &__table-head-cell {
+            width: 25%;
+            &:first-child {
+                display: table-cell;
+                visibility: hidden;
+            }
+        }
+        &__table-cell {
+            font-size: 12px;
+            padding-right: 0;
+            &:first-child {
+                display: table-cell;
+            }
+            &:not(:first-child) {
+                font-size: 0;
+                width: 120px;
+                background-position: 50% 50%;
+            }
+        }
+        &__controls {
+            display: none;
         }
     }
     @media @desktop {
         &__wrapper {
             width: 940px;    
+        }
+        &__table{
+            width: 100%;
         }
     }    
 }
