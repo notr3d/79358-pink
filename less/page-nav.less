@@ -3,6 +3,10 @@
         background-color: rgba(0,0,0,0.3);
         height: 70px;
         position: relative;
+        &--active {
+            background-color: @blue;
+            opacity: 1;
+        }
         &__list {
             margin: 0;
             padding: 0;
@@ -10,12 +14,9 @@
             top:70px;
             width: 100%;
             display: none;
-            &--opened {
+            &--active {
                 display: block;
             }
-        }
-        &__item {
-
         }
         &__link {
             display: block;
@@ -28,10 +29,14 @@
             border-bottom: 1px solid @black;
             border-top: 1px solid @light-blue;
             display: block;
-            
+            &:hover {
+                color:@pink;    
+            }
+            &:active {
+                color: rgba(210, 40, 86, 0.3);    
+            }
         }
         &__button {
-            color:transparent;
             display: inline-block;
             position: absolute;
             right: 0;
@@ -41,7 +46,11 @@
             background-color: transparent;
             border:none;
             outline:none;
-            &::before {
+            background: url(../img/misc/menu-burger.svg) no-repeat center;
+            &--active {
+                background-image: url(../img/misc/menu-cross.svg);
+            }
+           /* &::before {
                 content: '';
                 display: block;
                 position: absolute;
@@ -53,27 +62,30 @@
                 box-shadow:
                     0px 10px 0px 0px @white,
                     0px -10px 0px 0px @white;
-            }
+            }*/
         }
     }
     @media @tablet {
         height:110px;
+        &__list {
+            top:110px;
+        }
         &__button {
             height: 110px;
             width: 130px;
-            &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            width: 50px;
-            height: 4px;
-            background-color: @white;
-            right: 40px;
-            top: 50px;
-            box-shadow:
-                0px 10px 0px 0px @white,
-                0px -10px 0px 0px @white;
-        }
+            /*&::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 50px;
+                height: 4px;
+                background-color: @white;
+                right: 40px;
+                top: 50px;
+                box-shadow:
+                    0px 10px 0px 0px @white,
+                    0px -10px 0px 0px @white;
+            }*/
         }
     }
     @media @desktop {
@@ -106,6 +118,25 @@
             font-weight: normal;
             font-size: 18px;
             height: 72px;
+            position: relative;
+            &:hover {
+                &::before {
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    width: 100%;
+                    background: @white;
+                    position: absolute;
+                    top: 75%;
+                    left: 0;
+                }
+            }
+            &:active {
+                opacity: .3;
+                &::before {
+                    display: none;
+                }
+            }
         }
         &__button {
             display: none;

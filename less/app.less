@@ -48,6 +48,12 @@
                 border-radius: 50%;
                 border:2px solid @grey;
             }
+            &:hover::before {
+                border-color: @dark-blue;
+            }
+            &:focus::before {
+                border-color: @pink;
+            }
             &:checked::after {
                 content:'';
                 display: block;
