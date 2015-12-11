@@ -47,22 +47,21 @@
             border:none;
             outline:none;
             background: url(../img/misc/menu-burger.svg) no-repeat center;
+            &:hover {
+                background-image: url(../img/misc/menu-burger--hover.svg);
+            }
+            &:active {
+                opacity: .3;
+            }
             &--active {
                 background-image: url(../img/misc/menu-cross.svg);
+                &:hover {
+                    background-image: url(../img/misc/menu-cross--hover.svg);
+                }
+                &:active {
+                    opacity: .3;
+                }
             }
-           /* &::before {
-                content: '';
-                display: block;
-                position: absolute;
-                width: 50px;
-                height: 4px;
-                background-color: @white;
-                right: 20px;
-                top: 33px;
-                box-shadow:
-                    0px 10px 0px 0px @white,
-                    0px -10px 0px 0px @white;
-            }*/
         }
     }
     @media @tablet {
@@ -73,19 +72,6 @@
         &__button {
             height: 110px;
             width: 130px;
-            /*&::before {
-                content: '';
-                display: block;
-                position: absolute;
-                width: 50px;
-                height: 4px;
-                background-color: @white;
-                right: 40px;
-                top: 50px;
-                box-shadow:
-                    0px 10px 0px 0px @white,
-                    0px -10px 0px 0px @white;
-            }*/
         }
     }
     @media @desktop {
@@ -94,8 +80,7 @@
             width: 940px;
         }
         &__list {
-            top: -120px;
-            right: 0px;    
+            top: -120px;    
             display: -webkit-flex;
             display: -moz-flex;
             display: -ms-flex;
@@ -103,8 +88,8 @@
             display: flex;
             position: relative;
             width: 510px;
-            right: -435px;
-            flex-direction:row-reverse;
+            right: -360px;
+            flex-direction:row;
         }
         &__link {
             display: inline-block;

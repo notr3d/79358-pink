@@ -10,7 +10,7 @@
             position: absolute;
             top:99%;
             background-color: red;
-            background: url(../img/misc/triangle-white.svg) no-repeat center;
+            background: url(../img/misc/triangle-white--mobile.svg) no-repeat center;
         }
         &__wrapper {
             width: 280px;
@@ -29,6 +29,9 @@
         }
     }
     @media @tablet {
+        &::before {    
+            background-image: url(../img/misc/triangle-white--tablet.svg);    
+        }
         &__wrapper {
             width: 620px; 
         }
@@ -44,6 +47,9 @@
         }
     }
     @media @desktop {
+        &::before {    
+            background-image: url(../img/misc/triangle-white.svg);
+        }
         &__wrapper {
             width: 940px; 
         }
