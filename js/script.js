@@ -19,31 +19,32 @@ var durationButtonMinus = c("vacation__duration-minus"),
     durationButtonPlus = c("vacation__duration-plus"),
     durationInput = c("vacation__duration-count"),
     departureInput = c("vacation__start"),
-    arrivalInput = c("vacation__end"),
-    duration = parseInt(durationInput.value);
-    /*departureDate = departureInput.value.toString().split("-"),
+    vacationDuration = parseInt(durationInput.value);
+    /*arrivalInput = c("vacation__end"),
+    departureDate = departureInput.value.toString().split("-"),
     departureYear = +departureDate[0],
     departureMonth = +departureDate[1] - 1,
     departureDay = +departureDate[2],
-    arrivalDay = departureDay + duration,
+    arrivalDay = departureDay + vacationDuration,
     arrivalDate = new Date(departureYear, departureMonth, arrivalDay);*/
 
 
 durationButtonMinus.addEventListener("click", function(){
-    if(duration < 1)return;
-    duration--;
-    durationInput.value = duration + " дней";
+    if(vacationDuration < 1)return;
+    vacationDuration--;
+    durationInput.value = vacationDuration + " дней";
 });
 durationButtonPlus.addEventListener("click", function(){
-    duration++;
-    durationInput.value = duration + " дней";
+    vacationDuration++;
+    durationInput.value = vacationDuration + " дней";
 });
 durationInput.addEventListener("change", function(){
-    if(isNaN(parseInt(durationInput.value))){
+    if(isNaN(parseInt(durationInput.value)) || parseInt(durationInput.value) < 0){
         alert("Неверное значение продолжительности путешествия");
         durationInput.value = 10 + " дней";
     }else{
-        duration = parseInt(durationInput.value);
+        vacationDuration = parseInt(durationInput.value);
+        durationInput.value = vacationDuration + " дней";
     }
 });
 
@@ -59,14 +60,26 @@ companionsButtonMinus.addEventListener("click", function(){
     companionsInput.value = companionsCount + " чел";
 });
 companionsButtonPlus.addEventListener("click", function(){
-    companionsCount++;
-    companionsInput.value = companionsCount + " чел";
+    if(companionsCount > 98){
+        alert("Максимальное количество попутчиков: 99 чел.");
+        companionsCount = 99;
+        companionsInput.value = companionsCount + " чел";
+    }else{
+        companionsCount++;
+        companionsInput.value = companionsCount + " чел";    
+    }
+    
 });
 companionsInput.addEventListener("change", function(){
-    if(isNaN(parseInt(companionsInput.value))){
+    if(isNaN(parseInt(companionsInput.value)) || parseInt(companionsInput.value) < 0){
         alert("Неверное значение количества попутчиков");
         companionsInput.value = 2 + "  чел";
+    }else if(parseInt(companionsInput.value) > 99){
+        alert("1Максимальное количество попутчиков: 99 чел.");
+        companionsCount = 99;
+        companionsInput.value = companionsCount + " чел";
     }else{
         companionsCount = parseInt(companionsInput.value);
+        companionsInput.value = companionsCount + " чел";
     }
 });
