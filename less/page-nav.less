@@ -29,8 +29,9 @@
             border-bottom: 1px solid @black;
             border-top: 1px solid @light-blue;
             display: block;
+            transition: color .1s;
             &:hover {
-                color:@pink;    
+                color:@pink;
             }
             &:active {
                 color: rgba(210, 40, 86, 0.3);    
@@ -46,6 +47,7 @@
             background-color: transparent;
             border:none;
             outline:none;
+            cursor: pointer;
             background: url(../img/misc/menu-burger.svg) no-repeat center;
             &:hover {
                 background-image: url(../img/misc/menu-burger--hover.svg);
@@ -55,7 +57,9 @@
             }
             &--active {
                 background-image: url(../img/misc/menu-cross.svg);
+                
                 &:hover {
+                    transform: scale (1.1);
                     background-image: url(../img/misc/menu-cross--hover.svg);
                 }
                 &:active {
@@ -104,16 +108,21 @@
             font-size: 18px;
             height: 72px;
             position: relative;
+            &::before {
+                content: '';
+                display: block;
+                height: 3px;
+                width: 100%;
+                background-color: @white;
+                position: absolute;
+                top: 75%;
+                left: 0;
+                opacity: 0;
+                transition: opacity .1s;
+            }
             &:hover {
                 &::before {
-                    content: '';
-                    display: block;
-                    height: 3px;
-                    width: 100%;
-                    background: @white;
-                    position: absolute;
-                    top: 75%;
-                    left: 0;
+                    opacity: 1;    
                 }
             }
             &:active {
