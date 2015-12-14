@@ -33,6 +33,7 @@
         for(var i = 0; i < files.length; i++){
             preview(files[i]);    
         }
+        this.value="";
     });
     function preview(file){
         var photosContainer = c("photo__preview");

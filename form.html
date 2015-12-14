@@ -48,7 +48,7 @@
                  <div class="app__wrapper">
                      <h3 class="app__header">С каким приложением путешествовали? *</h3>
                      <div class="app__item">
-                         <input type="radio" name="app" class="app__radio" id="ios" value = "ios" required>
+                         <input type="radio" name="app" class="app__radio" id="ios" value = "ios" required checked>
                          <label for="ios" class="app__label">Pink для iOS</label>
                      </div>
                      <div class="app__item">
@@ -88,43 +88,14 @@
                          <input type="text" name="companions-count" class="companions__count" id="companions-count" placeholder="2 чел" value="2 чел" required>        
                          <input type="button" class="companions__plus" id="companions__plus" value="+">
                      </div>
-                     <div class="companion">
-                         <div class="companion__number">
-                             <label>№</label>
-                             <div>1</div>    
-                         </div>
-                         <div class="companion__name">
-                             <label for="companion__name-1">ИМЯ: *</label>
-                             <input type="text" name="companion-name-1" class="companion__name" id="companion__name-1" placeholder="Введите ваше имя" required>    
-                         </div>
-                         <div class="companion__alias">
-                             <label for="companion__alias-1">Прозвище:</label>
-                             <input type="text" name="companion-alias-1" class="companion__alias" id="companion__alias-1" placeholder="Ну как же без этого!">    
-                         </div>
-                         <button class="companion__delete">УДАЛИТЬ</button>     
-                     </div>
-                     <div class="companion">
-                         <div class="companion__number">
-                             <label>№</label>
-                             <div>2</div>    
-                         </div>
-                         <div class="companion__name">
-                             <label for="companion__name-2">ИМЯ: *</label>
-                             <input type="text" name="companion-name-2" class="companion__name" id="companion__name-2" placeholder="Введите ваше имя" required>    
-                         </div>
-                         <div class="companion__alias">
-                             <label for="companion__alias-2">Прозвище:</label>
-                             <input type="text" name="companion_-alias-2" class="companion__alias" id="companion__alias-2" placeholder="Ну как же без этого!">    
-                         </div>
-                         <button class="companion__delete">УДАЛИТЬ</button>     
-                     </div>
+                     <div class="companions__container"></div>
                  </div>
              </section>
              <section class="achievments">
                  <div class="achievments__wrapper">
                      <h3 class="achievments__header">Ваши безбашенные достижения в путешествии</h3>
                      <div class="achievments__item">
-                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-1" value="selfie-with-shark" checked>
+                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-1" value="selfie-with-shark">
                          <label for="achievment-1" class="achievments__label">Сделал селфи с акулой</label>
                      </div>
                      <div class="achievments__item">
@@ -188,6 +159,21 @@
              <img src="{{image}}" alt="{{name}}" title="{{name}}">
              <figcaption>{{name}}</figcaption>
              <button class="photo__delete">&times;</button>   
+         </script>
+         <script class="companion-template" type="text/html">
+             <div class="companion__number">
+                 <label>№</label>
+                 <div>{{number}}</div>    
+             </div>
+             <div class="companion__name">
+                 <label for="companion__name-{{number}}">ИМЯ: *</label>
+                 <input type="text" name="companion-name-{{number}}" class="companion__name" id="companion__name-{{number}}" placeholder="Введите ваше имя" required>    
+             </div>
+             <div class="companion__alias">
+                 <label for="companion__alias-{{number}}">Прозвище:</label>
+                 <input type="text" name="companion-alias-{{number}}" class="companion__alias" id="companion__alias-{{number}}" placeholder="Ну как же без этого!">    
+             </div>
+             <button class="companion__delete">УДАЛИТЬ</button>     
          </script>
     </body>
 </html>
