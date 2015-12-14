@@ -182,13 +182,18 @@
                  </div>
                  <a href="#" class="copyright">Разработано</a>
              </div>
-         </footer> 
+         </footer>
+         <script src="js/mustache.min.js"></script> 
          <script src="js/lib.js"></script>     
          <script src="js/script.js"></script>     
          <script src="js/menu.js"></script>
          <script src="js/vacation.js"></script>
          <script src="js/companions.js"></script>
          <script src="js/xhr.js"></script>
-         <script src="js/photo.js"></script>
+         <script class="image-template" type="text/html">
+             <img src="{{image}}" alt="{{name}}" title="{{name}}">
+             <figcaption>{{name}}</figcaption>
+             <button class="photo__delete">&times;</button>   
+         </script>
     </body>
 </html>
