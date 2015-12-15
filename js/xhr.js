@@ -105,13 +105,17 @@ figure.querySelector(".photo__delete").addEventListener("click", function(event)
             companionsContainer.innerHTML = "";
             for(var i = 0; i < companionsCount; i++){
                 addCompanion();
+                companionsContainer.childNodes[i].id = "companion-" + (i + 1);
+                companionsContainer.childNodes[i].firstElementChild.lastElementChild.innerHTML = i + 1;
             }
         }else{
             companionsCount = parseInt(companionsInput.value);
             companionsInput.value = companionsCount + " чел";
             companionsContainer.innerHTML = "";
             for(var i = 0; i < companionsCount; i++){
-                addCompanion();    
+                addCompanion();
+                companionsContainer.childNodes[i].id = "companion-" + (i + 1);
+                companionsContainer.childNodes[i].firstElementChild.lastElementChild.innerHTML = i + 1;
             }
         }
     });
@@ -131,10 +135,11 @@ figure.querySelector(".photo__delete").addEventListener("click", function(event)
             event.preventDefault();
             companionsCount--;
             companionsInput.value = companionsCount + " чел";
-            if(companion.nextSibling){
-                companion.nextSibling.id = "companion-" + companionsCount;    
-            }
             companionsContainer.removeChild(companion);
+            for(var i = 0; i < companionsContainer.childNodes.length; i++){
+                companionsContainer.childNodes[i].id = "companion-" + (i + 1);
+                companionsContainer.childNodes[i].firstElementChild.lastElementChild.innerHTML = i + 1;
+            };
         });
     };
     function removeCompanion(lastCompanion){
