@@ -66,5 +66,71 @@ figure.querySelector(".photo__delete").addEventListener("click", function(event)
             return element.figure != figure;
         });
         figure.parentNode.removeChild(figure);
+    };
+    
+    //кнопки для количества попутчиков
+    var companionsButtonMinus = c("companions__minus"),
+        companionsButtonPlus = c("companions__plus"),
+        companionsInput = c("companions__count"),
+        companionsCount = parseInt(companionsInput.value);
+
+    companionsButtonMinus.addEventListener("click", function(){
+        if(companionsCount < 1)return;
+        companionsCount--;
+        companionsInput.value = companionsCount + " чел";
+        removeCompanion();
+    });
+
+    companionsButtonPlus.addEventListener("click", function(){
+        if(companionsCount > 98){
+            alert("Максимальное количество попутчиков: 99 чел.");
+            companionsCount = 99;
+            companionsInput.value = companionsCount + " чел";
+        }else{
+            companionsCount++;
+            companionsInput.value = companionsCount + " чел";
+        }
+            addCompanion();
+    });
+
+    companionsInput.addEventListener("change", function(){
+        if(isNaN(parseInt(companionsInput.value)) || parseInt(companionsInput.value) < 0){
+            alert("Неверное значение количества попутчиков");
+            companionsInput.value = 2 + "  чел";
+        }else if(parseInt(companionsInput.value) > 99){
+            alert("1Максимальное количество попутчиков: 99 чел.");
+            companionsCount = 99;
+            companionsInput.value = companionsCount + " чел";
+        }else{
+            companionsCount = parseInt(companionsInput.value);
+            companionsInput.value = companionsCount + " чел";
+        }
+    });
+
+
+    
+    //реализация добавления новых блоков для попутчиков
+    function addCompanion(){
+        var companionsContainer = c("companions__container");
+        var companion = document.createElement("div");
+        var templateCompanion = c("companion-template").innerHTML;
+        var innerContent = Mustache.render(templateCompanion, {
+            "number": companionsCount
+        });
+        companion.classList.add("companion");
+        companion.id = "companion-" + companionsCount;
+        companion.innerHTML = innerContent;
+        companionsContainer.appendChild(companion);
+    };
+    function removeCompanion(lastCompanion){
+        var companionsContainer = c("companions__container");
+        var lastCompanion = companionsContainer.lastChild;
+        companionsContainer.removeChild(lastCompanion);
     }
+
+
+
+
+
+
 })();

@@ -1,3 +1,4 @@
+/*
 //кнопки для количества попутчиков
 var companionsButtonMinus = c("companions__minus"),
     companionsButtonPlus = c("companions__plus"),
@@ -53,3 +54,4 @@ function addCompanion(){
 
 
 
+*/
