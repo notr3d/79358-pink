@@ -73,21 +73,15 @@ input {
     overflow: hidden;
 }
 
-.block {
+.page-index {
     @media @mobile {
-        &__wrapper {
-            width: 280px;
-            margin: 0 auto;
+        .page-footer {
+            display: none;
         }
     }
     @media @tablet {
-        &__wrapper {
-            width: 620px;    
+        .page-footer {
+            display: block;
         }
     }
-    @media @desktop {
-        &__wrapper {
-            width: 940px;    
-        }
-    }    
 }

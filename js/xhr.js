@@ -82,33 +82,39 @@ figure.querySelector(".photo__delete").addEventListener("click", function(event)
     });
 
     companionsButtonPlus.addEventListener("click", function(){
-        if(companionsCount > 98){
-            alert("Максимальное количество попутчиков: 99 чел.");
-            companionsCount = 99;
+        if(companionsCount > 9){
+            alert("Максимальное количество попутчиков: 10 чел.");
+            companionsCount = 10;
             companionsInput.value = companionsCount + " чел";
         }else{
             companionsCount++;
             companionsInput.value = companionsCount + " чел";
-        }
             addCompanion();
+        }
     });
 
     companionsInput.addEventListener("change", function(){
+        var companionsContainer = c("companions__container");
         if(isNaN(parseInt(companionsInput.value)) || parseInt(companionsInput.value) < 0){
             alert("Неверное значение количества попутчиков");
-            companionsInput.value = 2 + "  чел";
-        }else if(parseInt(companionsInput.value) > 99){
-            alert("1Максимальное количество попутчиков: 99 чел.");
-            companionsCount = 99;
+            companionsInput.value = 0 + "  чел";
+        }else if(parseInt(companionsInput.value) > 10){
+            alert("1Максимальное количество попутчиков: 10 чел.");
+            companionsCount = 10;
             companionsInput.value = companionsCount + " чел";
+            companionsContainer.innerHTML = "";
+            for(var i = 0; i < companionsCount; i++){
+                addCompanion();
+            }
         }else{
             companionsCount = parseInt(companionsInput.value);
             companionsInput.value = companionsCount + " чел";
+            companionsContainer.innerHTML = "";
+            for(var i = 0; i < companionsCount; i++){
+                addCompanion();    
+            }
         }
     });
-
-
-    
     //реализация добавления новых блоков для попутчиков
     function addCompanion(){
         var companionsContainer = c("companions__container");
@@ -121,16 +127,19 @@ figure.querySelector(".photo__delete").addEventListener("click", function(event)
         companion.id = "companion-" + companionsCount;
         companion.innerHTML = innerContent;
         companionsContainer.appendChild(companion);
+        companion.querySelector(".companion__delete").addEventListener("click", function(event){
+            event.preventDefault();
+            companionsCount--;
+            companionsInput.value = companionsCount + " чел";
+            if(companion.nextSibling){
+                companion.nextSibling.id = "companion-" + companionsCount;    
+            }
+            companionsContainer.removeChild(companion);
+        });
     };
     function removeCompanion(lastCompanion){
         var companionsContainer = c("companions__container");
         var lastCompanion = companionsContainer.lastChild;
         companionsContainer.removeChild(lastCompanion);
     }
-
-
-
-
-
-
 })();
