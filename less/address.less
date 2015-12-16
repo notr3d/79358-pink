@@ -36,11 +36,12 @@
     @media @tablet {
         &__wrapper {
             width: 620px;
+            padding-top: 40px;
         }
         &__header {
             font-size: 40px;
             width: 400px;
-            margin: auto;
+            margin: 0 auto 20px;
         }
         &__container {
             display: -webkit-flex;
@@ -53,16 +54,34 @@
         }
         &__item {
             width: 260px;
+            &:last-child {
+                margin-top: 20px;
+            }
         }
     }
     @media @desktop {
         &__wrapper {
-            width: 940px;    
+            padding-top: 60px;
+            width: 940px;  
+            padding-bottom: 0;
         }
         &__item {
             &:nth-child(2) {
                 order:1;
             }
+            &:last-child {
+                margin-top: 0;
+            }
+        }
+        &__header {
+            font-size: 50px;
+            width: 470px;
+            line-height: 60px;
+            margin-bottom: 45px;
+        }
+        &__text {
+            font-size: 18px;
+            margin-bottom: 20px;
         }
     }    
 }

@@ -14,7 +14,7 @@
             display: inline-block;
             text-align: center;
             width: 270px;
-            margin: 40px auto;
+            margin: 40px auto 20px;
         }
         &__upload {
             position: relative;
@@ -101,9 +101,8 @@
     @media @tablet {
         background-color: @white;
         &__wrapper {
-            margin: 60px auto;
             border:2px solid @light-grey;
-            padding: 40px 60px;
+            padding: 40px 60px 0;
             width: 496px;
             margin: 0 auto;
             position: relative;
@@ -124,11 +123,14 @@
         &__label {
             width: 99%;
         }
+        &__preview {
+            padding-top: 55px;
+        }
         &__item {
             margin: 0;
             margin-top: 20px;
             margin-right: 59px;
-            margin-bottom: 45px;
+            margin-bottom: 35px;
             width: 126px;
             height: 160px;
             img {
@@ -137,7 +139,7 @@
             }
             figcaption {
                 font-size: 14px;
-                line-height: 30px;
+                line-height: 20px;
                 height: 34px;
             }
             button {
@@ -154,9 +156,11 @@
         &__wrapper {
             width: 816px;
             margin: 60px auto;
+            padding-bottom: 40px;
         }
         &__item {
             margin-right: 45px;
+            margin-bottom: 0;
             &:nth-child(3n) {
                 margin-right: 45px;
             }
