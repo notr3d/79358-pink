@@ -97,9 +97,11 @@ figure.querySelector(".photo__delete").addEventListener("click", function(event)
         var companionsContainer = c("companions__container");
         if(isNaN(parseInt(companionsInput.value)) || parseInt(companionsInput.value) < 0){
             alert("Неверное значение количества попутчиков");
-            companionsInput.value = 0 + "  чел";
+            companionsCount = 0;
+            companionsInput.value = companionsCount + "  чел";
+            companionsContainer.innerHTML = "";
         }else if(parseInt(companionsInput.value) > 10){
-            alert("1Максимальное количество попутчиков: 10 чел.");
+            alert("Максимальное количество попутчиков: 10 чел.");
             companionsCount = 10;
             companionsInput.value = companionsCount + " чел";
             companionsContainer.innerHTML = "";
