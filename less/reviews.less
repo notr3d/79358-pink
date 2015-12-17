@@ -9,8 +9,7 @@
             height: 100px;
             position: absolute;
             top:99%;
-            background-color: red;
-            background: url(../img/misc/triangle-white.svg) no-repeat center;
+            background: url(../img/misc/triangle-white--mobile.svg) no-repeat center;
         }
         &__wrapper {
             width: 280px;
@@ -99,6 +98,9 @@
         }
     }
     @media @tablet {
+        &::before {
+            background: url(../img/misc/triangle-white--tablet.svg) no-repeat center;
+        }
         &__wrapper {
             width: 620px;
         }
@@ -131,6 +133,9 @@
         }
     }
     @media @desktop {
+        &::before {
+            background: url(../img/misc/triangle-white.svg) no-repeat center;
+        }
         &__wrapper {
             width: 940px;
         }
@@ -161,7 +166,15 @@
             border: none;
             left: 0;
             top: 25px;
+            outline:none;
             background:  url(../img/misc/review-arrow-left.svg) no-repeat center;
+            opacity: .3;
+            &:hover {
+                opacity: .6;
+            }
+            &:active {
+                opacity: .1;
+            }            
             &--right {
                 left: 900px;
                 background-image: url(../img/misc/review-arrow-right.svg);

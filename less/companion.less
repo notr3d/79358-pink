@@ -23,6 +23,7 @@
                 height: 56px;
                 width: 56px;
                 border: 2px solid @grey;
+                border-radius: 3px;
                 text-align: center;
                 line-height: 60px;
             }
@@ -45,6 +46,14 @@
                 height: 60px;
                 padding: 25px;
                 border:2px solid @grey;
+                border-radius: 3px;
+                outline: none;
+                &:hover {
+                border-color: @dark-blue;
+                }
+                &:focus {
+                    border-color: @pink;
+                }
             }
         }
         &__alias {
@@ -67,6 +76,14 @@
                 height: 60px;
                 padding: 25px;
                 border:2px solid @grey;
+                border-radius: 3px;
+                outline: none;
+                &:hover {
+                    border-color: @dark-blue;
+                }
+                &:focus {
+                    border-color: @pink;
+                }
             }    
         }
         &__delete {
@@ -95,6 +112,15 @@
             top: 60px;
             right: -166px;
             font-size: 14px;
+            outline: none;
+            &:hover {
+                color: @pink;
+                text-decoration: underline;
+            }
+            &:active {
+                color: @grey;
+                text-decoration: none;
+            }
         }
     }
     @media @desktop {

@@ -5,20 +5,35 @@
         width: 160px;
         height: 70px;
         background: url(../img/logo/logotype-white-mobile.svg) no-repeat 20% 50%;
+        &:hover {
+            background-image: url(../img/logo/logotype-white-mobile--hover.svg);
+        }
+        &:active {
+            opacity: .3;
+        }
         &--black {
             background-image: url(../img/logo/logotype-blue-tablet.svg);
+            &:hover {
+                background-image: url(../img/logo/logotype-white-tablet--hover.svg);
+            }
         }
     }
     @media @tablet {
         height: 110px;
         width: 230px;
         background: url(../img/logo/logotype-white-tablet.svg) no-repeat 50% 50%;
+        &:hover {
+            background-image: url(../img/logo/logotype-white-tablet--hover.svg);
+        }
         &--black {
             background-image: url(../img/logo/logotype-blue-tablet.svg);
         }
     }
     @media @desktop {
             background-image: url(../img/logo/logotype-white-desktop.svg);
+        &:hover {
+            background-image: url(../img/logo/logotype-white-desktop--hover.svg);
+        }
         &--black {
             background-image: url(../img/logo/logotype-blue-desktop.svg);
         }

@@ -1,17 +1,42 @@
 .about {
     @media @mobile {
         &__wrapper {
-            width: 280px;
-            margin: 0 auto;
             display: none;
         }
     }
     @media @tablet {
         &__wrapper {
+            margin: 0 auto;
             display: block;
-            width: 310px;
-            padding: 100px 0 100px 310px;
-            background: url(../img/timer@tablet.png) no-repeat 0% 50%;
+            width: 620px;
+            padding: 50px 0;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            height: 320px;
+        }
+        &__timer {
+            width: 50%;
+            font-size: 105px;
+            font-weight: bold;
+            background: url(../img/misc/timer.svg) no-repeat center;
+            background-size: contain;
+        }
+        &__hour {
+            color: @pink;
+            width: 190px;
+            height: 190px;
+            line-height: 185px;
+            text-align: center;
+            margin: auto;
+            margin-top: 75px;
+            border: 10px solid @pink;
+            border-radius: 50%;
+        }
+        &__container {
+            width: 50%;
         }
         &__header {
             font-size: 30px;
@@ -32,9 +57,7 @@
     @media @desktop {
         background-color: @light-grey;
         &__wrapper {
-            width: 470px;
-            padding: 100px 0 100px 470px;
-            background: url(../img/timer@desktop.png) no-repeat 0% 50%;   
+            width: 840px;
         }
     }    
 }
