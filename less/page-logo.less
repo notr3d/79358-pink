@@ -1,0 +1,26 @@
+.page-logo {
+    @media @mobile {
+        .hide-link-text;
+        display: inline-block;
+        width: 160px;
+        height: 70px;
+        background: url(../img/logo/logotype-white-mobile.svg) no-repeat 20% 50%;
+        &--black {
+            background-image: url(../img/logo/logotype-blue-tablet.svg);
+        }
+    }
+    @media @tablet {
+        height: 110px;
+        width: 230px;
+        background: url(../img/logo/logotype-white-tablet.svg) no-repeat 50% 50%;
+        &--black {
+            background-image: url(../img/logo/logotype-blue-tablet.svg);
+        }
+    }
+    @media @desktop {
+            background-image: url(../img/logo/logotype-white-desktop.svg);
+        &--black {
+            background-image: url(../img/logo/logotype-blue-desktop.svg);
+        }
+    }    
+}
