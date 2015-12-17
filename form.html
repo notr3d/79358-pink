@@ -24,7 +24,7 @@
                  <h1 class="page-title__header">Конкурс на самое безбашенное путешествие с Пинк</h1>    
              </div>
          </header>
-         <article class="form">
+         <form class="form">
              <h2 class="form__header">
                  Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span> Пожалуйста, заполните форму ниже:</span>
              </h2>
@@ -48,15 +48,15 @@
                  <div class="app__wrapper">
                      <h3 class="app__header">С каким приложением путешествовали? *</h3>
                      <div class="app__item">
-                         <input type="radio" name="app" class="app__radio" id="ios" required>
+                         <input type="radio" name="app" class="app__radio" id="ios" value = "ios" required>
                          <label for="ios" class="app__label">Pink для iOS</label>
                      </div>
                      <div class="app__item">
-                         <input type="radio" name="app" class="app__radio" id="android" required>
+                         <input type="radio" name="app" class="app__radio" id="android" value="android" required>
                          <label for="android" class="app__label">Pink для Android</label>
                      </div>
                      <div class="app__item">
-                         <input type="radio" name="app" class="app__radio" id="windows" required>
+                         <input type="radio" name="app" class="app__radio" id="windows" value="windows" required>
                          <label for="windows" class="app__label">Windows Phone</label>
                      </div>
                  </div>
@@ -69,13 +69,13 @@
                          <label for="vacation__start" class="vacation__label">ДАТА ВЫЕЗДА</label>    
                      </div>
                      <div class="vacation__item">
-                         <input type="button" name="vacation__duration-minus" class="vacation__duration-minus" id="vacation__duration-minus" value="-">
-                         <input type="text" name="vacation__duration-count" class="vacation__duration-count" id="vacation__duration-count" value="10 дней" required>        
-                         <input type="button" name="vacation__duration-plus" class="vacation__duration-plus" id="vacation__duration-plus" value="+">
+                         <input type="button" class="vacation__duration-minus" id="vacation__duration-minus" value="-">
+                         <input type="text" name="vacation-duration" class="vacation__duration-count" id="vacation__duration-count" value="10 дней" required>        
+                         <input type="button"  class="vacation__duration-plus" id="vacation__duration-plus" value="+">
                          <label for="vacation__duration-count" class="vacation__label">ПРОДОЛЖИТЕЛЬНОСТЬ</label>        
                      </div>
                      <div class="vacation__item">
-                         <input type="date" name="vacation__end" class="vacation__end" id="vacation__end" value="2015-04-11" disabled>
+                         <input type="date" name="vacation-end" class="vacation__end" id="vacation__end" value="2015-04-11" disabled>
                          <label for="vacation__end" class="vacation__label">Дата Возвращения</label>
                      </div>
                  </div>
@@ -84,68 +84,67 @@
                  <div class="companions__wrapper">
                      <h3 class="companions__header">КОЛИЧЕСТВО ПОПУТЧИКОВ *</h3>
                      <div class="companions__item">
-                         <input type="button" name="companions__minus" class="companions__minus" id="companions__minus" value="-">
+                         <input type="button"  class="companions__minus" id="companions__minus" value="-">
                          <input type="text" name="companions-count" class="companions__count" id="companions-count" placeholder="2 чел" value="2 чел" required>        
-                         <input type="button" name="companions__plus" class="companions__plus" id="companions__plus" value="+">
+                         <input type="button" class="companions__plus" id="companions__plus" value="+">
                      </div>
                      <div class="companion">
                          <div class="companion__number">
-                         <label>№</label>
-                         <div>1</div>    
+                             <label>№</label>
+                             <div>1</div>    
                          </div>
                          <div class="companion__name">
-                         <label>ИМЯ: *</label>
-                         <input type="text" name="companion__name" class="companion__name" id="companion__name" placeholder="Введите ваше имя" required>    
+                             <label for="companion__name-1">ИМЯ: *</label>
+                             <input type="text" name="companion-name-1" class="companion__name" id="companion__name-1" placeholder="Введите ваше имя" required>    
                          </div>
                          <div class="companion__alias">
-                         <label>Прозвище:</label>
-                         <input type="text" name="companion__alias" class="companion__alias" id="companion__alias" placeholder="Ну как же без этого!" required>    
+                             <label for="companion__alias-1">Прозвище:</label>
+                             <input type="text" name="companion-alias-1" class="companion__alias" id="companion__alias-1" placeholder="Ну как же без этого!">    
                          </div>
                          <button class="companion__delete">УДАЛИТЬ</button>     
                      </div>
                      <div class="companion">
                          <div class="companion__number">
-                         <label>№</label>
-                         <div>2</div>    
+                             <label>№</label>
+                             <div>2</div>    
                          </div>
                          <div class="companion__name">
-                         <label>ИМЯ: *</label>
-                         <input type="text" name="companion__name-2" class="companion__name-2" id="companion__name" placeholder="Введите ваше имя" required>    
+                             <label for="companion__name-2">ИМЯ: *</label>
+                             <input type="text" name="companion-name-2" class="companion__name" id="companion__name-2" placeholder="Введите ваше имя" required>    
                          </div>
                          <div class="companion__alias">
-                         <label>Прозвище:</label>
-                         <input type="text" name="companion__alias" class="companion__alias" id="companion__alias" placeholder="Ну как же без этого!" required>    
+                             <label for="companion__alias-2">Прозвище:</label>
+                             <input type="text" name="companion_-alias-2" class="companion__alias" id="companion__alias-2" placeholder="Ну как же без этого!">    
                          </div>
                          <button class="companion__delete">УДАЛИТЬ</button>     
                      </div>
-                     
                  </div>
              </section>
              <section class="achievments">
                  <div class="achievments__wrapper">
                      <h3 class="achievments__header">Ваши безбашенные достижения в путешествии</h3>
                      <div class="achievments__item">
-                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-1" value="achievment-1" checked>
+                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-1" value="selfie-with-shark" checked>
                          <label for="achievment-1" class="achievments__label">Сделал селфи с акулой</label>
                      </div>
                      <div class="achievments__item">
-                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-2" value="achievment-3">
+                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-2" value="burn-on-beach">
                          <label for="achievment-2" class="achievments__label">Обгорел на пляже</label>
                      </div>
                      <div class="achievments__item">
-                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-3" value="achievment-3">
+                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-3" value="saw-chuck-norris">
                          <label for="achievment-3" class="achievments__label">Видел Чака Норриса</label>
                      </div>
                      <div class="achievments__item">
-                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-4" value="achievment-4">
+                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-4" value="bought-souvenirs">
                          <label for="achievment-4" class="achievments__label">Накупил сувениров</label>
                      </div>
                      <div class="achievments__item">
-                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-5" value="achievment-5">
+                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-5" value="kept-himself-together">
                          <label for="achievment-5" class="achievments__label">Удержал башню</label>
                      </div>
                      <div class="achievments__item">
-                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-6" value="achievment-6">
+                         <input type="checkbox" name="achievment" class="achievments__checkbox" id="achievment-6" value="destroyed-hotel">
                          <label for="achievment-6" class="achievments__label">Разгромил отель</label>
                      </div>                     
                  </div>                 
@@ -206,7 +205,7 @@
                  <input type="submit" name="submit" class="submit__button" id="submit__button" value="ОТПРАВИТЬ ФОРМУ">
                  <div class="submit__descr"><span>* </span>— ОБЯЗАТЕЛЬНЫЕ <span>ДЛЯ ЗАПОЛНЕНИЯ</span> ПОЛЯ</div>    
              </section>    
-         </article>
+         </form>
          <footer class="page-footer">
              <div class="page-footer__wrapper">
                  <a href="#" class="page-logo  page-logo--black">Pink</a>
@@ -220,6 +219,11 @@
                  <a href="#" class="copyright">Разработано</a>
              </div>
          </footer> 
+         <script src="js/lib.js"></script>     
          <script src="js/script.js"></script>     
+         <script src="js/menu.js"></script>
+         <script src="js/vacation.js"></script>
+         <script src="js/companions.js"></script>
+         <script src="js/xhr.js"></script>
     </body>
 </html>
