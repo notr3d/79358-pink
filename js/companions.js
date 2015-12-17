@@ -1,3 +1,4 @@
+/*
 //кнопки для количества попутчиков
 var companionsButtonMinus = c("companions__minus"),
     companionsButtonPlus = c("companions__plus"),
@@ -17,9 +18,9 @@ companionsButtonPlus.addEventListener("click", function(){
         companionsInput.value = companionsCount + " чел";
     }else{
         companionsCount++;
-        companionsInput.value = companionsCount + " чел";    
+        companionsInput.value = companionsCount + " чел";
+        addCompanion()
     }
-    
 });
 
 companionsInput.addEventListener("change", function(){
@@ -35,3 +36,22 @@ companionsInput.addEventListener("change", function(){
         companionsInput.value = companionsCount + " чел";
     }
 });
+
+//реализация добавления новых блоков для попутчиков
+function addCompanion(){
+    var companionsContainer = c("companions__container");
+    var templateCompanion = c("companion-template").innerHTML;
+    var innerContent = Mustache.render(templateCompanion, {
+        "number": companionsCount
+    });
+    var companion = document.createElement("div");
+    companion.classList.add("companion");
+    companion.innerHTML = innerContent;
+    companionsContainer.appendChild(companion);
+};
+
+
+
+
+
+*/

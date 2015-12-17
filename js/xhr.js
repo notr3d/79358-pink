@@ -33,6 +33,7 @@
         for(var i = 0; i < files.length; i++){
             preview(files[i]);    
         }
+        this.value="";
     });
     function preview(file){
         var photosContainer = c("photo__preview");
@@ -65,5 +66,87 @@ figure.querySelector(".photo__delete").addEventListener("click", function(event)
             return element.figure != figure;
         });
         figure.parentNode.removeChild(figure);
+    };
+    
+    //кнопки для количества попутчиков
+    var companionsButtonMinus = c("companions__minus"),
+        companionsButtonPlus = c("companions__plus"),
+        companionsInput = c("companions__count"),
+        companionsCount = parseInt(companionsInput.value);
+
+    companionsButtonMinus.addEventListener("click", function(){
+        if(companionsCount < 1)return;
+        companionsCount--;
+        companionsInput.value = companionsCount + " чел";
+        removeCompanion();
+    });
+
+    companionsButtonPlus.addEventListener("click", function(){
+        if(companionsCount > 9){
+            alert("Максимальное количество попутчиков: 10 чел.");
+            companionsCount = 10;
+            companionsInput.value = companionsCount + " чел";
+        }else{
+            companionsCount++;
+            companionsInput.value = companionsCount + " чел";
+            addCompanion();
+        }
+    });
+
+    companionsInput.addEventListener("change", function(){
+        var companionsContainer = c("companions__container");
+        if(isNaN(parseInt(companionsInput.value)) || parseInt(companionsInput.value) < 0){
+            alert("Неверное значение количества попутчиков");
+            companionsCount = 0;
+            companionsInput.value = companionsCount + "  чел";
+            companionsContainer.innerHTML = "";
+        }else if(parseInt(companionsInput.value) > 10){
+            alert("Максимальное количество попутчиков: 10 чел.");
+            companionsCount = 10;
+            companionsInput.value = companionsCount + " чел";
+            companionsContainer.innerHTML = "";
+            for(var i = 0; i < companionsCount; i++){
+                addCompanion();
+                companionsContainer.childNodes[i].id = "companion-" + (i + 1);
+                companionsContainer.childNodes[i].firstElementChild.lastElementChild.innerHTML = i + 1;
+            }
+        }else{
+            companionsCount = parseInt(companionsInput.value);
+            companionsInput.value = companionsCount + " чел";
+            companionsContainer.innerHTML = "";
+            for(var i = 0; i < companionsCount; i++){
+                addCompanion();
+                companionsContainer.childNodes[i].id = "companion-" + (i + 1);
+                companionsContainer.childNodes[i].firstElementChild.lastElementChild.innerHTML = i + 1;
+            }
+        }
+    });
+    //реализация добавления новых блоков для попутчиков
+    function addCompanion(){
+        var companionsContainer = c("companions__container");
+        var companion = document.createElement("div");
+        var templateCompanion = c("companion-template").innerHTML;
+        var innerContent = Mustache.render(templateCompanion, {
+            "number": companionsCount
+        });
+        companion.classList.add("companion");
+        companion.id = "companion-" + companionsCount;
+        companion.innerHTML = innerContent;
+        companionsContainer.appendChild(companion);
+        companion.querySelector(".companion__delete").addEventListener("click", function(event){
+            event.preventDefault();
+            companionsCount--;
+            companionsInput.value = companionsCount + " чел";
+            companionsContainer.removeChild(companion);
+            for(var i = 0; i < companionsContainer.childNodes.length; i++){
+                companionsContainer.childNodes[i].id = "companion-" + (i + 1);
+                companionsContainer.childNodes[i].firstElementChild.lastElementChild.innerHTML = i + 1;
+            };
+        });
+    };
+    function removeCompanion(lastCompanion){
+        var companionsContainer = c("companions__container");
+        var lastCompanion = companionsContainer.lastChild;
+        companionsContainer.removeChild(lastCompanion);
     }
 })();
