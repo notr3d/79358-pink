@@ -9,6 +9,16 @@
             position: relative;
             left: 50%;
             margin-left: -420px;
+            transition: all 1s;
+            &--first-slide {
+                transform: translateX(280px);
+            }
+            &--second-slide {
+                transform: translateX(0px);
+            }
+            &--third-slide {
+                transform: translateX(-280px);
+            }
         }
         &__table {
             border-collapse: collapse;
@@ -112,29 +122,41 @@
                     box-shadow: 0 0 0 3px @dark-blue;
                 }
             }
-            #prices__control-1:checked ~ .prices__wrapper .prices__table  {
-                transform: translateX(280px);
-            }
-            #prices__control-3:checked ~ .prices__wrapper .prices__table {
-                transform: translateX(-280px);
-            }
         }
     //}
     @media @tablet {
+        padding-bottom: 67px;
         &__wrapper {
             width: 620px;
             margin: 0 auto;
             position: static;
         }
+        &__table{
+            width: 100%;
+        }
         &__table-head-cell {
             width: 25%;
+            padding:12px 0;
             &:first-child {
                 display: table-cell;
                 visibility: hidden;
             }
+            &--hit {
+                &::before {
+                    top:0;
+                    left:-32px;
+                }
+            }
+        }
+        &__type {
+            font-size: 16px;
+        }
+        &__price {
+            font-size: 18px;
         }
         &__table-cell {
             font-size: 12px;
+            padding: 14px;
             padding-right: 0;
             &:first-child {
                 display: table-cell;
@@ -150,11 +172,22 @@
         }
     }
     @media @desktop {
+        padding: 153px 0 91px;
         &__wrapper {
             width: 940px;    
         }
-        &__table{
-            width: 100%;
+        &__type {
+            font-size: 18px;
+        }
+        &__price {
+            font-size: 22px;
+        }
+        &__table-head-cell {
+            padding: 22px 0;
+        }
+        &__table-cell {
+            padding: 20px 0 20px 20px;
+            font-size: 15px;
         }
     }    
 }

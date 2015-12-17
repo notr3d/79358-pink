@@ -2,7 +2,7 @@
     //@media @mobile {
         &__wrapper {
             width: 280px;
-            margin: 0 auto;
+            margin: 0 auto 25px;
         }
         &__header {
             color:@pink;
@@ -10,11 +10,10 @@
             line-height: 30px;
             font-weight: normal;
             text-transform: uppercase;
-            margin: 40px auto 0;
+            margin: 55px auto 40px;
             display: inline-block;
             text-align: center;
             width: 100%;
-            margin-bottom: 45px;
         }
         &__item {
             width: 100%;
@@ -26,9 +25,10 @@
             color: @pink;
             text-transform: uppercase;
             text-align: center;
-            padding: 20px 0 25px;
+            padding: 20px 0;
         }
         &__start {
+            font-size:18px;
             width: 100%;
             height: 56px;
             padding: 20px;
@@ -56,12 +56,14 @@
             margin:0;
             outline:none;
             cursor:pointer;
+            color:@dark-blue;
             transition: border-color .1s;
             &:hover {
                 border-color: @dark-blue;
             }
-            &:focus {
-                border-color: @pink;
+            &:active {
+                color:@white;
+                background-color: @dark-blue;
             }
         }
         &__duration-plus {
@@ -80,28 +82,32 @@
             &:hover {
                 border-color: @dark-blue;
             }
-            &:focus {
-                border-color: @pink;
+            &:active {
+                color:@white;
+                background-color: @dark-blue;
             }
         }
         &__duration-count {
-            width: 159px;
-            margin:0;
+            font-size:18px;
+            width: 171px;
+            margin:0 -6px;
             display: inline-block;
-            padding: 20px 40px;
+            padding: 20px 0 20px 50px;
             box-sizing: border-box;
             border: 2px solid @light-grey;
             height: 56px;
             vertical-align: top;
             transition: border-color .1s;
-            &:hover {
+            outline: none;
+            /*&:hover {
                 border-color: @dark-blue;
             }
             &:focus {
                 border-color: @pink;
-            }
+            }*/
         }
         &__end {
+            font-size:18px;
             box-sizing: border-box;
             border: 2px solid @grey;
             border-radius: 3px;
@@ -124,6 +130,7 @@
             display: -o-flex;
             display: flex;
             flex-wrap:wrap;
+            padding-bottom: 0;
         }
         &__header {
             position: absolute;
@@ -141,10 +148,13 @@
             }
         }
         &__duration-count {
-            width: 115px;
+            width: 127px;
             padding: 20px;
             outline: none;
             border-radius: 3px;
+        }
+        &__label {
+            padding: 24px 0 33px;
         }
     }
     @media @desktop {

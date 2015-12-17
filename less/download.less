@@ -1,6 +1,6 @@
 .download {
     //@media @mobile {
-        background: url(../img/hand/iphone-hand-mobile.png) no-repeat 0% 25%;
+        background: url(../img/hand/iphone-hand-mobile.png) no-repeat 50% 25%;
         @media (min-resolution: 2dppx) {
             background-size: contain; 
             background-image: url(../img/hand/iphone-hand-mobile@2x.png);
@@ -99,6 +99,7 @@
             margin: 0 auto 30px;
             width: 240px;
             text-align: center;
+            line-height: 50px;
         }
         &__container {
             padding: 0;
@@ -119,18 +120,21 @@
     }
     @media @desktop {
         width: 940px;
-        background: url(../img/hand/iphone-hand-desktop@1x.png) no-repeat 0% 100%;
+        background: url(../img/hand/iphone-hand-desktop@1x.png) no-repeat -14% 100%;
         @media (min-resolution: 2dppx) {
             background-size: contain; 
             background-image: url(../img/hand/iphone-hand-desktop@2x.png);
         }
-        padding: 120px 0;
+        padding: 120px 0 109px;
         &__header {
             font-size: 50px;
             margin-bottom: 40px;
         }
         &__type {
             margin: 45px auto 45px;
+        }
+        &__link {
+            margin-bottom: 65px;
         }
     }    
 }
