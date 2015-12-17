@@ -1,5 +1,5 @@
 .name {
-    @media @mobile {
+    //@media @mobile {
         &__wrapper {
             width: 280px;
             margin: 0 auto;
@@ -13,6 +13,13 @@
             border: 2px solid @light-grey;
             border-radius: 3px;
             outline: none;
+            transition: border-color .1s;
+            &:hover {
+                border-color: @dark-blue;
+            }
+            &:focus {
+                border-color: @pink;
+            }
         }
         &__label {
             color:@pink;
@@ -20,7 +27,7 @@
             display: block;
             font-size: 14px;
             }    
-        }
+        //}
     @media @tablet {
         &__wrapper {
             width: 620px;

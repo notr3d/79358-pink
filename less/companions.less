@@ -1,5 +1,5 @@
 .companions {
-    @media @mobile {
+    //@media @mobile {
         background-color: @light-grey;
         padding-bottom: 50px;
         &__wrapper {
@@ -24,6 +24,7 @@
         &__minus {
             background-color: @white;
             border:2px solid @grey;
+            border-radius: 3px;
             width: 56px;
             height: 56px;
             position: relative;
@@ -31,10 +32,19 @@
             line-height: 0px;
             margin:0;
             outline:none;
+            cursor:pointer;
+            transition: border-color .1s;
+            &:hover {
+                border-color: @dark-blue;
+            }
+            &:focus {
+                border-color: @pink;
+            }
         }
         &__plus {
             background-color: @white;
             border:2px solid @grey;
+            border-radius: 3px;
             width: 56px;
             height: 56px;
             position: relative;
@@ -42,6 +52,14 @@
             line-height: 0px;
             margin:0;
             outline:none;
+            cursor:pointer;
+            transition: border-color .1s;
+            &:hover {
+                border-color: @dark-blue;
+            }
+            &:focus {
+                border-color: @pink;
+            }
         }
         &__count {
             width: 159px;
@@ -50,10 +68,19 @@
             padding: 20px 55px;
             box-sizing: border-box;
             border: 2px solid @grey;
+            border-radius: 3px;
             height: 56px;
+            outline: none;
             vertical-align: top;
+            transition: border-color .1s;
+            &:hover {
+                border-color: @dark-blue;
+            }
+            &:focus {
+                border-color: @pink;
+            }
         }
-    }
+    //}
     @media @tablet {
         background-color: @white;
         &__wrapper {

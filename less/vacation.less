@@ -1,5 +1,5 @@
 .vacation {
-    @media @mobile {
+    //@media @mobile {
         &__wrapper {
             width: 280px;
             margin: 0 auto;
@@ -36,10 +36,18 @@
             outline:none;
             border:2px solid @light-grey;
             border-radius: 3px;
+            transition: border-color .1s;
+            &:hover {
+                border-color: @dark-blue;
+            }
+            &:focus {
+                border-color: @pink;
+            }
         }
         &__duration-minus {
             background-color: @white;
             border:2px solid @light-grey;
+            border-radius: 3px;
             width: 56px;
             height: 56px;
             position: relative;
@@ -47,10 +55,19 @@
             line-height: 0px;
             margin:0;
             outline:none;
+            cursor:pointer;
+            transition: border-color .1s;
+            &:hover {
+                border-color: @dark-blue;
+            }
+            &:focus {
+                border-color: @pink;
+            }
         }
         &__duration-plus {
             background-color: @white;
             border:2px solid @light-grey;
+            border-radius: 3px;
             width: 56px;
             height: 56px;
             position: relative;
@@ -58,6 +75,14 @@
             line-height: 0px;
             margin:0;
             outline:none;
+            cursor:pointer;
+            transition: border-color .1s;
+            &:hover {
+                border-color: @dark-blue;
+            }
+            &:focus {
+                border-color: @pink;
+            }
         }
         &__duration-count {
             width: 159px;
@@ -68,16 +93,24 @@
             border: 2px solid @light-grey;
             height: 56px;
             vertical-align: top;
+            transition: border-color .1s;
+            &:hover {
+                border-color: @dark-blue;
+            }
+            &:focus {
+                border-color: @pink;
+            }
         }
         &__end {
             box-sizing: border-box;
             border: 2px solid @grey;
+            border-radius: 3px;
             width: 100%;
             height: 56px;
             padding: 20px;
             background-color: @light-grey;
         }
-    }
+    //}
     @media @tablet {
         &__wrapper {
             border:2px solid @light-grey;
@@ -110,6 +143,8 @@
         &__duration-count {
             width: 115px;
             padding: 20px;
+            outline: none;
+            border-radius: 3px;
         }
     }
     @media @desktop {

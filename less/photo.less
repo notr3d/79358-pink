@@ -1,6 +1,6 @@
 .photo {
     background-color:@light-grey;
-    @media @mobile {
+    //@media @mobile {
         &__wrapper {
             width: 280px;
             margin: 0 auto;
@@ -33,10 +33,19 @@
             left: 0;
             background-color: @white;
             border:2px solid @grey;
+            border-radius: 3px;
             text-align: center;
             font-weight: bold;
             line-height: 60px;
             cursor: pointer;
+            transition: border-color .1s;
+            &:hover {
+                    border-color: @dark-blue;
+            }
+            &:active {
+                background-color: @dark-blue;
+                color:@white;
+            }
         }
         &__preview {
             display: -webkit-flex;
@@ -78,9 +87,17 @@
                 top:-15px;
                 right: -15px;
                 outline:none;
+                transition: border-color .1s;
+                &:hover {
+                    border-color: @dark-blue;
+                }
+                &:active {
+                    background-color: @dark-blue;
+                    color:@white;
+                }
             }
         }
-    }
+    //}
     @media @tablet {
         background-color: @white;
         &__wrapper {

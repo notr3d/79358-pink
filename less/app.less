@@ -1,5 +1,5 @@
 .app {
-    @media @mobile {
+    //@media @mobile {
         background-color: @light-grey;
         &__wrapper {
             width: 280px;
@@ -47,6 +47,13 @@
                 background-color: @white;
                 border-radius: 50%;
                 border:2px solid @grey;
+                transition:border-color .1s;
+            }
+            &:hover::before {
+                border-color: @dark-blue;
+            }
+            &:focus::before {
+                border-color: @pink;
             }
             &:checked::after {
                 content:'';
@@ -60,7 +67,7 @@
                 border-radius: 50%;
             }
         }
-    }
+    //}
     @media @tablet {
         background-color: @white;
         &__wrapper {

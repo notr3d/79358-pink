@@ -1,5 +1,5 @@
 .social {
-    @media @mobile {
+    //@media @mobile {
         &__list {
             margin: 0;
             padding: 0;
@@ -19,6 +19,13 @@
             background-color: @white;
             border: 3px solid @light-grey;
             margin: 5px;
+            transition: border-color .1s;
+            &:hover {
+                border-color: @dark-blue;
+            }
+            &:active {
+                opacity: .3;
+            }
             &--twitter {
                 background: url(../img/social/twitter.svg) no-repeat center;
             }
@@ -29,7 +36,7 @@
                 background: url(../img/social/youtube.svg) no-repeat center;
             }
         }
-    }
+    //}
     @media @tablet {
         
     }

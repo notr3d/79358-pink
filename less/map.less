@@ -1,5 +1,5 @@
 .map {
-    @media @mobile {
+    //@media @mobile {
         height: 200px;
         background-color: @light-grey;
         position: relative;
@@ -11,13 +11,16 @@
             position: absolute;
             left: 0;
             top: 0;
-            background: url(../img/misc/triangle-white-footer.svg) no-repeat 50% 0;
+            background: url(../img/misc/triangle-white-footer--mobile.svg) no-repeat 50% 0;
         }
-    }
+    //}
     @media @tablet {
-    height: 380px;    
+        height: 380px;
+        &::before {
+            background-image: url(../img/misc/triangle-white-footer--tablet.svg);
+        }    
     }
     @media @desktop {
-        height: 540px;    
+        height: 540px;
     }    
 }

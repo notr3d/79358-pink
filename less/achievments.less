@@ -1,5 +1,5 @@
 .achievments {
-    @media @mobile {
+    //@media @mobile {
         &__wrapper {
             width: 280px;
             margin: 0 auto;
@@ -42,9 +42,11 @@
                 position: absolute;
                 width: 38px;
                 height: 38px;
+                border-radius: 3px;
                 background-color: @white;
                 border:2px solid @grey;
-                top:-2px
+                top:-2px;
+                transition: border-color .1s;
             }
             &:checked::after {
                 content:'';
@@ -58,8 +60,14 @@
                 border-bottom:2px solid @pink;
                 transform:rotate(-45deg);
             }
+            &:hover::before {
+                    border-color: @dark-blue;
+            }
+            &:focus::before {
+                border-color: @pink;
+            }
         }
-    }
+    //}
     @media @tablet {
         &__wrapper {
             border:2px solid @light-grey;
@@ -89,7 +97,7 @@
             display: flex;
             flex-wrap: wrap; 
             flex-direction: column;
-            height: 160px;
+            height: 172px;
         }
         &__item {
             
