@@ -1,0 +1,66 @@
+.success {
+    position: fixed;
+    width: 280px;
+    padding: 50px 20px 0;
+    background-color: @white;
+    top:200px;
+    left: 50%;
+    margin-left: -160px;
+    top: 25%;
+    box-shadow: 0 5px 15px 0 rgba(223,223,223,.5);
+    display: none;
+    &__header {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    &__container {
+        background-color: @light-grey;
+        padding: 50px 20px;
+        margin: 0 -20px;
+    }
+    &__button {
+        display: block;
+        width: 100%;
+        background-color: @dark-green;
+        color:@white;
+        font-size: 18px;
+        font-weight: bold;
+        border:none;
+        border-radius: 3px;
+        cursor: pointer;
+        padding: 25px;
+    }
+    @media @tablet {
+        width: 300px;
+        padding: 50px 80px 0;
+        margin-left: -230px;
+        &__container {
+            margin: 0 -80px;
+        }
+        &__header {
+            font-size: 30px;
+            line-height: 40px;
+        }
+        &__text {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+    @media @desktop {
+        width: 380px;
+        padding: 50px 200px 0;
+        margin-left: -390px;
+    }
+    &__container {
+        margin: 0 -200px;
+        padding: 50px 180px;
+        
+    }
+}
