@@ -26,6 +26,7 @@
             width: 100%;
             line-height: 40px;
             padding: 0 25px;
+            cursor: pointer;
         }
         &__radio {
             width: 40px;
@@ -43,17 +44,11 @@
                 background-color: @white;
                 border-radius: 50%;
                 border: 2px solid @grey;
-                transition: border-color .1s;
+                transition: all .1s;
             }
-            &:hover::before {
-                border-color: @dark-blue;
-            }
-            &:focus::before {
-                border-color: @pink;
-            }
-            &:checked::after {
+            &::after {
                 content: "";
-                display: block;
+                display: none;
                 position: absolute;
                 width: 16px;
                 height: 16px;
@@ -61,6 +56,40 @@
                 left: 12px;
                 background-color: @pink;
                 border-radius: 50%;
+            }
+            &:hover {
+                &::before {
+                    border-color: @dark-blue;
+                }
+            }
+            &:active {
+                &::before {
+                    border-color: @pink;
+                }
+                &::after {
+                    display: block;
+                }
+            }
+            &:checked {
+                &::before {
+                    border-color: @grey;
+                }
+                &::after {
+                    display: block;
+                }
+                &:hover {
+                    &::before {
+                        border-color: @dark-blue;
+                    }
+                }
+                &:active {
+                    &::before {
+                        border-color: @pink;
+                    }
+                    &::after {
+                        display: none;
+                    }
+                }
             }
         }
     //}

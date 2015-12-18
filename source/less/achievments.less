@@ -25,6 +25,7 @@
             width: 100%;
             line-height: 30px;
             padding: 0 0 0 25px;
+            cursor: pointer;
         }
         &__checkbox {
             width: 40px;
@@ -44,9 +45,9 @@
                 top: -2px;
                 transition: border-color .1s;
             }
-            &:checked::after {
+            &::after {
                 content: "";
-                display: block;
+                display: none;
                 position: absolute;
                 width: 20px;
                 height: 7px;
@@ -56,11 +57,39 @@
                 border-bottom: 2px solid @pink;
                 transform: rotate(-45deg);
             }
-            &:hover::before {
+            &:hover {
+                &::before {
                     border-color: @dark-blue;
+                }
             }
-            &:focus::before {
-                border-color: @pink;
+            &:active {
+                &::before {
+                    border-color: @pink;
+                }
+                &::after {
+                    display: block;
+                }
+            }
+            &:checked {
+                &::before {
+                    border-color: @grey;
+                }
+                &::after {
+                    display: block;
+                }
+                &:hover {
+                    &::before {
+                        border-color: @dark-blue;
+                    }
+                }
+                &:active {
+                    &::before {
+                        border-color: @pink;
+                    }
+                    &::after {
+                        display: none;
+                    }
+                }
             }
         }
     //}
