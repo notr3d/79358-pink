@@ -48,7 +48,7 @@ module.exports = function(grunt) {
         ]
       },
       style: {
-        src: "css/*.css"
+        src: "build/css/style.css"
       }
     },
       
