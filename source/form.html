@@ -32,15 +32,15 @@
                  <div class="name__wrapper">
                      <div class="name__item">
                          <label for="firstname" class="name__label">ИМЯ: *</label>
-                         <input type="text" name="firstname" class="name__input" id="firstname" placeholder="Введите ваше имя" required>
+                         <input name="firstname" class="name__input" id="firstname" placeholder="Введите ваше имя" required>
                      </div> 
                      <div class="name__item">
                          <label for="lastname" class="name__label">ФАМИЛИЯ: *</label>
-                         <input type="text" name="lastname" class="name__input" id="lastname" placeholder="Укажите фамилию" required>
+                         <input name="lastname" class="name__input" id="lastname" placeholder="Укажите фамилию" required>
                      </div> 
                      <div class="name__item">
                          <label for="middlename" class="name__label">ОТЧЕСТВО:</label>
-                         <input type="text" name="middlename"  class="name__input" id="middlename" placeholder="Ну и отчество тоже">
+                         <input name="middlename"  class="name__input" id="middlename" placeholder="Ну и отчество тоже">
                      </div>   
                  </div>
              </section>
@@ -65,17 +65,17 @@
                  <div class="vacation__wrapper">
                       <h3 class="vacation__header">Когда вы путешествовали? *</h3>
                      <div class="vacation__item">
-                         <input type="text" name="vacation-start" class="vacation__start" id="vacation__start" value="01/01/2015" required>
+                         <input name="vacation-start" class="vacation__start" id="vacation__start" value="01/01/2015" required>
                          <label for="vacation__start" class="vacation__label">ДАТА ВЫЕЗДА</label>    
                      </div>
                      <div class="vacation__item">
                          <input type="button" class="vacation__duration-minus" id="vacation__duration-minus" value="&minus;">
-                         <input type="text" name="vacation-duration" class="vacation__duration-count" id="vacation__duration-count" value="0 дней" required>        
+                         <input name="vacation-duration" class="vacation__duration-count" id="vacation__duration-count" value="0 дней" required>        
                          <input type="button"  class="vacation__duration-plus" id="vacation__duration-plus" value="+">
                          <label for="vacation__duration-count" class="vacation__label">ПРОДОЛЖИТЕЛЬНОСТЬ</label>        
                      </div>
                      <div class="vacation__item">
-                         <input type="text" name="vacation-end" class="vacation__end" id="vacation__end" readonly>
+                         <input name="vacation-end" class="vacation__end" id="vacation__end" readonly>
                          <label for="vacation__end" class="vacation__label">Дата Возвращения</label>
                      </div>
                  </div>
@@ -85,7 +85,7 @@
                      <h3 class="companions__header">КОЛИЧЕСТВО ПОПУТЧИКОВ *</h3>
                      <div class="companions__item">
                          <input type="button"  class="companions__minus" id="companions__minus" value="&minus;">
-                         <input type="text" name="companions-count" class="companions__count" id="companions-count" placeholder="0 чел" value="0 чел" required>        
+                         <input name="companions-count" class="companions__count" id="companions-count" placeholder="0 чел" value="0 чел" required>        
                          <input type="button" class="companions__plus" id="companions__plus" value="+">
                      </div>
                      <div class="companions__container"></div>
@@ -174,11 +174,11 @@
              </div>
              <div class="companion__name">
                  <label>ИМЯ: *</label>
-                 <input type="text" name="companion-name-{{number}}" class="companion__name" id="companion__name-{{number}}" placeholder="Введите ваше имя" required>    
+                 <input name="companion-name-{{number}}" class="companion__name" id="companion__name-{{number}}" placeholder="Введите ваше имя" required>    
              </div>
              <div class="companion__alias">
                  <label>Прозвище:</label>
-                 <input type="text" name="companion-alias-{{number}}" class="companion__alias" id="companion__alias-{{number}}" placeholder="Ну как же без этого!">    
+                 <input name="companion-alias-{{number}}" class="companion__alias" id="companion__alias-{{number}}" placeholder="Ну как же без этого!">    
              </div>
              <button class="companion__delete">УДАЛИТЬ</button>     
          </script>
