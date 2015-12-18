@@ -21,6 +21,9 @@
             &:active {
                 color: @dark-grey;
             }
+            &:disabled {
+                background-color: @light-grey;
+            }
         }
         &__descr {
             font-size: 14px;
@@ -43,10 +46,12 @@
         margin: 0 auto 60px;
         padding-top: 55px;
         &__button {
-            display: inline-block;    
+            display: inline-block;
+            vertical-align: top;
         }
         &__descr {
             display: inline-block;
+            vertical-align: top;
             float: right;
             width: auto;
         }
