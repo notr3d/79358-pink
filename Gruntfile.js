@@ -104,6 +104,14 @@ module.exports = function(grunt) {
           }
       },
       
+    uglify: {
+        build: {
+            files: {
+            'build/js/script.min.js': ['build/js/script.js']
+            }
+        }
+    },
+      
     watch: {
       style: {
         files: ["less/**/*.less"],
@@ -125,6 +133,7 @@ module.exports = function(grunt) {
         "cssmin",
         "imagemin",
         "concat",
+        "uglify",
         "htmlmin"
     ]);
 
