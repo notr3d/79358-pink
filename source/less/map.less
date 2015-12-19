@@ -1,12 +1,11 @@
 .map {
-    height: 200px;
     background-color: @light-grey;
     position: relative;
-    &__google {
-        width: 100%;
-        height: 100%;
+    &__container {
+        height: 200px;
     }
     &::before {
+        z-index: 1000;
         content: "";
         display: block;
         width: 100%;
@@ -17,12 +16,16 @@
         background: url(../img/misc/triangle-white-footer--mobile.svg) no-repeat 50% 0;
     }
     @media @tablet {
-        height: 380px;
         &::before {
             background-image: url(../img/misc/triangle-white-footer--tablet.svg);
-        }    
+        }
+        &__container {
+            height: 380px;    
+        }
     }
     @media @desktop {
-        height: 510px;
+        &__container {
+            height: 510px;
+        }
     }    
 }
