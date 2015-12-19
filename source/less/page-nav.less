@@ -1,0 +1,138 @@
+.page-nav {
+    //@media @mobile {
+        background-color: rgba(0,0,0,0.3);
+        height: 70px;
+        position: relative;
+        &--active {
+            background-color: @blue;
+            opacity: 1;
+        }
+        &__list {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 70px;
+            width: 100%;
+            display: none;
+            &--active {
+                display: block;
+            }
+        }
+        &__link {
+            display: block;
+            color: @white;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 20px 0;
+            background-color: @blue;
+            font-weight: bold;
+            border-bottom: 1px solid @black;
+            border-top: 1px solid @light-blue;
+            display: block;
+            transition: color .1s;
+            &:hover {
+                color:@pink;
+            }
+            &:active {
+                color: rgba(210, 40, 86, 0.3);    
+            }
+        }
+        &__button {
+            display: inline-block;
+            vertical-align: top;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 90px;
+            height: 70px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background: url(../img/misc/menu-burger.svg) no-repeat center;
+            &:hover {
+                background-image: url(../img/misc/menu-burger--hover.svg);
+            }
+            &:active {
+                opacity: .3;
+            }
+            &--active {
+                background-image: url(../img/misc/menu-cross.svg);
+                
+                &:hover {
+                    transform: scale (1.1);
+                    background-image: url(../img/misc/menu-cross--hover.svg);
+                }
+                &:active {
+                    opacity: .3;
+                }
+            }
+        }
+    //}
+    @media @tablet {
+        height: 110px;
+        &__list {
+            top:110px;
+        }
+        &__button {
+            height: 110px;
+            width: 130px;
+        }
+    }
+    @media @desktop {
+        &__wrapper {
+            margin: 0 auto;
+            width: 940px;
+        }
+        &__list {
+            top: -120px;
+            display: flex;
+            position: relative;
+            width: 510px;
+            right: -360px;
+            flex-direction: row;
+        }
+        &__link {
+            display: inline-block;
+            vertical-align: top;
+            text-transform: capitalize;
+            font-size: 18px;
+            background-color: transparent;
+            vertical-align: middle;
+            line-height: 72px;
+            border: none;
+            margin-left: 70px;
+            font-weight: normal;
+            font-size: 18px;
+            height: 72px;
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                height: 3px;
+                width: 100%;
+                background-color: @white;
+                position: absolute;
+                top: 75%;
+                left: 0;
+                opacity: 0;
+                transition: opacity .1s;
+            }
+            &:hover {
+                color: @white;
+                &::before {
+                    opacity: 1;    
+                }
+            }
+            &:active {
+                opacity: .3;
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        &__button {
+            display: none;
+        }
+    }    
+}

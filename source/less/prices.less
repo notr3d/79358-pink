@@ -1,0 +1,189 @@
+.prices {
+    //@media @mobile {
+        background-color: @light-grey;
+        padding: 90px 0 20px;
+        overflow: hidden;
+        &__wrapper {
+            width: 840px;
+            margin: 0 auto;
+            position: relative;
+            left: 50%;
+            margin-left: -420px;
+            transition: all 1s;
+            &--first-slide {
+                transform: translateX(280px);
+            }
+            &--second-slide {
+                transform: translateX(0px);
+            }
+            &--third-slide {
+                transform: translateX(-280px);
+            }
+        }
+        &__table {
+            border-collapse: collapse;
+        }
+        &__table-head-cell {
+            background-color: @dark-blue;
+            color: @white;
+            border: 2px solid @grey;
+            width: 280px;
+            padding: 20px 0;
+            &:first-child {
+                display: none;
+            } 
+            &--hit {
+                position: relative;
+                overflow: hidden;
+                &::before {
+                    content: "ХИТ";
+                    display: block;
+                    width: 100px;
+                    height: 30px;
+                    position: absolute;
+                    top: 10px;
+                    left: -25px;
+                    color:white;
+                    font-size: 14px;
+                    line-height: 30px;
+                    background: @pink;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        &__type {
+            font-size: 18px;
+            margin: 0;
+            margin-bottom: 10;
+        }
+        &__price {
+            font-size: 24px;
+            font-weight: lighter;
+            margin: 0;
+        }
+        &__table-cell {
+            font-size: 14px;
+            text-transform: uppercase;
+            padding: 20px;
+            border: 2px solid @grey;
+            background: @white;
+            &--yes {
+                background: @white url(../img/misc/yes.svg) no-repeat 93% 50%;    
+            }
+            &--no {
+                background: @white url(../img/misc/no.svg) no-repeat 93% 50%;    
+            }
+            &:first-child {
+                display: none;
+            }
+        }
+        &__controls {
+            width: 72px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 20px auto;
+        }
+        &__control {
+            position: relative;
+            visibility: hidden;
+            &::before {
+                visibility: visible;
+                content: "";
+                display: block;
+                height: 6px;
+                width: 6px;
+                position: absolute;
+                left: 3px;
+                top: 3px;
+                border-radius: 50%;
+                background-color: @dark-grey;
+                cursor: pointer;               
+            }
+            &:checked {
+                &::after {
+                    visibility: visible;
+                    content: "";
+                    display: block;
+                    height: 6px;
+                    width: 6px;
+                    position: absolute;
+                    left: 3px;
+                    top: 3px;
+                    border-radius: 50%;
+                    background-color: @dark-grey;
+                    cursor: pointer;
+                    background-color: @white;
+                    box-shadow: 0 0 0 3px @dark-blue;
+                }
+            }
+        }
+    //}
+    @media @tablet {
+        padding-bottom: 67px;
+        &__wrapper {
+            width: 620px;
+            margin: 0 auto;
+            position: static;
+        }
+        &__table{
+            width: 100%;
+        }
+        &__table-head-cell {
+            width: 25%;
+            padding: 12px 0;
+            &:first-child {
+                display: table-cell;
+                visibility: hidden;
+            }
+            &--hit {
+                &::before {
+                    top: 4px;
+                    left: -32px;
+                }
+            }
+        }
+        &__type {
+            font-size: 16px;
+        }
+        &__price {
+            font-size: 18px;
+        }
+        &__table-cell {
+            font-size: 12px;
+            padding: 14px;
+            padding-right: 0;
+            &:first-child {
+                display: table-cell;
+            }
+            &:not(:first-child) {
+                font-size: 0;
+                width: 120px;
+                background-position: 50% 50%;
+            }
+        }
+        &__controls {
+            display: none;
+        }
+    }
+    @media @desktop {
+        padding: 153px 0 91px;
+        &__wrapper {
+            width: 940px;    
+        }
+        &__type {
+            font-size: 18px;
+        }
+        &__price {
+            font-size: 22px;
+        }
+        &__table-head-cell {
+            padding: 22px 0;
+        }
+        &__table-cell {
+            padding: 20px 0 20px 20px;
+            font-size: 15px;
+        }
+    }    
+}
