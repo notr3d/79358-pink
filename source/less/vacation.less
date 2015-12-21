@@ -10,7 +10,7 @@
             line-height: 30px;
             font-weight: normal;
             text-transform: uppercase;
-            margin: 55px auto 40px;
+            margin: 43px auto 35px;
             display: inline-block;
             vertical-align: top;
             text-align: center;
@@ -27,12 +27,12 @@
             color: @pink;
             text-transform: uppercase;
             text-align: center;
-            padding: 20px 0;
+            padding: 13px 0 24px;
         }
         &__start {
             font-size: 18px;
             width: 100%;
-            height: 56px;
+            height: 63px;
             padding: 0 20px;
             box-sizing: border-box;
             outline: none;
@@ -50,8 +50,8 @@
             background-color: @white;
             border: 2px solid @light-grey;
             border-radius: 3px;
-            width: 56px;
-            height: 56px;
+            width: 60px;
+            height: 60px;
             position: relative;
             font-size: 50px;
             line-height: 0px;
@@ -72,8 +72,8 @@
             background-color: @white;
             border: 2px solid @light-grey;
             border-radius: 3px;
-            width: 56px;
-            height: 56px;
+            width: 60px;
+            height: 60px;
             position: relative;
             font-size: 50px;
             line-height: 0px;
@@ -91,14 +91,14 @@
         }
         &__duration-count {
             font-size: 18px;
-            width: 171px;
+            width: 163px;
             margin: 0 -6px;
             display: inline-block;
             vertical-align: top;
-            padding: 0 0 0 40px;
+            padding: 0 0 0 45px;
             box-sizing: border-box;
             border: 2px solid @light-grey;
-            height: 56px;
+            height: 60px;
             vertical-align: top;
             transition: border-color .1s;
             outline: none;
@@ -115,7 +115,7 @@
             border: 2px solid @grey;
             border-radius: 3px;
             width: 100%;
-            height: 56px;
+            height: 64px;
             padding: 0 20px;
             background-color: @light-grey;
         }
@@ -133,7 +133,7 @@
         }
         &__header {
             position: absolute;
-            top: -10px;
+            top: -16px;
             left: 50%;
             width: 260px;
             margin: 0;
@@ -145,20 +145,29 @@
             &:nth-child(3) {
                 margin-left: 20px;
             }
-        }
+        }        
         &__duration-count {
-            width: 127px;
-            padding: 0 0 0 40px;
+            width: 119px;
+            padding: 0 0 0 28px;
             outline: none;
             border-radius: 3px;
         }
         &__label {
-            padding: 24px 0 33px;
+            text-align: left;
+            padding: 17px 0 31px 18px;
+            &[for="vacation__duration-count"] {
+                text-align: center;
+                padding-left: 0;
+            }
         }
     }
     @media @desktop {
         &__wrapper {
             width: 816px;
+            margin: 67px auto;
+        }
+        &__label {
+            padding-bottom: 16px;
         }
         &__item {
             &:nth-child(3) {

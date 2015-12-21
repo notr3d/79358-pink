@@ -4,6 +4,7 @@
         &__wrapper {
             width: 280px;
             margin: 0 auto;
+            padding-bottom: 31px;
         }
         &__header {
             color: @pink;
@@ -18,7 +19,7 @@
             width: 100%;
         }
         &__item {
-            padding: 20px 0;
+            padding: 29px 0 5px;
             display: flex;
         }
         &__label {
@@ -107,6 +108,18 @@
         &__item {
             padding: 15px 0;
         }
+         &__label {
+            line-height: 35px;
+            padding: 0 15px;
+            &::before {
+                left: -45px;
+                top: -4px;
+            }
+            &::after {
+                top: 9px;
+                left: -32px;
+            }
+        }
     }
     @media @desktop {
         &__wrapper {
@@ -114,11 +127,20 @@
             margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
+            padding-bottom: 30px;
         }
         &__label {
             padding: 0;
-            padding-left: 25px;
-            width: 199px;
+            padding-left: 9px;
+            width: 136px;
+            &::before {
+                left: -50px;
+                top: -6px;
+            }
+            &::after {
+                top: 7px;
+                left: -37px;
+            }
         }
         &__item {
             &:nth-child(3) {
