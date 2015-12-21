@@ -133,13 +133,14 @@
         &__name {
             font-size: 20px;
             margin-bottom: 0;
-            padding: 20px 0 0;
+            padding: 14px 0 0;
         }
         &__descr {
             display: block;
             font-size: 14px;
             text-align: center;
             color: @dark-grey;
+            margin: 9px auto 17px;
         }
     }
     @media @desktop {
@@ -157,10 +158,13 @@
         &__item {
             width: 940px;
         }
+        &__descr {
+            font-size: 18px;
+        }
         &__quotes {
             width: 100px;
             height: 100px;
-            margin: 60px auto 25px;
+            margin: -23px auto 31px;
             background: url(../img/misc/quotes.svg) no-repeat center;
         }
         &__name {
@@ -180,7 +184,7 @@
             position: absolute;
             background-color: @white;
             border: none;
-            left: 0;
+            left: -14px;
             top: 0;
             outline: none;
             cursor: pointer;
@@ -193,7 +197,7 @@
                 opacity: .1;
             }            
             &--right {
-                left: 900px;
+                left: 902px;
                 background-image: url(../img/misc/review-arrow-right.svg);
             }
         }

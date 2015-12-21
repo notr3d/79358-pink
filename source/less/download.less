@@ -1,6 +1,6 @@
 .download {
     //@media @mobile {
-        background: url(../img/hand/iphone-hand-mobile.png) no-repeat 50% 25%;
+        background: url(../img/hand/iphone-hand-mobile-wide.png) no-repeat 0 26%;
         @media (min-resolution: 1.5dppx) {
             background-size: 258px 286px; 
             background-image: url(../img/hand/iphone-hand-mobile@2x.png);
@@ -83,7 +83,7 @@
             background-size: 700px 545px; 
             background-image: url(../img/hand/iphone-hand-tablet@2x.png);
         }
-        padding: 88px 0 96px;
+        padding: 88px 0 112px;
         width: 620px;
         margin: 0 auto;
         line-height: 50px;
@@ -100,6 +100,7 @@
         }
         &__container {
             padding: 0;
+            margin: 0;
         }
         &__app {
             background-color: transparent;
@@ -109,29 +110,38 @@
             padding: 0;
         }
         &__type {
+            margin-left: 29px;
             margin-bottom: 29px;
         }
         &__text {
-            font-size: 16px;
+            font-size: 18px;
+            margin: 0 auto;
+            width: 308px;
         }
     }
     @media @desktop {
         width: 940px;
+        padding: 113px 0 125px;
         background: url(../img/hand/iphone-hand-desktop@1x.png) no-repeat -14% 100%;
         @media (min-resolution: 1.5dppx) {
             background-size: 1050px 645px; 
             background-image: url(../img/hand/iphone-hand-desktop@2x.png);
         }
-        padding: 120px 0 109px;
         &__header {
             font-size: 50px;
-            margin-bottom: 70px;
+            margin-bottom: 56px;
+            line-height: 57px;
         }
         &__type {
             margin: 45px auto 45px;
         }
         &__link {
             margin-bottom: 65px;
+            font-size: 21px;
+            width: 294px;
+        }
+        &__container {
+            width: 300px;
         }
     }    
 }
