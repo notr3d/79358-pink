@@ -4,6 +4,7 @@
         &__wrapper {
             width: 280px;
             margin: 0 auto;
+            padding-bottom: 31px;
         }
         &__header {
             color: @pink;
@@ -18,7 +19,7 @@
             width: 100%;
         }
         &__item {
-            padding: 20px 0;
+            padding: 29px 0 5px;
             display: flex;
         }
         &__label {
@@ -29,21 +30,14 @@
             line-height: 40px;
             padding: 0 25px;
             cursor: pointer;
-        }
-        &__radio {
-            width: 40px;
-            height: 40px;
-            display: inline-block;
-            vertical-align: top;
             position: relative;
-            cursor: pointer;
             &::before {
                 content: "";
                 display: block;
                 position: absolute;
                 width: 38px;
                 height: 38px;
-                left: -1px;
+                left: -39px;
                 background-color: @white;
                 border-radius: 50%;
                 border: 2px solid @grey;
@@ -56,7 +50,7 @@
                 width: 16px;
                 height: 16px;
                 top: 13px;
-                left: 12px;
+                left: -26px;
                 background-color: @pink;
                 border-radius: 50%;
             }
@@ -73,22 +67,19 @@
                     display: block;
                 }
             }
+        }
+        &__radio {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+            visibility: hidden;
             &:checked {
-                &::before {
-                    border-color: @grey;
-                }
-                &::after {
+                ~ .app__label::after {
                     display: block;
                 }
-                &:hover {
-                    &::before {
-                        border-color: @dark-blue;
-                    }
-                }
-                &:active {
-                    &::before {
-                        border-color: @pink;
-                    }
+                ~ .app__label:active {
                     &::after {
                         display: none;
                     }
@@ -117,22 +108,43 @@
         &__item {
             padding: 15px 0;
         }
+         &__label {
+            line-height: 35px;
+            padding: 0 15px;
+            &::before {
+                left: -45px;
+                top: -4px;
+            }
+            &::after {
+                top: 9px;
+                left: -32px;
+            }
+        }
     }
     @media @desktop {
         &__wrapper {
             width: 816px;
             margin: 0 auto;
             display: flex;
-            
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-bottom: 30px;
         }
         &__label {
             padding: 0;
-            padding-left: 25px;
-        }
-        &__item {
-            &:nth-child(3) {
-                margin: auto;   
+            padding-left: 9px;
+            width: 136px;
+            &::before {
+                left: -50px;
+                top: -6px;
+            }
+            &::after {
+                top: 7px;
+                left: -37px;
             }
         }
-    }    
+        &__item {
+            width: 193px;
+        }
+    }
 }

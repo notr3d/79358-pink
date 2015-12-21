@@ -10,7 +10,7 @@
             line-height: 18px;
             font-weight: normal;
             text-transform: uppercase;
-            margin: 40px auto 20px;
+            margin: 45px auto 24px;
             display: block;
             text-align: center;
             width: 250px;
@@ -25,26 +25,20 @@
             vertical-align: top;
             width: 100%;
             line-height: 30px;
-            padding: 0 0 0 25px;
+            padding: 0 0 0 20px;
             cursor: pointer;
-        }
-        &__checkbox {
-            width: 40px;
-            height: 40px;
-            display: inline-block;
-            vertical-align: top;
             position: relative;
-            cursor: pointer;
             &::before {
                 content: "";
                 display: block;
                 position: absolute;
-                width: 38px;
-                height: 38px;
+                width: 36px;
+    height: 36px;
                 border-radius: 3px;
                 background-color: @white;
                 border: 2px solid @grey;
-                top: -2px;
+                top: -3px;
+                left: -39px;
                 transition: border-color .1s;
             }
             &::after {
@@ -53,8 +47,8 @@
                 position: absolute;
                 width: 20px;
                 height: 7px;
-                top: 12px;
-                left: 10px;
+                top: 9px;
+                left: -30px;
                 border-left: 2px solid @pink;
                 border-bottom: 2px solid @pink;
                 transform: rotate(-45deg);
@@ -72,22 +66,19 @@
                     display: block;
                 }
             }
+        }
+        &__checkbox {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+            visibility: hidden;
             &:checked {
-                &::before {
-                    border-color: @grey;
-                }
-                &::after {
+                ~ .achievments__label::after {
                     display: block;
                 }
-                &:hover {
-                    &::before {
-                        border-color: @dark-blue;
-                    }
-                }
-                &:active {
-                    &::before {
-                        border-color: @pink;
-                    }
+                ~ .achievments__label:active {
                     &::after {
                         display: none;
                     }
@@ -100,7 +91,7 @@
             border: 2px solid @light-grey;
             padding: 40px 60px 20px;
             width: 496px;
-            margin: -45px auto 70px;
+            margin: -45px auto 63px;
             position: relative;
         }
         &__header {
@@ -113,7 +104,16 @@
             background-color: @white;
         }
         &__label {
-            line-height: 43px;
+            line-height: 30px;
+            padding-left: 15px;
+            &::before {
+                top: -5px;
+                left: -45px;
+            }
+            &::after {
+                top: 7px;
+                left: -36px;
+            }
         }
     }
     @media @desktop {
@@ -124,9 +124,20 @@
             flex-wrap: wrap; 
             flex-direction: column;
             height: 172px;
+            padding: 41px 60px 20px;
         }
         &__label {
-            width: 236px;
+            width: 254px;
+            line-height: 32px;
+            padding-left: 10px;
+            &::before {
+                top: -2px;
+                left: -49px;
+            }
+            &::after {
+                top: 10px;
+                left: -41px;
+            }
         }
     }    
 }

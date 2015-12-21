@@ -1,28 +1,30 @@
 .features {
     //@media @mobile {
         background-color: @light-grey;
-        padding-top: 63px;
         &__wrapper {
             width: 280px;
             margin: 0 auto;
+            padding-top: 81px;
         }
         &__header {
             font-size: 18px;
             font-weight: bold;
             text-align: center;
+            margin: 0 auto 11px;
         }
         &__text {
             font-size: 14px;
-            line-height: 26px;
+            line-height: 24px;
             text-align: center;
             color: @dark-grey;
+            margin: 0 auto 32px;
         }
         &__item {
             padding-bottom: 0px;
             &:last-child {
                 padding-bottom: 0;
                 .features__screen {
-                    height: 294px;
+                    height: 287px;
                     background: url(../img/iphone/screen-mobile-3.png) no-repeat 50% 100%;
                     @media (min-resolution: 1.5dppx) {
                         background-size: 158px 258px;
@@ -38,27 +40,30 @@
         }
     //}
     @media @tablet {
-        padding-top: 83px;
+        //padding-top: 83px;
         &__wrapper {
             width: 310px;
             padding-left: 310px;
+            padding-top: 75px;
         }
         &__header {
             text-align: left;
             margin: 0;
+            margin-bottom: 12px;
         }
         &__text {
             text-align: left;
-            margin-bottom: 30px;
+            margin-bottom: 34px;
+            
         }
         &__item {
             &:last-child {
-                padding-bottom: 1px;
+                padding-bottom: 8px;
                 position: relative;
                 .features__screen {
                     position: absolute;
                     right: 100%;
-                    bottom: 0%;
+                    bottom: 0;
                     height: 500px;
                     width: 310px;
                     background: url(../img/iphone/iphone-screen-tablet-3@1x.png) no-repeat 0% 100%;
@@ -75,13 +80,16 @@
         &__wrapper {
             width: 940px;
             padding-left: 0;
+            padding-top: 0;
             display: flex;
+            
         }
         &__header {
-            width: 240px;
+            width: 228px;
             font-size: 30px;
             text-align: center;
-                margin: 35px auto 10px;
+            margin: 52px auto 23px 40px;
+            line-height: 33px;            
         }
         &__text {
             width: 240px;
@@ -94,7 +102,7 @@
             width: 33%;
             &:first-child {
                 .features__screen {
-                    background: url(../img/iphone/iphone-screen-desktop-1@1x.png) no-repeat 50% 0;
+                    background: url(../img/iphone/iphone-screen-desktop-1@1x.png) no-repeat 24% 0;
                     @media (min-resolution: 1.5dppx) {
                         background-size: 292px 302px;
                         background-image: url(../img/iphone/iphone-screen-desktop-1@2x.png);
@@ -102,8 +110,9 @@
                 }
             }
             &:nth-child(2) {
+                margin: 0 10px;
                 .features__screen {
-                    background: url(../img/iphone/iphone-screen-desktop-2@1x.png) no-repeat 50% 0;
+                    background: url(../img/iphone/iphone-screen-desktop-2@1x.png) no-repeat 94% 0;
                     @media (min-resolution: 1.5dppx) {
                         background-size: 292px 302px;
                         background-image: url(../img/iphone/iphone-screen-desktop-2@2x.png);
@@ -113,9 +122,9 @@
             &:last-child {
                 position: static;
                 .features__screen {
-                    height: 300px;
+                    height: 302px;
                     position: static;
-                    background: url(../img/iphone/iphone-screen-desktop-3@1x.png) no-repeat 50% 0;
+                    background: url(../img/iphone/iphone-screen-desktop-3@1x.png) no-repeat 100% 0;
                     @media (min-resolution: 1.5dppx) {
                         background-size: 292px 302px;
                         background-image: url(../img/iphone/iphone-screen-desktop-3@2x.png);
@@ -127,7 +136,7 @@
         }
         &__screen {
             order: -1;
-            height: 300px;
+            height: 302px;
             z-index: 1;
         }
     }    

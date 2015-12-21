@@ -122,6 +122,7 @@
     //}
     @media @tablet {
         padding-bottom: 67px;
+        padding-top: 85px;
         &__wrapper {
             width: 620px;
             margin: 0 auto;
@@ -132,7 +133,7 @@
         }
         &__table-head-cell {
             width: 25%;
-            padding: 12px 0;
+            padding: 16px 0;
             &:first-child {
                 display: table-cell;
                 visibility: hidden;
@@ -168,7 +169,7 @@
         }
     }
     @media @desktop {
-        padding: 153px 0 91px;
+        padding: 149px 0 95px;
         &__wrapper {
             width: 940px;    
         }
@@ -180,10 +181,17 @@
         }
         &__table-head-cell {
             padding: 22px 0;
+            &--hit {
+                &::before {
+                    top: 10px;
+                    left: -25px
+                }
+            }
         }
         &__table-cell {
-            padding: 20px 0 20px 20px;
-            font-size: 15px;
+            padding: 15px 0 20px 20px;
+            font-size: 18px;
+            text-transform: capitalize;
         }
     }    
 }

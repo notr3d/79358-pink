@@ -17,7 +17,7 @@
                 background-color: @light-grey;
                 color: @black;
                 height: 56px;
-                width: 56px;
+                width: 58px;
                 border: 2px solid @grey;
                 border-radius: 3px;
                 text-align: center;
@@ -41,7 +41,7 @@
                 box-sizing: border-box;
                 width: 100%;
                 height: 60px;
-                padding: 25px;
+                padding: 0 0 0 20px;
                 border: 2px solid @grey;
                 border-radius: 3px;
                 outline: none;
@@ -60,11 +60,11 @@
             label {
                 display: block;
                 color: @pink;
-                height: 65px;
+                height: 54px;
                 width: 100%;
                 text-transform: uppercase;
                 padding: 0 25px;
-                line-height: 90px;
+                line-height: 67px;
                 font-size: 14px;
                 box-sizing: border-box;
             }
@@ -73,11 +73,12 @@
                 box-sizing: border-box;
                 width: 100%;
                 height: 60px;
-                padding: 25px;
+                padding: 0 0 0 20px;
                 border: 2px solid @grey;
                 border-radius: 3px;
                 outline: none;
                 transition: border-color .1s;
+                margin-bottom: 10px;
                 &:hover {
                     border-color: @dark-blue;
                 }
@@ -100,17 +101,23 @@
         }
         &__name {
             width: 300px;
+            label {
+                padding-left: 20px;
+            }
         }
         &__alias {
             width: 300px;
+            label {
+                padding-left: 20px;
+            }
         }
         &__delete {
             display: block;
             position: absolute;
             background-color: transparent;
             border: none;
-            width: 166px;
-            height: 60px;
+            width: 175px;
+            height: 70px;
             top: 60px;
             right: -166px;
             font-size: 14px;
@@ -127,11 +134,21 @@
     }
     @media @desktop {
         width: 700px;
+        margin-top: -3px;
         &__wrapper {
             padding-bottom: 55px;
         }
         &__number {
             margin-right: 20px;
         }   
+        &__alias {
+            input {
+                margin-bottom: 0;
+            }
+            label {
+                height: 65px;
+                line-height: 90px;
+            }
+        }
     }    
 }

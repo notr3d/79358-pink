@@ -46,11 +46,6 @@
 @import "failure.less";
 @import "success.less";
 
-
-* {
-    
-}
-
 ul {
     list-style: none;
 }
@@ -85,4 +80,25 @@ body, input {
             display: block;
         }
     }
+    @media @desktop {
+        .page-footer {
+            margin-top: 46px;  
+        }
+    }
+}
+
+ @keyframes download-animation {
+    0% {
+        color: rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    100% {
+        color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+.in-progress {
+    animation: download-animation 1s infinite;
 }

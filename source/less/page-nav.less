@@ -89,7 +89,7 @@
             display: flex;
             position: relative;
             width: 510px;
-            right: -360px;
+            right: -370px;
             flex-direction: row;
         }
         &__link {
@@ -99,9 +99,9 @@
             font-size: 18px;
             background-color: transparent;
             vertical-align: middle;
-            line-height: 72px;
+            line-height: 89px;
             border: none;
-            margin-left: 70px;
+            margin-left: 69px;
             font-weight: normal;
             font-size: 18px;
             height: 72px;
@@ -125,6 +125,8 @@
                 }
             }
             &:active {
+                transition: all .1s;
+                color: @white;
                 opacity: .3;
                 &::before {
                     display: none;

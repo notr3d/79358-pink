@@ -3,6 +3,7 @@
     position: relative;
     &__container {
         height: 200px;
+        background: url(../img/pink-map.jpg) no-repeat 47% 57%;
     }
     &::before {
         z-index: 1000;
@@ -14,18 +15,21 @@
         left: 0;
         top: 0;
         background: url(../img/misc/triangle-white-footer--mobile.svg) no-repeat 50% 0;
+        pointer-events: none;
     }
     @media @tablet {
         &::before {
             background-image: url(../img/misc/triangle-white-footer--tablet.svg);
         }
         &__container {
-            height: 380px;    
+            height: 380px; 
+            background-position: 46% 70%;
         }
     }
     @media @desktop {
         &__container {
             height: 510px;
+            background-position: 45% 76%;
         }
     }    
 }

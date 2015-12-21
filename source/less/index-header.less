@@ -33,7 +33,9 @@
             background-image: url(../img/misc/triangle-white--tablet.svg);    
         }
         &__wrapper {
-            width: 620px; 
+            width: 620px;
+            padding: 45px 0;
+            line-height: 50px;
         }
         &__item {
             font-size: 40px;
@@ -47,12 +49,14 @@
         }
     }
     @media @desktop {
-        &::before {    
+        &::before {
+            top:99%;
             background-image: url(../img/misc/triangle-white.svg);
         }
         &__wrapper {
             width: 940px;
-            padding: 62px 0 64px;
+            padding: 67px 0 75px;
+            line-height: 60px;
         }
         &__item {
             font-size: 50px;
