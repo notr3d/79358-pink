@@ -10,6 +10,7 @@ module.exports = function(grunt) {
       style: {
         files: {
           "build/css/style.css": "source/less/style.less",
+          "source/css/style.css": "source/less/style.less"
         }
       }
     },
@@ -95,12 +96,19 @@ module.exports = function(grunt) {
           options: {
               separator: ";"
           },
-          dist: {
+          build: {
               src: [
                   "source/js/vendors/*.js",
                   "source/js/*.js"
               ],
               dest: "build/js/script.js"
+          },
+          source: {
+              src: [
+                  "source/js/vendors/*.js",
+                  "source/js/*.js"
+              ],
+              dest: "source/js/script.js"
           }
       },
       
@@ -115,7 +123,7 @@ module.exports = function(grunt) {
     watch: {
       style: {
         files: ["less/**/*.less"],
-        tasks: ["less", "postcss"],
+        tasks: ["less"],
         options: {
           spawn: false,
           livereload: true
@@ -131,7 +139,7 @@ module.exports = function(grunt) {
         "cmq",
         "postcss",
         "cssmin",
-        "imagemin",
+        //"imagemin",
         "concat",
         "uglify",
         "htmlmin"
