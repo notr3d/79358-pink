@@ -7,5 +7,6 @@ Thumbs.db
 .idea
 *.sublime*
 *.log
-css/*.css
+//css/*.css
+source/
 less/style.less
