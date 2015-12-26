@@ -87,6 +87,8 @@ module.exports = function(grunt) {
           html: {
               files: {
                   "build/index.min.html": "build/index.html",
+                  "build/blog.min.html": "build/blog.html",
+                  "build/post.min.html": "build/post.html",
                   "build/form.min.html": "build/form.html"
               }
           }
@@ -139,7 +141,7 @@ module.exports = function(grunt) {
         "cmq",
         "postcss",
         "cssmin",
-        //"imagemin",
+        "imagemin",
         "concat",
         "uglify",
         "htmlmin"
