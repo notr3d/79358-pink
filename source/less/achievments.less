@@ -1,0 +1,169 @@
+.achievments {
+    //@media @mobile {
+        &__wrapper {
+            width: 280px;
+            margin: 0 auto 20px;
+        }
+        &__header {
+            color: @pink;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: normal;
+            text-transform: uppercase;
+            margin: 45px auto 24px;
+            display: block;
+            text-align: center;
+            width: 250px;
+        }
+        &__item {
+            padding: 18px 0;
+            display: flex;
+        }
+        &__label {
+            font-size: 18px;
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+            line-height: 30px;
+            padding: 0 0 0 20px;
+            cursor: pointer;
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 36px;
+    height: 36px;
+                border-radius: 3px;
+                background-color: @white;
+                border: 2px solid @grey;
+                top: -3px;
+                left: -39px;
+                transition: border-color .1s;
+            }
+            &::after {
+                content: "";
+                display: none;
+                position: absolute;
+                width: 20px;
+                height: 7px;
+                top: 9px;
+                left: -30px;
+                border-left: 2px solid @pink;
+                border-bottom: 2px solid @pink;
+                transform: rotate(-45deg);
+            }
+            &:hover {
+                &::before {
+                    border-color: @dark-blue;
+                }
+            }
+            &:active {
+                &::before {
+                    border-color: @pink;
+                }
+                &::after {
+                    display: block;
+                }
+            }
+        }
+        &__checkbox {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+            visibility: hidden;
+            &:checked {
+                ~ .achievments__label::after {
+                    display: block;
+                }
+                ~ .achievments__label:active {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    //}
+    @media @tablet {
+        &__wrapper {
+            border: 2px solid @light-grey;
+            padding: 40px 60px 20px;
+            width: 496px;
+            margin: -45px auto 63px;
+            position: relative;
+        }
+        &__header {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            width: 440px;
+            margin: 0;
+            margin-left: -220px;
+            background-color: @white;
+        }
+        &__label {
+            line-height: 30px;
+            padding-left: 15px;
+            &::before {
+                top: -5px;
+                left: -45px;
+            }
+            &::after {
+                top: 7px;
+                left: -36px;
+            }
+        }
+    }
+    @media @desktop {
+        &__wrapper {
+            width: 876px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap; 
+            //flex-direction: column;
+            //height: 172px;
+            padding: 41px 0 20px 60px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__item {
+            margin: auto;
+            &:nth-child(2) {
+                order: -6;
+            }
+            &:nth-child(3) {
+                order: -3;
+            }
+             &:nth-child(4) {
+                order: -5;
+            }
+             &:nth-child(5) {
+                order: -2;
+            }
+             &:nth-child(6) {
+                order: -4;
+            }
+             &:nth-child(7) {
+                order: -1;
+            }
+            
+        }
+        &__label {
+            line-height: 32px;
+            padding-left: 10px;
+               
+            width: 200px;
+            margin-right: auto;
+            &::before {
+                top: -2px;
+                left: -49px;
+            }
+            &::after {
+                top: 10px;
+                left: -41px;
+            }
+        }
+    }    
+}

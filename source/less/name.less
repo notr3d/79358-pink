@@ -1,0 +1,54 @@
+.name {
+    //@media @mobile {
+    padding: 10px 0 38px;
+        &__wrapper {
+            width: 280px;
+            margin: 0px auto;
+        }
+        &__input {
+            display: block;
+            width: 100%;
+            padding: 20px 20px;
+            box-sizing: border-box;
+            border: 2px solid @light-grey;
+            border-radius: 3px;
+            outline: none;
+            font-size: 18px;
+            transition: border-color .1s;
+            &:hover {
+                border-color: @dark-blue;
+            }
+            &:focus {
+                border-color: @pink;
+            }
+        }
+        &__label {
+            color: @pink;
+            padding: 25px 0 7px 25px;
+            display: block;
+            font-size: 14px;
+            }    
+        //}
+    @media @tablet {
+        padding: 10px 0 62px;
+        &__wrapper {
+            width: 620px;
+            margin: 0 auto;
+        }
+    }
+    @media @desktop {
+        &__wrapper {
+            display: flex;
+            width: 940px;
+            margin: 0 auto;
+        }
+        &__item {
+            display: inline-block;
+            vertical-align: top;
+            width: 33%;
+            &:nth-child(2) {
+                margin: 0 20px;
+            }
+        }
+    }    
+}

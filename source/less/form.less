@@ -1,0 +1,33 @@
+.form {
+    //@media @mobile {
+        &__header {
+            width: 280px;
+            font-size: 14px;
+            line-height: 30px;
+            color: @dark-grey;
+            font-weight: normal;
+            margin: 0 auto;
+            text-align: center;
+            margin: 45px auto 0;
+            span {
+                display: none;
+            }
+        }
+    //}
+    @media @tablet {
+        &__header {
+            width: 500px;
+            font-size: 18px;
+            margin-top: 94px;
+            span {
+                display: inline;
+            }
+        }
+    }
+    @media @desktop {
+        &__header {
+            width: 800px;
+            margin: 94px auto 38px;
+        }
+    }    
+}

@@ -1,0 +1,29 @@
+.page-title {
+    //@media @mobile {
+        &__header {
+            color: @white;
+            font-size: 24px;
+            text-align: center;
+            font-weight: lighter;
+            padding: 27px 0 50px;
+            margin: 0 auto;
+            width: 230px;
+            line-height: 30px;
+        }    
+    //}
+    @media @tablet {
+        &__header {
+            font-size: 50px;
+            width: 500px;
+            padding: 72px 0 81px;
+            line-height: 59px;
+        }
+    }
+    @media @desktop {
+        &__header {
+            padding: 65px 0 101px;
+            font-size: 50px;
+            width: 800px;
+        }
+    }    
+}

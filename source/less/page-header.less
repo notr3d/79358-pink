@@ -1,0 +1,23 @@
+.page-header {
+    //@media @mobile {
+        background: linear-gradient(darken(@dark-blue, 10%), lighten(@dark-blue, 10%));
+        background: @dark-blue url(../img/bg/background-mobile@1x.jpg) no-repeat 50% 0%;
+        @media (min-resolution: 1.5dppx) {
+            background-size: 700px 488px;
+            background-image: url(../img/bg/background-mobile@2x.jpg);
+        }
+        @media (min-resolution: 2.5dppx) {
+            background-image: url(../img/bg/background-mobile@3x.jpg);
+        }
+    //} 
+    @media @tablet {
+        background: @dark-blue url(../img/bg/background-tablet@1x.jpg) no-repeat 50% 0%;
+        @media (min-resolution: 1.5dppx) {
+            background-size: 1200px 729px;
+            background-image: url(../img/bg/background-tablet@2x.jpg);
+        }
+    }
+    @media @desktop {
+        background: @dark-blue url(../img/bg/background-fullsize.jpg) no-repeat 50% 30%;
+    }    
+}

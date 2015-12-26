@@ -1,0 +1,20 @@
+.page-footer {
+    //@media @mobile {
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    //}
+    @media @tablet {
+        &__wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    @media @desktop {
+        width: 940px;
+        margin: 45px auto 0;
+        margin-top: 0;
+    }    
+}

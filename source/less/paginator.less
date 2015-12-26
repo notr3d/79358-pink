@@ -1,0 +1,47 @@
+.paginator {
+    width: 280px;
+    margin: 0 auto;
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 0;
+    }
+    &__item {
+        display: inline-block;
+    }    
+    &__link {
+        display: block;
+        width: 56px;
+        height: 56px;
+        border:2px solid @grey;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 60px;
+        border-radius: 3px;
+        &:hover {
+            border-color:@pink;
+        }
+    }
+    @media @tablet {
+        width: 620px;
+        &__list {
+            position: relative;
+            &::before {
+                content:'СТР.';
+                position: absolute;
+                top: 20px;
+                left: -65px;;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+        &__wrapper {
+            width: 280px;
+        }
+    }
+    @media @desktop {
+        width: 940px;
+    }
+}

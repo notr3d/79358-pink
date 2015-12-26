@@ -1,0 +1,178 @@
+.vacation {
+    //@media @mobile {
+        &__wrapper {
+            width: 280px;
+            margin: 0 auto 25px;
+        }
+        &__header {
+            color: @pink;
+            font-size: 14px;
+            line-height: 30px;
+            font-weight: normal;
+            text-transform: uppercase;
+            margin: 43px auto 35px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            width: 100%;
+        }
+        &__item {
+            width: 100%;
+        }
+        &__label {
+            font-size: 14px;
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+            color: @pink;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 13px 0 24px;
+        }
+        &__start {
+            font-size: 18px;
+            width: 100%;
+            height: 63px;
+            padding: 0 20px;
+            box-sizing: border-box;
+            outline: none;
+            border: 2px solid @light-grey;
+            border-radius: 3px;
+            transition: border-color .1s;
+            &:hover {
+                border-color: @dark-blue;
+            }
+            &:focus {
+                border-color: @pink;
+            }
+        }
+        &__duration-minus {
+            background-color: @white;
+            border: 2px solid @light-grey;
+            border-radius: 3px;
+            width: 60px;
+            height: 60px;
+            position: relative;
+            font-size: 50px;
+            line-height: 0px;
+            margin: 0;
+            outline: none;
+            cursor: pointer;
+            color:@dark-blue;
+            transition: border-color .1s;
+            &:hover {
+                border-color: @dark-blue;
+            }
+            &:active {
+                color: @white;
+                background-color: @dark-blue;
+            }
+        }
+        &__duration-plus {
+            background-color: @white;
+            border: 2px solid @light-grey;
+            border-radius: 3px;
+            width: 60px;
+            height: 60px;
+            position: relative;
+            font-size: 50px;
+            line-height: 0px;
+            margin: 0;
+            outline: none;
+            cursor: pointer;
+            transition: border-color .1s;
+            &:hover {
+                border-color: @dark-blue;
+            }
+            &:active {
+                color: @white;
+                background-color: @dark-blue;
+            }
+        }
+        &__duration-count {
+            font-size: 18px;
+            width: 163px;
+            margin: 0 -6px;
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 0 0 45px;
+            box-sizing: border-box;
+            border: 2px solid @light-grey;
+            height: 60px;
+            vertical-align: top;
+            transition: border-color .1s;
+            outline: none;
+            /*&:hover {
+                border-color: @dark-blue;
+            }
+            &:focus {
+                border-color: @pink;
+            }*/
+        }
+        &__end {
+            font-size: 18px;
+            box-sizing: border-box;
+            border: 2px solid @grey;
+            border-radius: 3px;
+            width: 100%;
+            height: 64px;
+            padding: 0 20px;
+            background-color: @light-grey;
+        }
+    //}
+    @media @tablet {
+        &__wrapper {
+            border: 2px solid @light-grey;
+            padding: 40px 60px;
+            width: 496px;
+            margin: 60px auto;
+            position: relative;
+            display: flex;
+            flex-wrap:wrap;
+            padding-bottom: 0;
+        }
+        &__header {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            width: 260px;
+            margin: 0;
+            margin-left: -130px;
+            background-color: @white;
+        }
+        &__item {
+            width: 236px;
+            &:nth-child(3) {
+                margin-left: 20px;
+            }
+        }        
+        &__duration-count {
+            width: 119px;
+            padding: 0 0 0 28px;
+            outline: none;
+            border-radius: 3px;
+        }
+        &__label {
+            text-align: left;
+            padding: 17px 0 31px 18px;
+            &[for="vacation__duration-count"] {
+                text-align: center;
+                padding-left: 0;
+            }
+        }
+    }
+    @media @desktop {
+        &__wrapper {
+            width: 816px;
+            margin: 67px auto;
+        }
+        &__label {
+            padding-bottom: 16px;
+        }
+        &__item {
+            &:nth-child(3) {
+                margin: auto;   
+            }
+        }
+    }    
+}
